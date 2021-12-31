@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+       <com.airbnb.lottie.LottieAnimationView
+           android:id="@+id/lottery_wheel_lottie"
+           android:layout_width="48dp"
+           android:layout_height="48dp"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           app:lottie_autoPlay="true"
+           app:lottie_fileName="lottieFiles/lotteryWheel/data.json"
+           app:lottie_imageAssetsFolder="lottieFiles/lotteryWheel/images"
+           app:lottie_loop="true"/>
+
+        <TextView
+            android:id="@+id/lottery_tip_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/wifi_shape_float_lottery_wheel_text"
+            android:gravity="center"
+            android:text="大转盘"
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/lottery_wheel_lottie"
+            android:layout_marginTop="36dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+
+

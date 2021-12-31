@@ -1,0 +1,37 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.android.compileSdkVersion
+    buildToolsVersion rootProject.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.android.minSdkVersion
+        targetSdkVersion rootProject.android.targetSdkVersion
+        versionCode rootProject.android.versionCode
+        versionName rootProject.android.versionName
+
+        //强行添加前缀,不然就会报红
+        resourcePrefix "wifi_"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation project(path: ':biz:commonLib:dataLib')
+    implementation project(path: ':biz:commonLib:scenesLib')
+    //引用赚钱金币系统
+    implementation project(path: ':game:lib_common')
+    // for wifi ap
+    implementation('com.linkedin.dexmaker:dexmaker:2.28.1')
+
+}

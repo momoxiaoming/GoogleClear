@@ -1,0 +1,39 @@
+# "Config" is the reserved word which to mark the env
+
+[Config]
+package="com.mckj.module.wifi.gen"
+dir= "../src/main/java"
+#author= "[holmes]"
+#nameKey="nm"
+#typeKey="t"
+#commentKey="cm"
+
+# === The perference Group ===
+# === [[Group]] ===
+
+# === nm : name, cm: comment , t: type===
+
+[[Wifi]]
+    nm = "home:scanTime"
+    t = "Long"
+    cm = "扫描时间"
+
+[[Wifi]]
+    nm = "home:firstRequestPermission"
+    t = "Bool"
+    cm = "第一次申请权限"
+
+[[Wifi]]
+    nm = "home:menuConfig"
+    t = "String"
+    cm = "主界面主菜单配置"
+
+[[Wifi]]
+    nm = "business:menuConfig"
+    t = "String"
+    cm = "主界面业务菜单配置"
+
+[[Wifi]]
+    nm = "jump:menuConfig"
+    t = "String"
+    cm = "主界面跳转菜单配置"

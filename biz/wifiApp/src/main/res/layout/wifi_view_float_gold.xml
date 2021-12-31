@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/float_gold_iv"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@null"
+            android:src="@drawable/wifi_float_gold_icon" />
+
+        <com.mckj.module.wifi.widget.FloatCountdownView
+            android:id="@+id/float_gold_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/float_gold_iv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:textColor="@color/open_text_white"
+            android:textSize="12sp"
+            app:floatDefaultText="领取红包" />
+    </RelativeLayout>
+
+</layout>
