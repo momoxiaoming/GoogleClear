@@ -1,0 +1,199 @@
+import groovy.xml.MarkupBuilder
+
+apply from: "${rootProject.projectDir}/modules/stringhex/stringHexConfig.gradle"
+
+task createStringHexFile() {
+
+    def rootPath = project.projectDir
+    def folderPath = rootPath.path + "/build/generated/source/hex"
+    def folder = new File(folderPath)
+    if (!folder.exists()) {
+        folder.mkdirs()
+    }
+    //创建包名文件夹
+    def childFolder = new File(folder.path, "/${packageName.toString().replace(".", "/")}")
+    if (!childFolder.exists()) {
+        childFolder.mkdirs()
+    }
+    //创建输出文件
+    def destFile = new File(childFolder.path, "${project.ext.clazz}.kt") //指定输出文件
+    def assetDir = destFile.parentFile
+    if (!assetDir.exists()) {
+        assetDir.mkdirs()
+    }
+    if (destFile != null && !destFile.exists()) {
+        destFile.createNewFile()
+    }
+
+    if (destFile.text != null && destFile.text.size() > 0) {
+        println 'delete suc'
+        destFile.delete()
+    }
+
+    //写入文件
+    destFile.withWriter { writer ->
+        writer.append(generateKotlinCode(packageName))
+        println 'writer suc'
+    }
+
+    //添加source指向路径
+    def mainSource = project.android.sourceSets.findByName("main")
+    if (mainSource == null) {
+        mainSource = project.android.sourceSets.create("main")
+    }
+    mainSource.java.srcDirs += [folder.absolutePath]
+}
+
+/**
+ * 创建Kotlin代码
+ *
+ * @return
+ */
+private String generateKotlinCode(String packageName) {
+    StringBuilder builder = new StringBuilder()
+    builder.append("package ").append(packageName).append(";\n\n")
+    builder.append("import okio.ByteString.Companion.decodeHex\n")
+    builder.append("import kotlin.experimental.xor\n")
+    builder.append('\n')
+    builder.append("object ").append("${ext.clazz}")
+    builder.append(" {\n")
+    builder.append('\n')
+    generateVariable(builder)
+    builder.append('\n')
+    generateMethods(builder)
+    builder.append("}\n")
+    return builder.toString()
+}
+
+/**
+ * 创建变量
+ * @param builder
+ * @return
+ */
+private String generateVariable(StringBuilder builder) {
+    Random random = new Random()
+    ext.source.each { key, value ->
+        int keys = random.nextInt(256)
+        generateAnnotation(builder, "$value")
+        builder.append('\n')
+        builder.append('\t')
+        builder.append("val $key :String")
+        builder.append('\n')
+        builder.append('\t')
+        builder.append("get() {")
+        builder.append('\n')
+        String encryptString = encrypt(value.toString().getBytes(), keys).toString()
+        builder.append('\t')
+        builder.append('\t')
+        builder.append("val bytes = byteArrayOf${encryptString.replace("[", "(").replace("]", ")")}")
+        builder.append('\n')
+        builder.append('\t')
+        builder.append('\t')
+        builder.append("return String(decrypt(bytes,$keys))")
+        builder.append('\n')
+        builder.append('\t')
+        builder.append("}")
+        builder.append('\n')
+    }
+}
+
+private  String generateMethods(StringBuilder builder){
+    builder.append('\t')
+    builder.append("private fun decrypt(bytes: ByteArray, keys: Int): ByteArray {")
+    builder.append('\n')
+    builder.append('\t')
+    builder.append('\t')
+    builder.append("val len = bytes.size")
+    builder.append('\n')
+    builder.append('\t')
+    builder.append('\t')
+    builder.append("for (i in len - 1 downTo 1) {")
+    builder.append('\n')
+    builder.append('\t')
+    builder.append('\t')
+    builder.append('\t')
+    builder.append("bytes[i] = (bytes[i] xor bytes[i - 1])")
+    builder.append('\n')
+    builder.append('\t')
+    builder.append('\t')
+    builder.append("}")
+    builder.append('\n')
+    builder.append('\t')
+    builder.append('\t')
+    builder.append("bytes[0] = (bytes[0] xor keys.toByte())")
+    builder.append('\n')
+    builder.append('\t')
+    builder.append('\t')
+    builder.append("return bytes")
+    builder.append('\n')
+    builder.append('\t')
+    builder.append("}")
+    builder.append('\n')
+}
+
+/**
+ * 创建注释
+ * @param builder
+ * @param description 注释描述
+ * @return
+ */
+private String generateAnnotation(StringBuilder builder, String description) {
+    builder.append('\t')
+    builder.append("/**")
+    builder.append('\n')
+    builder.append('\t')
+    builder.append("* decode:$description")
+    builder.append('\n')
+    builder.append('\t')
+    builder.append("*/")
+}
+
+
+private String hex(byte[] data) {
+    char[] HEX_DIGITS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']
+    char[] result = new char[data.length * 2]
+    int c = 0
+    for (byte b : data) {
+        result[c++] = HEX_DIGITS[(b >> 4) & 0xf]
+        result[c++] = HEX_DIGITS[b & 0xf]
+    }
+    return new String(result)
+}
+
+
+/**
+ * 字符串转化成为16进制字符串
+ * @param s
+ * @return
+ */
+private String strTo16(String s) {
+    def random = new Random()
+    def encode = random.nextInt(100) + separate + s + separate + random.nextInt(100)
+    return hex(encode.getBytes("utf-8"))
+}
+
+private byte[] encrypt(byte[] bytes, int keys) {
+    if (bytes == null) {
+        return null
+    }
+    int len = bytes.length
+    int key = keys
+    for (int i = 0; i < len; i++) {
+        bytes[i] = (byte) (bytes[i] ^ key)
+        key = bytes[i]
+    }
+    return bytes
+}
+
+//private byte[] decrypt(byte[] bytes, int keys) {
+//    if (bytes == null) {
+//        return null;
+//    }
+//    int len = bytes.length;
+//    int key = keys;
+//    for (int i = len - 1; i > 0; i--) {
+//        bytes[i] = (byte) (bytes[i] ^ bytes[i - 1]);
+//    }
+//    bytes[0] = (byte) (bytes[0] ^ key);
+//    return bytes;
+//}

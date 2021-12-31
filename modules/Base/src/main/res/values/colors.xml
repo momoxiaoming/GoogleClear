@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffff</color>
+    <color name="gray">#f5f5f5</color>
+    <color name="gray_f0">#F0F0F0</color>
+    <color name="back">#000000</color>
+    <color name="black">#000000</color>
+
+
+    <color name="red">#f44336</color>
+    <color name="yellow">#ffeb3b</color>
+    <color name="orange">#ff9800</color>
+    <color name="green">#8bc34a</color>
+    <color name="blue">#03a9f4</color>
+
+    <color name="primaryTextColor">#262626</color>
+    <color name="secondaryTextColor">#666666</color>
+    <color name="gray_999">#999999</color>
+    <color name="gray_96">#969696</color>
+
+    <color name="green_15b464">#15B464</color>
+    <color name="green_60c48b">#60C48B</color>
+    <color name="green_7acc9c">#7ACC9C</color>
+    <color name="red_f59285">#F59285</color>
+    <color name="red_f47f6f">#F47F6F</color>
+    <color name="textRed">#F15135</color>
+
+
+    <drawable name="windowBackground">#fafafa</drawable>
+    <drawable name="transparent">@android:color/transparent</drawable>
+
+</resources>

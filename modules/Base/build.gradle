@@ -1,0 +1,78 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion rootProject.android.compileSdkVersion
+    buildToolsVersion rootProject.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.android.minSdkVersion
+        targetSdkVersion rootProject.android.targetSdkVersion
+        versionCode 1_0_00
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+kapt {
+    correctErrorTypes = true
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    api project(':modules:Common')
+
+    api rootProject.ankoCommons
+    api rootProject.ankoSdk
+    api rootProject.constraint
+
+    api rootProject.glide
+    kapt rootProject.glide_apt
+    api rootProject.glide_okhttp
+
+    api rootProject.recycleview
+    api rootProject.swiperefresh
+
+    api rootProject.dagger2
+    api rootProject.dagger2_android
+    kapt rootProject.dagger2_apt
+
+    api rootProject.room
+    kapt rootProject.room_apt
+    api rootProject.room_coroutine
+
+    api rootProject.multitype
+    api rootProject.multiDex
+
+    api rootProject.viewpager2
+    api rootProject.desgin
+    api rootProject.lottie
+
+    api rootProject.autosize
+    api rootProject.mmkv
+    //本地广播
+    api rootProject.localbroadcastmanager
+    //权限申请库
+    api rootProject.rxpermission
+    //防重复点击
+    api rootProject.rxbinding
+    api rootProject.cardview
+
+    api rootProject.eventBus
+    api rootProject.work
+    api rootProject.work_kt
+    api rootProject.concurrentKt
+}

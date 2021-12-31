@@ -1,0 +1,145 @@
+// 自动配置一些通用
+
+
+// === 统一生成各个子项目的 BuildType, 就不用每个都手动写 ===
+def customBuildTypes = [
+]
+
+def abi = ["armeabi-v7a", "arm64-v8a"]
+
+allprojects {
+    afterEvaluate { project ->
+        if (project.hasProperty("android")
+                && project != rootProject) {
+            if (project.plugins.hasPlugin("java-library")) {
+                return
+            }
+            println "Auto Configure project(${project.name})"
+
+            def buildFile = new File(project.projectDir, "build.gradle")
+            if (!buildFile.exists()) {
+                println "project(${project.name}) maybe only a parent dir. ignore it"
+                return
+            }
+
+            def hasARouterPlug = project.plugins.hasPlugin("com.alibaba.arouter")
+            def hasApplication = project.plugins.hasPlugin("com.android.application")
+            def isReleaseBuildType = isReleaseBuildType()
+            println "isReleaseBuildType:${isReleaseBuildType}"
+
+            if (hasApplication && !hasARouterPlug && isReleaseBuildType) {
+                project.pluginManager.apply("com.alibaba.arouter")
+            }
+
+            if (hasApplication) {
+                project.apply from: "$rootProject.projectDir.path/modules/res-guard.gradle"
+            }
+
+            // java8 support
+            if (project.android.compileOptions != null) {
+                project.android.compileOptions.sourceCompatibility = JavaVersion.VERSION_1_8
+                project.android.compileOptions.targetCompatibility = JavaVersion.VERSION_1_8
+            }
+
+            if (project.android.hasProperty("kotlinOptions")) {
+                println "apply kotlin Java1.8 on ${project.name}"
+                project.android.kotlinOptions.jvmTarget = JavaVersion.VERSION_1_8.toString()
+            }
+
+            if (project.android.hasProperty("buildFeatures")) {
+                if (project.hasProperty("ignoreDatabinding") && project.ignoreDatabinding) {
+                    println "ignore viewBinding"
+                } else {
+                    println "apply buildFeatures and viewBinding"
+                    project.android.buildFeatures.dataBinding = true
+                }
+            }
+            // project.android.viewBinding.enabled = true
+
+
+            customBuildTypes.each { buildItem ->
+                def bt = project.android.buildTypes.findByName(buildItem)
+                if (bt == null) {
+                    bt = project.android.buildTypes.create(buildItem)
+                    bt.initWith(project.android.buildTypes.release)
+                    bt.proguardFiles = project.android.buildTypes.release.proguardFiles
+                    println "Create Build type '${buildItem}' in project ${project.name}"
+                }
+            }
+
+            // add buildConfigField
+            project.android.buildTypes.each { bt ->
+                // addBuildConfigs(bt)
+            }
+
+            def useApt = project.hasProperty("kapt")
+            if (useApt) {
+                println "Configure kapt"
+                project.kapt.correctErrorTypes = true
+            }
+
+            project.android.defaultConfig.multiDexEnabled = true
+            // 添加 通用依赖
+            project.android.defaultConfig.testInstrumentationRunner = rootProject.testRunner
+            project.android.testOptions.unitTests.includeAndroidResources = true
+
+            def deps = project.dependencies
+            // unit test
+            deps.add("testImplementation", rootProject.junit)
+            deps.add("testImplementation", rootProject.hamcrest)
+            deps.add("androidTestImplementation", rootProject.junitx)
+            deps.add("androidTestImplementation", rootProject.espressox)
+            //
+            if (hasApplication) {
+                // 纯为了编译时动态生成的反混淆keepjava的类能编译通过用的
+                deps.add("compileOnly", rootProject.daemonCore)
+                deps.add("compileOnly", rootProject.wb_extensions_draw)
+                deps.add("compileOnly", rootProject.wb_extensions_api)
+                //添加arm64-v8a架构
+                project.android.buildTypes.each { buildItem ->
+                    def buildType = project.android.buildTypes.findByName(buildItem.name)
+                    if (buildType != null) {
+                        buildType.ndk.abiFilters = abi
+                    }
+                }
+            }
+
+            // aRouter
+            deps.add("implementation", rootProject.arouter)
+            if (useApt) {
+                println "enable aRouter by kapt"
+                project.kapt {
+                    arguments {
+                        arg("AROUTER_MODULE_NAME", project.getName())
+                    }
+                }
+
+                deps.add("kapt", rootProject.arouter_apt)
+            } else {
+                println "enable aRouter by apt"
+                project.android.defaultConfig.javaCompileOptions.annotationProcessorOptions {
+                    arguments = [AROUTER_MODULE_NAME: project.getName(), AROUTER_GENERATE_DOC: "enable"]
+                }
+
+                deps.add("annotationProcessor", rootProject.arouter_apt)
+            }
+            //
+
+
+        }
+
+    }
+}
+
+apply from: 'modules/writeCommit.gradle'
+apply from: 'modules/sourceDir.gradle'
+apply from: 'modules/auto_string_encrypt/string_encrypt.gradle'
+apply from: 'modules/common_build.gradle'
+
+boolean isReleaseBuildType() {
+    for (String taskName : gradle.startParameter.taskNames) {
+        println("taskName: $taskName")
+        return ((taskName.contains("assemble")||(taskName.toLowerCase(Locale.US).contains("resguard"))) && !taskName.contains("Debug"))
+    }
+    return false
+}

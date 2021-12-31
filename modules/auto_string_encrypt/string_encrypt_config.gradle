@@ -1,0 +1,13 @@
+ext{
+    stringEncrypt_enable = true
+    stringEncrypt_enableInDebug = false
+    stringEncrypt_encryptPackages = [
+            'com.tz',
+            'com.mc',
+            'com.mckj',
+            'com.mckj.sceneslib',
+            'com.mckj.api',
+            'com.mckj.apiimpl',
+            'com.google.daemon.string'
+    ]
+}

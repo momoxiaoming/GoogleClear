@@ -1,0 +1,77 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+
+
+android {
+    compileSdkVersion rootProject.android.compileSdkVersion
+    buildToolsVersion rootProject.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.android.minSdkVersion
+        targetSdkVersion rootProject.android.targetSdkVersion
+        versionCode 1_0_00
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude '.readme'
+        exclude '/z/**'
+    }
+
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+
+    api rootProject.appCompt
+    api rootProject.fragment
+    api rootProject.fragment_kt
+    api rootProject.lifecycle
+    api rootProject.lifecycle_java8
+    api rootProject.core_kt
+
+    api rootProject.okhttp3
+    api rootProject.okhttp3_log
+    api(rootProject.retrofit2) {
+        exclude group: 'com.squareup.okhttp3'
+    }
+    api rootProject.retrofit2_gson
+    api rootProject.retrofit2_rxjava3
+
+    api rootProject.rxjava
+    api rootProject.rxandroid
+    api(rootProject.rxbinding) {
+        exclude group: 'io.reactivex.rxjava2'
+    }
+    api rootProject.rxkotlin
+
+    api rootProject.gson
+
+    api kotlin_stdlib_jdk8
+    api rootProject.kotlinCoroutines
+    api rootProject.kotlinCoroutinesRx3
+
+    api rootProject.mars_xlog
+
+    /**
+     * 纯接口库，用于平台sdk判断
+     * 所有activity继承IBase接口
+     * 应用外activity继承IOutApp接口
+     * 启动页activity继承IStart接口
+     */
+    api rootProject.wb_core_base
+}

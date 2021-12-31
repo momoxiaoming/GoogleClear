@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppText" parent="TextAppearance.AppCompat">
+
+    </style>
+
+    <style name="AppText.Title" parent="TextAppearance.AppCompat.Headline">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
+    </style>
+
+    <style name="AppText.Body" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">@dimen/primaryTextSize</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
+    </style>
+
+    <style name="AppText.Item" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">@dimen/secondaryTextSize</item>
+        <item name="android:textColor">@color/secondaryTextColor</item>
+    </style>
+
+    <style name="AppButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bg_btn_round</item>
+        <item name="android:textColor">@color/btn_color</item>
+    </style>
+
+    <style name="AppButton.Borderless" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:minWidth">24dp</item>
+        <item name="android:minHeight">24dp</item>
+        <item name="android:background">@drawable/bg_btn_boradless</item>
+        <item name="android:textColor">@color/secondaryTextColor</item>
+    </style>
+
+    <style name="AppToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:contentInsetLeft">0dp</item>
+        <item name="android:contentInsetRight">0dp</item>
+        <item name="contentInsetStart">0dp</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="titleTextColor">@color/white</item>
+        <item name="subtitleTextColor">@color/white</item>
+    </style>
+
+    <style name="AppToolbar.Transparent">
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="AppToolbar.Transparent.WhiteBtn">
+        <item name="android:background">@null</item>
+        <item name="android:theme">@style/WhiteActionOverflowButtonStyle</item>
+    </style>
+
+    <style name="WhiteActionOverflowButtonStyle">
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+
+</resources>
