@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.dn.openlib">
+
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<application>
+
+		<activity
+			android:name=".ui.container.ContainerActivity"
+			android:excludeFromRecents="true"
+			android:launchMode="standard"
+			android:screenOrientation="portrait"
+			android:theme="@style/OpenTheme" />
+
+		<activity
+			android:name=".ui.container.ContainerFullScreenActivity"
+			android:excludeFromRecents="true"
+			android:launchMode="standard"
+			android:screenOrientation="portrait"
+			android:theme="@style/OpenTheme" />
+
+		<activity
+			android:name=".ui.container.ContainerTitleActivity"
+			android:excludeFromRecents="true"
+			android:launchMode="standard"
+			android:screenOrientation="portrait"
+			android:theme="@style/OpenTheme" />
+	</application>
+</manifest>

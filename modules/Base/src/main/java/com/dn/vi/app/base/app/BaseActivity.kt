@@ -3,7 +3,6 @@ package com.dn.vi.app.base.app
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.qq.e.base.IBase
 import kotlinx.coroutines.CoroutineScope
 import java.util.concurrent.atomic.AtomicReference
 
@@ -11,7 +10,7 @@ import java.util.concurrent.atomic.AtomicReference
  *  Base Activity。
  * Created by holmes on 2020/5/19.
  **/
-abstract class BaseActivity : AppCompatActivity(), NamedPage, IBase {
+abstract class BaseActivity : AppCompatActivity(), NamedPage {
 
     /**
      * 扩展属性中使用.

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="cleanup_junk_detail_title">Detail</string>
+	<string name="cleanup_clean">CLEANUP</string>
+
+</resources>

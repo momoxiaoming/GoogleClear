@@ -31,9 +31,7 @@ allprojects {
                 project.pluginManager.apply("com.alibaba.arouter")
             }
 
-            if (hasApplication) {
-                project.apply from: "$rootProject.projectDir.path/modules/res-guard.gradle"
-            }
+
 
             // java8 support
             if (project.android.compileOptions != null) {
@@ -92,9 +90,7 @@ allprojects {
             //
             if (hasApplication) {
                 // 纯为了编译时动态生成的反混淆keepjava的类能编译通过用的
-                deps.add("compileOnly", rootProject.daemonCore)
-                deps.add("compileOnly", rootProject.wb_extensions_draw)
-                deps.add("compileOnly", rootProject.wb_extensions_api)
+
                 //添加arm64-v8a架构
                 project.android.buildTypes.each { buildItem ->
                     def buildType = project.android.buildTypes.findByName(buildItem.name)
@@ -131,10 +127,7 @@ allprojects {
     }
 }
 
-apply from: 'modules/writeCommit.gradle'
-apply from: 'modules/sourceDir.gradle'
-apply from: 'modules/auto_string_encrypt/string_encrypt.gradle'
-apply from: 'modules/common_build.gradle'
+
 
 boolean isReleaseBuildType() {
     for (String taskName : gradle.startParameter.taskNames) {

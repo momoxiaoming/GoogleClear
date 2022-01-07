@@ -1,0 +1,20 @@
+# "Config" is the reserved word which to mark the env
+
+[Config]
+package="com.mckj.sceneslib.gen"
+dir= "../src/main/java"
+#author= "[holmes]"
+#nameKey="nm"
+#typeKey="t"
+#commentKey="cm"
+
+# === The perference Group ===
+# === [[Group]] ===
+
+# === nm : name, cm: comment , t: type===
+
+[[Scenes]]
+    nm = "networkSpeed:max"
+    t = "Long"
+    cm = "最大网速"
+

@@ -1,6 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     apply from: 'modules/config.gradle'
+
     repositories {
         maven { url "http://dnsdk.vimedia.cn:8081/repository/vimedia-public/" }
         maven { url "http://dnsdk.vimedia.cn:8081/repository/Viapp-public/" }
@@ -42,5 +43,3 @@ task clean(type: Delete) {
 }
 
 apply from: 'modules/auto_configure.gradle'
-apply from: 'game/morph.gradle'
-apply from: 'biz/bizConfig.gradle'

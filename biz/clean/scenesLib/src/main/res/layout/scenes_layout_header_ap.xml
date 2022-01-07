@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="displayApInfo"
+            type="Boolean" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/broadPadding"
+        android:paddingBottom="@dimen/broadPadding">
+
+        <ImageView
+            android:id="@+id/done"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/scenes_icon_finish_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:textColor="@color/white"
+            android:textSize="29sp"
+            app:layout_constraintBottom_toTopOf="@+id/desc"
+            app:layout_constraintStart_toEndOf="@+id/done"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="热点分享成功" />
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/done"
+            app:layout_constraintStart_toStartOf="@+id/title"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            tools:text="开始连接热点吧" />
+
+        <TextView
+            android:id="@+id/ap_name"
+            style="@style/AppText.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:isGone="@{!displayApInfo}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/title"
+            app:layout_constraintTop_toBottomOf="@+id/done"
+            tools:text="热点名称: wifiap-123456" />
+
+        <TextView
+            android:id="@+id/ap_passwd"
+            style="@style/AppText.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            app:isGone="@{!displayApInfo}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/ap_name"
+            app:layout_constraintTop_toBottomOf="@+id/ap_name"
+            tools:text="热点密码: 123" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

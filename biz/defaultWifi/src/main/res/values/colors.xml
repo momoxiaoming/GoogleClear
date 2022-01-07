@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="primaryColor">#4FD376</color>
-    <color name="primaryDarkColor">#17C371</color>
-    <color name="secondaryColor">#03DAC5</color>
-
-    <color name="bottomColorNor">#B0B0B0</color>
-    <color name="bottomColorSel">#1FC593</color>
-</resources>

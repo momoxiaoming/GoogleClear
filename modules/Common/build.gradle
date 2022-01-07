@@ -67,11 +67,11 @@ dependencies {
 
     api rootProject.mars_xlog
 
-    /**
-     * 纯接口库，用于平台sdk判断
-     * 所有activity继承IBase接口
-     * 应用外activity继承IOutApp接口
-     * 启动页activity继承IStart接口
-     */
-    api rootProject.wb_core_base
+//    /**
+//     * 纯接口库，用于平台sdk判断
+//     * 所有activity继承IBase接口
+//     * 应用外activity继承IOutApp接口
+//     * 启动页activity继承IStart接口
+//     */
+//    api rootProject.wb_core_base
 }

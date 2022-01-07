@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="BezierBackgroundView">
+        <!--曲线高度-->
+        <attr name="bezierHeight" format="dimension" />
+        <!--曲线百分比（0-1）-->
+        <attr name="bezierProgress" format="float" />
+    </declare-styleable>
+
+</resources>

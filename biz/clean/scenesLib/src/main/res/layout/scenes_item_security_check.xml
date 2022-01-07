@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.mckj.sceneslib.entity.SecurityCheckEntity" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="entity"
+            type="SecurityCheckEntity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginBottom="30dp">
+
+        <TextView
+            android:id="@+id/item_security_check_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{entity.name}"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/item_security_check_dash_line"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/scenes_shape_dash_line_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/item_security_check_name_tv"
+            app:layout_constraintRight_toLeftOf="@+id/item_security_check_state_layout"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@id/item_security_check_state_layout"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:visibility="@{entity.state == SecurityCheckEntity.STATE_NORMAL ? View.GONE : View.VISIBLE}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/item_security_check_dash_line"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/item_security_check_state_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:src="@{entity.state == SecurityCheckEntity.STATE_RIGHT ? @drawable/scenes_icon_right_white : @drawable/scenes_icon_wrong_white}"
+                android:visibility="@{entity.state == SecurityCheckEntity.STATE_RIGHT || entity.state == SecurityCheckEntity.STATE_WRONG ? View.VISIBLE : View.GONE}" />
+
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:indeterminateDrawable="@drawable/scenes_anim_loading_white"
+                android:visibility="@{entity.state == SecurityCheckEntity.STATE_LOADING ? View.VISIBLE : View.GONE}" />
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

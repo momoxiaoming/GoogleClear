@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="OpenPurple_200">#FFBB86FC</color>
+    <color name="OpenPurple_500">#FF6200EE</color>
+    <color name="OpenPurple_700">#FF3700B3</color>
+    <color name="OpenBackground">#F5F5F5</color>
+
+    <color name="OpenColorWhite">#FFFFFF</color>
+    <color name="OpenColorWhite50">#80FFFFFF</color>
+    <color name="OpenColorGray">#DDDDDD</color>
+    <color name="OpenColorGray50">#80DDDDDD</color>
+    <color name="OpenColorText">#666666</color>
+    <color name="OpenColorText50">#80666666</color>
+    <color name="OpenColorTextBlack">#333333</color>
+    <color name="OpenColorTextBlack50">#80333333</color>
+    <color name="OpenColorTextHint">#999999</color>
+    <color name="OpenColorTextHint50">#80999999</color>
+
+    <color name="OpenDivider">#E3E3E3</color>
+    <color name="OpenTextColorGray">#ffadadad</color>
+</resources>

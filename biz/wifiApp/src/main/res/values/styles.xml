@@ -1,8 +1,0 @@
-<resources>
-
-    <style name="WifiDialogBottom2Top" parent="android:Animation">
-        <item name="android:windowEnterAnimation">@anim/wifi_anim_bottom_enter</item>
-        <item name="android:windowExitAnimation">@anim/wifi_anim_bottom_exit</item>
-    </style>
-
-</resources>

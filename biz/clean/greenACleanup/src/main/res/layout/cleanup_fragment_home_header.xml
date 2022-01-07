@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/title_layout"
+            layout="@layout/open_include_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.dn.baselib.ui.view.selector.SelectorImageView
+            android:id="@+id/title_setting_iv"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@null"
+            android:padding="14dp"
+            android:src="@drawable/cleanup_icon_setting"
+            app:layout_constraintBottom_toBottomOf="@id/title_layout"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.dn.baselib.ui.view.selector.SelectorImageView
+            android:id="@+id/title_remind_iv"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@null"
+            android:padding="14dp"
+            android:src="@drawable/cleanup_icon_remind"
+            app:layout_constraintBottom_toBottomOf="@id/title_layout"
+            app:layout_constraintEnd_toStartOf="@id/title_setting_iv" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/content_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_layout">
+
+            <Button
+                android:id="@+id/content_smart_btn"
+                android:layout_width="161dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/cleanup_btn_round_white"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="CLEANUP"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="23dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!--扫描中布局-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/scanning_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@id/content_smart_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/scanning_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="184dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginBottom="18dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/cleanup_icon_header_arrow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/scanning_size_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:singleLine="true"
+                    android:text="0.00"
+                    android:textColor="@color/white"
+                    android:textSize="47dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/scanning_desc_tv"
+                    app:layout_constraintEnd_toStartOf="@+id/scanning_unit_tv"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@id/scanning_desc_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:text="正在清理中"
+                    android:textColor="@color/open_text_white"
+                    android:textSize="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/scanning_size_tv" />
+
+                <TextView
+                    android:id="@+id/scanning_unit_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:singleLine="true"
+                    android:text="MB"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/scanning_thing_tv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/scanning_size_tv"
+                    app:layout_constraintTop_toTopOf="@id/scanning_size_tv"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@id/scanning_thing_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="Trash"
+                    android:textColor="@color/white"
+                    android:textSize="13dp"
+                    app:layout_constraintBottom_toBottomOf="@id/scanning_size_tv"
+                    app:layout_constraintStart_toStartOf="@id/scanning_unit_tv"
+                    app:layout_constraintTop_toBottomOf="@id/scanning_unit_tv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--默认布局-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/scan_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@id/content_smart_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/scan_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="117dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/cleanup_icon_header_clean"
+                    app:layout_constraintBottom_toTopOf="@id/scan_desc_tv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/scan_desc_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:singleLine="true"
+                    android:text="垃圾清理，手机更快速"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/scan_iv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.mckj.sceneslib.ui.LSNTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:textColor="#60ffffff"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_layout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+

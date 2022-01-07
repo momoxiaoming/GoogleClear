@@ -1,0 +1,39 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+}
+def getDateVersion() {
+    return new Date().format('yyyy.MM.dd')
+}
+android {
+    compileSdkVersion rootProject.android.compileSdkVersion
+    buildToolsVersion rootProject.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.android.minSdkVersion
+        targetSdkVersion rootProject.android.targetSdkVersion
+        versionCode rootProject.android.versionCode
+        versionName rootProject.android.versionName
+        consumerProguardFiles "consumer-rules.pro"
+        // 定义一些内部依赖版本
+        def dateVer = getDateVersion()
+        def pipeCodeVersion = "${dateVer}-1"
+        resValue('string', 'pipe__code_ver', "${pipeCodeVersion}")
+        buildConfigField("String", "CODE_VER", "\"${pipeCodeVersion}\"")
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    api project(":biz:common:openLib")
+
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <color android:color="@color/white" />
+    </item>
+
+    <item
+        android:drawable="@color/primaryColor"
+        android:gravity="center"
+        android:bottom="431dp"
+        android:top="171dp"
+        android:left="50dp"
+        android:right="50dp"/>
+
+</layer-list>

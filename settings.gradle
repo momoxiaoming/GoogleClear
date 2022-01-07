@@ -1,2 +1,6 @@
 rootProject.name = "GoogleClear"
 include ':app'
+
+apply from: 'modules/mdSettings.gradle'
+apply from: 'biz/bizSettings.gradle'
+

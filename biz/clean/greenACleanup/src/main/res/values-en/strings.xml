@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="cleanup_stop">STOP</string>
+	<string name="cleanup_scaning">SCANNING</string>
+	<string name="cleanup_clean_1">CLEANUP</string>
+	<string name="cleanup_junk_detail">Trash Details></string>
+	<string name="cleanup_clear_junk_desc">Junk cleanup, faster phone</string>
+</resources>

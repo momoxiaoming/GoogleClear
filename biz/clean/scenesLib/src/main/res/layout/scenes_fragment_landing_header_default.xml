@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/landing_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="109dp">
+
+        <ImageView
+            android:id="@+id/landing_header_iv"
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="15dp"
+            android:contentDescription="@null"
+            android:src="@drawable/scenes_icon_finish_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/landing_header_detail_layout"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@id/landing_header_detail_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="start|center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/landing_header_iv"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/landing_header_detail_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start|center_vertical"
+                android:singleLine="true"
+                android:text="加速成功"
+                android:textColor="@color/OpenColorWhite"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/landing_header_detail_desc_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="start|center_vertical"
+                android:singleLine="true"
+                android:text="手机更快度"
+                android:textColor="@color/OpenColorWhite"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/header_layout"
+            layout="@layout/open_include_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/signal_boost_lottie"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="48dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_layout" />
+
+        <TextView
+            android:id="@+id/signal_boost_percent_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/OpenColorWhite"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/signal_boost_lottie"/>
+
+        <TextView
+            android:id="@+id/signal_boost_tip_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/OpenColorWhite"
+            android:textSize="18sp"
+            android:text="WiFI信号正在增强..."
+            app:layout_constraintTop_toBottomOf="@id/signal_boost_percent_tv"/>
+
+        <com.mckj.sceneslib.ui.LSNTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_layout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

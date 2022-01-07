@@ -1,0 +1,11 @@
+//公共库
+include ':biz:common:baseLib'
+include ':biz:common:openLib'
+
+include ':biz:dataLib'
+//业务
+include ':biz:clean:cleanupApp'
+include ':biz:clean:greenACleanup'
+include ':biz:clean:scenesLib'
+include ':biz:clean:cleanCore'
+

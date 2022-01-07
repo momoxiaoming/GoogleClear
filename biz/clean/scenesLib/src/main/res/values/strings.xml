@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="scenes_check_now_net">正在检测网络环境安全</string>
+	<string name="scenes_check_net_err_now">正在检测网络入侵风险</string>
+	<string name="scenes_check_camera_now">正在查找可疑摄像头</string>
+	<string name="scenes_camer_checking">摄像头检测中…</string>
+	<string name="scenes_phone_cool">手机降温</string>
+	<string name="scenes_phone_perfor">提升手机性能</string>
+	<string name="scenes_temp_high">温度过高</string>
+	<string name="scenes_cool_now">立即降温</string>
+	<string name="scenes_cool_finish">降温成功</string>
+	<string name="scenes_close_app">已关闭所有导致发热应用</string>
+	<string name="scenes_back_app">后台运行程序过多</string>
+	<string name="scenes_phone_temp_higt_now">手机温度过高</string>
+	<string name="scenes_super_bat">超级省电</string>
+	<string name="scenes_clean_bat_app">清理耗电应用</string>
+	<string name="scenes_now_yh">立即优化</string>
+	<string name="scenes_now_yh_finish">优化完成</string>
+	<string name="scenes_close_bat_app">已关闭所有耗电应用</string>
+	<string name="scenes_now_fx_bat">正在分析耗电应用</string>
+	<string name="scenes_close_bat_ing">正在关闭耗电应用</string>
+	<string name="scenes_close_bat_app_ing">正在释放手机空间</string>
+	<string name="scenes_bat_yh">电池正在优化中...</string>
+	<string name="scenes_photo_clean">相册清理</string>
+	<string name="scenes_clean_many_ram">释放更多空间</string>
+	<string name="scenes_clean_now">立即清理</string>
+	<string name="scenes_speed_finish">加速完成</string>
+	<string name="scenes_yh_ok">已优化到最佳</string>
+	<string name="scenes_phone_sd">手机杀毒</string>
+	<string name="scenes_check_phone_aq">检查手机安全</string>
+	<string name="scenes_sd_now">立即杀毒</string>
+	<string name="scenes_sd_finish">杀毒完成</string>
+	<string name="scenes_phone_safe">手机已经很安全了</string>
+	<string name="scenes_phone_no_safe">手机失去保护</string>
+	<string name="scenes_phone_no_safe_2">手机安全受到威胁</string>
+	<string name="scenes_check_ys">正在检测隐私风险</string>
+	<string name="scenes_check_bd_app">正在扫描病毒应用</string>
+	<string name="scenes_check_wl">正在检查网络安全</string>
+	<string name="scenes_bd_cs">手机病毒查杀中...</string>
+	<string name="scenes_app_zip_clean">安装包清理</string>
+	<string name="scenes_delete_zip_app">清理无用的安装包</string>
+	<string name="scenes_clean_finish">清理完成</string>
+	<string name="scenes_zip_app_manager">安装包管理</string>
+	<string name="scenes_clean_no_zip">清理不需要的安装包</string>
+	<string name="scenes_big_file_manager">大文件管理</string>
+	<string name="scenes_clean_big_file">清理不需要的大文件</string>
+	<string name="scenes_kd_yh">卡慢优化</string>
+	<string name="scenes_phone_yh_ok2">当前手机优化最佳</string>
+	<string name="scenes_phone_xn">手机性严重降低</string>
+	<string name="scenes_yhsjcl">正在优化手机残留</string>
+	<string name="scenes_phone_ram_ing">正在优化手机内存</string>
+	<string name="scenes_km_ing">卡慢优化中...</string>
+	<string name="scenes_file_clean">文件清理</string>
+	<string name="scenes_clean_file_more">释放更多的空间</string>
+	<string name="scenes_file_manager">文件管理</string>
+	<string name="scenes_game_speed">游戏加速</string>
+	<string name="scenes_speed_ok">加速成功</string>
+	<string name="scenes_yh_zj">手机已优化最佳</string>
+	<string name="scenes_hot_share">热点分享</string>
+	<string name="scenes_share_ll">分享手机流量</string>
+	<string name="scenes_share_now">立即分享</string>
+	<string name="scenes_share_finish">分享完成</string>
+	<string name="scenes_junk_clean">垃圾清理</string>
+	<string name="scenes_junk_many">当前手机垃圾太多</string>
+	<string name="scenes_fx_junk">发现有大量垃圾文件</string>
+	<string name="scenes_jjql">手机空间急需清理</string>
+	<string name="scenes_clean_spped">清理加速</string>
+	<string name="scenes_fcw">防止蹭网</string>
+	<string name="scenes_fcw_desc">防止网络被蹭</string>
+	<string name="scenes_new_tool">新功能</string>
+	<string name="scenes_check_sb">检测共有多少个设备</string>
+	<string name="scenes_net_speed">网络加速</string>
+	<string name="scenes_net_c">当前网络较差</string>
+	<string name="scenes_wljs">网络加速</string>
+	<string name="scenes_net_fxxl">发现更优质的上网线路</string>
+	<string name="scenes_yhlyq">正在优化路由器</string>
+	<string name="scenes_czsw">正在查找优质上网线路</string>
+	<string name="scenes_yhwlpz">正在优化网络安全配置</string>
+	<string name="scenes_net_speed_ing">网路加速中...</string>
+	<string name="scenes_net_cs">网络测速</string>
+	<string name="scenes_wldx">查看网速大小</string>
+	<string name="scenes_ckws">查看网速</string>
+	<string name="scenes_ljcs">立即测试</string>
+	<string name="scenes_cswc">测试完成</string>
+	<string name="scenes_yjjs">一键加速</string>
+	<string name="scenes_phone_now_kj">当前手机内存不足</string>
+	<string name="scenes_ncbz">内存不足</string>
+	<string name="scenes_photo_manager">相册管理</string>
+	<string name="scenes_photo_manager_desc">清理不需要的相片</string>
+	<string name="scenes_hdgk">手机耗电过快</string>
+	<string name="scenes_sdjs">省电加速</string>
+	<string name="scenes_yhhdyy">优化耗电应用</string>
+	<string name="scenes_aqjc">安全检测</string>
+	<string name="scenes_jcwlaq">检测网络安全</string>
+	<string name="scenes_securty_desc">本次优化了1处风险</string>
+	<string name="scenes_video_clean">短视频清理</string>
+	<string name="scenes_video_junk">看视频缓存的垃圾</string>
+	<string name="scenes_junk_clean_ok">垃圾已清理干净</string>
+	<string name="scenes_video_file_many">短视频缓存文件过多</string>
+	<string name="scenes_video_file_many2">抖音快手缓存文件过多</string>
+	<string name="scenes_video_speed">短视频加速</string>
+	<string name="scenes_junk_yh_ok">垃圾已优化干净</string>
+	<string name="scenes_xhzq">信号增强</string>
+	<string name="scenes_xhgr">防止信号干扰</string>
+	<string name="scenes_kgl">抗干扰</string>
+	<string name="scenes_xhyh">信号优化</string>
+	<string name="scenes_ts50">提升50%以上</string>
+	<string name="scenes_net_need_yh">网络需优化</string>
+	<string name="scenes_net_need_yh2">发现更优质的上网线路</string>
+	<string name="scenes_check_wifi_state">正在检查wifi网络状态</string>
+	<string name="scenes_check_wifi_state2">正在查找优质上网线路</string>
+	<string name="scenes_check_wifi_state3">正在优化网络信号</string>
+	<string name="scenes_check_wifi_state4">信号优化中...</string>
+	<string name="scenes_video_manager">视频管理</string>
+	<string name="scenes_clean_video">清理不需要的视频</string>
+	<string name="scenes_video_fast">看视频速度更快</string>
+	<string name="scenes_auto_clean">自动清理</string>
+	<string name="scenes_zip_need_clean">压缩包清理</string>
+	<string name="scenes_zip_need_clean2">清理无用的压缩包</string>
+	<string name="scenes_zip_manager">压缩包管理</string>
+	<string name="scenes_zip_manager2">清理不需要的压缩包</string>
+	<string name="scenes_finish" type="string">完成</string>
+	<string name="scenes_phone_speed" type="string">手机加速</string>
+	<string name="scenes_clean_phone" type="string">清理手机内存</string>
+	<string name="scenes_memory_Low" type="string">内存不足</string>
+	<string name="scenes_now_Speed" type="string">立即加速</string>
+	<string name="scenes_phone_speed_finish" type="string">手机已加速</string>
+	<string name="scenes_phone_opt_finish" type="string">手机已优化最佳</string>
+	<string name="scenes_phone_speed_ram" type="string">手机内存加速</string>
+	<string name="scenes_phone_clean_ad" type="string">清理广告加速</string>
+	<string name="scenes_phone_clean_ing" type="string">正在释放手机空间</string>
+	<string name="scenes_phone_speed_ing" type="string">手机加速中...</string>
+	<string name="scenes_many_app" type="string">大量手机应用占用内存</string>
+	<string name="scenes_phone_lazy" type="string">手机运行速度变慢</string>
+	<string name="scenes_camera_check" type="string">摄像头检测</string>
+	<string name="scenes_camera_found" type="string">找出摄像头</string>
+	<string name="scenes_check" type="string">立即检测</string>
+	<string name="scenes_check_finish" type="string">检测完成</string>
+	<string name="scenes_check_no" type="string">未发现异常</string>
+	<string name="scenes_check_net" type="string">网络环境待检测</string>
+	<string name="scenes_check_net_err" type="string">网络环境风险待检测</string>
+	<string name="scenes_phone_speed_os">手机加速成功</string>
+	<string name="scenes_app_hcql">应用缓存清理</string>
+	<string name="scenes_ad_hcql">广告垃圾清理</string>
+	<string name="scenes_ljql">残留垃圾清理</string>
+	<string name="scenes_clean_junk_ing">垃圾正在清理中...</string>
+	<string name="scenes_share_yhwlpz">优化网络配置</string>
+	<string name="scenes_share_fxrd">开始分享热点</string>
+	<string name="scenes_share_fxcg">热点分享成功</string>
+	<string name="scenes_scanning_sjyj">正在扫描手机硬件</string>
+	<string name="scenes_close_hot_app">关闭导致发热应用</string>
+	<string name="scenes_temp_jw">手机开始降温</string>
+	<string name="scenes_sjjw_ing">手机正在降温中...</string>
+	<string name="scenes_clean_video_kj">清理视频释放空间</string>
+	<string name="scenes_clean_app_zip">清理无用安装包</string>
+	<string name="scenes_clean_big_file2">清理较大文件</string>
+	<string name="scenes_plase_con_wifi">请连接WiFi</string>
+	<string name="scenes_plase_con_net">请连接网络</string>
+	<string name="scenes_wn">蜗牛</string>
+	<string name="scenes_net_zxc">自行车</string>
+	<string name="scenes_net_qc">汽车</string>
+	<string name="scenes_net_fj">飞机</string>
+	<string name="scenes_net_hj">火箭</string>
+	<string name="scenes_sec_aes">是否加密</string>
+	<string name="scenes_sec_dns">DNS劫持</string>
+	<string name="scenes_sec_aq">网络安全</string>
+	<string name="scenes_sec_scanning">正在检测中...</string>
+	<string name="scenes_hot_is_open">热点已开启</string>
+	<string name="scenes_other_app_con">其他设备快来连接使用吧</string>
+	<string name="scenes_hot_pwd">热点密码:</string>
+	<string name="scenes_wifi_name_default">热点名称: --</string>
+	<string name="scenes_wifi_pwd_default">热点密码: --</string>
+	<string name="scenes_hot_pwd_ck">热点密码: 点击查看WLAN热点</string>
+	<string name="scenes_short_video_desc1">短视频缓存清理</string>
+	<string name="scenes_short_video_desc2">抖音快手缓存清理</string>
+	<string name="scenes_short_video_desc3">QQ空间短视频缓存清理</string>
+	<string name="scenes_short_video_desc4">短视频优化中...</string>
+</resources>

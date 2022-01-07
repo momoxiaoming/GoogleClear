@@ -1,0 +1,39 @@
+# "Config" is the reserved word which to mark the env
+
+[Config]
+package="com.mckj.module.cleanup.gen"
+dir= "../src/main/java"
+#author= "[holmes]"
+#nameKey="nm"
+#typeKey="t"
+#commentKey="cm"
+
+# === The perference Group ===
+# === [[Group]] ===
+
+# === nm : name, cm: comment , t: type===
+
+[[Cleanup]]
+    nm = "cleanup:home:menuConfig"
+    t = "String"
+    cm = "主界面主菜单配置"
+
+[[Cleanup]]
+    nm = "cleanup:business:menuConfig"
+    t = "String"
+    cm = "主界面业务菜单配置"
+
+[[Cleanup]]
+    nm = "cleanup:jump:menuConfig"
+    t = "String"
+    cm = "主界面跳转菜单配置"
+
+[[Cleanup]]
+    nm = "cleanup:home:scanTime"
+    t = "Long"
+    cm = "扫描时间"
+
+    [[Cleanup]]
+        nm = "galleryGuideProgress"
+        t = "Int"
+        cm = "图库引导进度"

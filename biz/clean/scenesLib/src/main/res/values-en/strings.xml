@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="scenes_check_now_net">Network Security Being Checked</string>
+	<string name="scenes_check_net_err_now">Network intrusion risk being detected</string>
+	<string name="scenes_check_camera_now">Looking for suspicious ipc camera</string>
+	<string name="scenes_camer_checking">Find Cameras…</string>
+	<string name="scenes_phone_cool">Mobile Phone Cooling</string>
+	<string name="scenes_phone_perfor">Improve phone performance</string>
+	<string name="scenes_temp_high">High temperature</string>
+	<string name="scenes_cool_now">Immediate cooling down</string>
+	<string name="scenes_cool_finish">Cooling success</string>
+	<string name="scenes_close_app">Close all heat-generating apps</string>
+	<string name="scenes_back_app">Too many app running in the background</string>
+	<string name="scenes_phone_temp_higt_now">High phone temperature</string>
+	<string name="scenes_super_bat">POWER</string>
+	<string name="scenes_clean_bat_app">clean up power hungry apps</string>
+	<string name="scenes_now_yh">OPTIMIZE</string>
+	<string name="scenes_now_yh_finish">COMPLETED</string>
+	<string name="scenes_close_bat_app">close power-hungry apps</string>
+	<string name="scenes_now_fx_bat">Analyzing Energy Apps</string>
+	<string name="scenes_close_bat_ing">Close Energy Apps</string>
+	<string name="scenes_close_bat_app_ing">Freeing up space on the phone</string>
+	<string name="scenes_bat_yh">Optimization in process...</string>
+	<string name="scenes_photo_clean">Album Cleaning</string>
+	<string name="scenes_clean_many_ram">free up more space</string>
+	<string name="scenes_clean_now">CLEAN</string>
+	<string name="scenes_speed_finish">COMPLETED</string>
+	<string name="scenes_yh_ok">COMPLETED</string>
+	<string name="scenes_phone_sd">Mobile Antivirus</string>
+	<string name="scenes_check_phone_aq">Check Mobile Security</string>
+	<string name="scenes_sd_now">Kill the virus now</string>
+	<string name="scenes_sd_finish">COMPLETED</string>
+	<string name="scenes_phone_safe">COMPLETED</string>
+	<string name="scenes_phone_no_safe">Cell phone lost protection</string>
+	<string name="scenes_phone_no_safe_2">Cell phone security at risk</string>
+	<string name="scenes_check_ys">Privacy risks being detected</string>
+	<string name="scenes_check_bd_app">Scanning for virus apps</string>
+	<string name="scenes_check_wl">Checking network security</string>
+	<string name="scenes_bd_cs">clean...</string>
+	<string name="scenes_app_zip_clean">Installer Cleanup</string>
+	<string name="scenes_delete_zip_app">Clean up useless installer</string>
+	<string name="scenes_clean_finish">COMPLETED</string>
+	<string name="scenes_zip_app_manager">Package Manager</string>
+	<string name="scenes_clean_no_zip">Clean App Installation Package</string>
+	<string name="scenes_big_file_manager">Large File</string>
+	<string name="scenes_clean_big_file">Clean Large File</string>
+	<string name="scenes_kd_yh">CATON</string>
+	<string name="scenes_phone_yh_ok2">The phone is in good condition</string>
+	<string name="scenes_phone_xn">Inadequate cell phone performance</string>
+	<string name="scenes_yhsjcl">Optimizing phone junk</string>
+	<string name="scenes_phone_ram_ing">Optimizing phone memory</string>
+	<string name="scenes_km_ing">Caton Optimizing...</string>
+	<string name="scenes_file_clean">File Cleanup</string>
+	<string name="scenes_clean_file_more">Free up space on your phone</string>
+	<string name="scenes_file_manager">File Manager</string>
+	<string name="scenes_game_speed">Game</string>
+	<string name="scenes_speed_ok">COMPLETED</string>
+	<string name="scenes_yh_zj">COMPLETED</string>
+	<string name="scenes_hot_share">WIFIHOT</string>
+	<string name="scenes_share_ll">Share Mobile Traffic</string>
+	<string name="scenes_share_now">SHARE</string>
+	<string name="scenes_share_finish">COMPLETED</string>
+	<string name="scenes_junk_clean">Trash</string>
+	<string name="scenes_junk_many">Too much cell phone junk</string>
+	<string name="scenes_fx_junk">Found lots of junk files</string>
+	<string name="scenes_jjql">Phone space needs to be cleared</string>
+	<string name="scenes_clean_spped">CleanFast</string>
+	<string name="scenes_fcw">Preventing network scraping</string>
+	<string name="scenes_fcw_desc">Preventing network scraping</string>
+	<string name="scenes_new_tool">NEW</string>
+	<string name="scenes_check_sb">Test how many devices in total</string>
+	<string name="scenes_net_speed">Network</string>
+	<string name="scenes_net_c">Current poor network</string>
+	<string name="scenes_wljs">Internet Acceleration</string>
+	<string name="scenes_net_fxxl">Discover better internet lines</string>
+	<string name="scenes_yhlyq">Optimizing the router</string>
+	<string name="scenes_czsw">Looking for a quality Internet connection</string>
+	<string name="scenes_yhwlpz">Network security configuration is being optimized</string>
+	<string name="scenes_net_speed_ing">Accelerating...</string>
+	<string name="scenes_net_cs">Network Speed Test</string>
+	<string name="scenes_wldx">Check Internet speed</string>
+	<string name="scenes_ckws">Check Internet speed</string>
+	<string name="scenes_ljcs">TEST</string>
+	<string name="scenes_cswc">COMPLETED</string>
+	<string name="scenes_yjjs">SPEEDUP</string>
+	<string name="scenes_phone_now_kj">Current phone memory is low</string>
+	<string name="scenes_ncbz">Low memory</string>
+	<string name="scenes_photo_manager">Albums Management</string>
+	<string name="scenes_photo_manager_desc">Clear unwanted photos</string>
+	<string name="scenes_hdgk">Fast phone power consumption</string>
+	<string name="scenes_sdjs">PowerSaving</string>
+	<string name="scenes_yhhdyy">Optimize power-hungry apps</string>
+	<string name="scenes_aqjc">Security Testing</string>
+	<string name="scenes_jcwlaq">Security Testing</string>
+	<string name="scenes_securty_desc">This optimization of 1 ris</string>
+	<string name="scenes_video_clean">Short Video Cleaning</string>
+	<string name="scenes_video_junk">Watch the video cache junk</string>
+	<string name="scenes_junk_clean_ok">Trash has been cleaned up</string>
+	<string name="scenes_video_file_many">Too many video cache files</string>
+	<string name="scenes_video_file_many2">Too many cache files</string>
+	<string name="scenes_video_speed">VideoSpeed</string>
+	<string name="scenes_junk_yh_ok">Trash is optimized and clean</string>
+	<string name="scenes_xhzq">SignalsPower</string>
+	<string name="scenes_xhgr">Prevent signal interference</string>
+	<string name="scenes_kgl">Anti Interference</string>
+	<string name="scenes_xhyh">Signal Optimization</string>
+	<string name="scenes_ts50">Up to 50% or more</string>
+	<string name="scenes_net_need_yh">Network needs optimization</string>
+	<string name="scenes_net_need_yh2">Discover better internet lines</string>
+	<string name="scenes_check_wifi_state">Checking wifi network status</string>
+	<string name="scenes_check_wifi_state2">Looking for a quality Internet connection</string>
+	<string name="scenes_check_wifi_state3">Optimizing network signal</string>
+	<string name="scenes_check_wifi_state4">Optimization in progress...</string>
+	<string name="scenes_video_manager">VideoManage</string>
+	<string name="scenes_clean_video">Clean unwanted videos</string>
+	<string name="scenes_video_fast">Faster video viewing</string>
+	<string name="scenes_auto_clean">AutoClean</string>
+	<string name="scenes_zip_need_clean">ZipCleanup</string>
+	<string name="scenes_zip_need_clean2">Clean up useless zip files</string>
+	<string name="scenes_zip_manager">Compression Management</string>
+	<string name="scenes_zip_manager2">Clean up unwanted zip files</string>
+	<string name="scenes_finish" type="string">COMPLETED</string>
+	<string name="scenes_phone_speed" type="string">SPEED</string>
+	<string name="scenes_clean_phone" type="string">Clear phone memory</string>
+	<string name="scenes_memory_Low" type="string">low</string>
+	<string name="scenes_now_Speed" type="string">SPEEDUP</string>
+	<string name="scenes_phone_speed_finish" type="string">The phone has sped up</string>
+	<string name="scenes_phone_opt_finish" type="string">The phone is optimized for optimal</string>
+	<string name="scenes_phone_speed_ram" type="string">Phone memory acceleration</string>
+	<string name="scenes_phone_clean_ad" type="string">Clean ad acceleration</string>
+	<string name="scenes_phone_clean_ing" type="string">Freeing up phone space</string>
+	<string name="scenes_phone_speed_ing" type="string">phone speed...</string>
+	<string name="scenes_many_app" type="string">Application memory usage</string>
+	<string name="scenes_phone_lazy" type="string">The phone runs slower</string>
+	<string name="scenes_camera_check" type="string">CAMERA</string>
+	<string name="scenes_camera_found" type="string">Find a camera</string>
+	<string name="scenes_check" type="string">Detect Now</string>
+	<string name="scenes_check_finish" type="string">COMPLETED</string>
+	<string name="scenes_check_no" type="string">No abnormality found</string>
+	<string name="scenes_check_net" type="string">Network environment to be tested</string>
+	<string name="scenes_check_net_err" type="string">Network environment to be tested</string>
+	<string name="scenes_phone_speed_os">COMPLETED</string>
+	<string name="scenes_app_hcql">App Cache Cleanup</string>
+	<string name="scenes_ad_hcql">Ad cache cleanup</string>
+	<string name="scenes_ljql">Trash removal</string>
+	<string name="scenes_clean_junk_ing">Trash is cleaning...</string>
+	<string name="scenes_share_yhwlpz">optimize network configuration</string>
+	<string name="scenes_share_fxrd">Share Network Hotspot</string>
+	<string name="scenes_share_fxcg">Share Success</string>
+	<string name="scenes_scanning_sjyj">Scanning phone hardware</string>
+	<string name="scenes_close_hot_app">close apps that cause heat</string>
+	<string name="scenes_temp_jw">Reduce the phone temperature</string>
+	<string name="scenes_sjjw_ing">Phone is cooling down...</string>
+	<string name="scenes_clean_video_kj">Clear video to free up space</string>
+	<string name="scenes_clean_app_zip">Clean up useless packages</string>
+	<string name="scenes_clean_big_file2">Clean up larger files</string>
+	<string name="scenes_plase_con_wifi">Please connect WiFi</string>
+	<string name="scenes_plase_con_net">Please connect to the network</string>
+	<string name="scenes_wn">Snails</string>
+	<string name="scenes_net_zxc">Bicycle</string>
+	<string name="scenes_net_qc">Car</string>
+	<string name="scenes_net_fj">Airplane</string>
+	<string name="scenes_net_hj">Rocket</string>
+	<string name="scenes_sec_aes">Encryption or not</string>
+	<string name="scenes_sec_dns">DNS Hijack</string>
+	<string name="scenes_sec_aq">Cyber Security</string>
+	<string name="scenes_sec_scanning">Under testing...</string>
+
+	<string name="scenes_hot_is_open">wifi is open</string>
+	<string name="scenes_other_app_con">everyone connects together</string>
+	<string name="scenes_hot_pwd">password:</string>
+	<string name="scenes_wifi_name_default">name: --</string>
+	<string name="scenes_wifi_pwd_default">password: --</string>
+	<string name="scenes_hot_pwd_ck">password: click to see</string>
+	<string name="scenes_short_video_desc1">Short Video Cache Cleanup</string>
+	<string name="scenes_short_video_desc2">tiktok Cache Cleanup</string>
+	<string name="scenes_short_video_desc3">other video Cache Cleanup</string>
+	<string name="scenes_short_video_desc4">Video Optimization...</string>
+</resources>
