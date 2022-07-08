@@ -1,0 +1,5 @@
+{{- with .Data.Events -}}
+{{ range . -}}
+{{ .Name }},{{ safeHan .Comment }},0
+{{ end }}
+{{- end -}}

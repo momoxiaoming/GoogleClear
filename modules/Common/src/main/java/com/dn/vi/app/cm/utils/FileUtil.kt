@@ -21,7 +21,29 @@ import java.util.*
 object FileUtil {
 
     const val TAG = "FileUtil"
+    fun getFileSizeNumber(size: Long): Float {
+        return when {
+            size < 1000 -> {
+                //999B
+                size.toFloat()
+            }
 
+            size < 1000 * 1024L -> {
+                //999KB
+                size / 1024f
+            }
+            size < 1000 * 1024 * 1024L -> {
+                size / 1024f / 1024
+            }
+
+            size < 1000 * 1024 * 1024 * 1024L -> {
+                size / 1024f / 1024 / 1024
+            }
+            else -> {
+                size / 1024f / 1024 / 1024 / 1024
+            }
+        }
+    }
     /**
      * Return the file by path.
      *

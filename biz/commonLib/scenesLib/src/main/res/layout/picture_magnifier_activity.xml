@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="ResourceName">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_pic_back"
+            android:layout_width="69dp"
+            android:layout_height="28dp"
+            android:background="@drawable/bg_picture_magnifier"
+            android:text="返回"
+            android:textSize="16sp"
+            android:textColor="#ff333333"
+            android:gravity="center_vertical"
+            app:drawableLeftCompat="@drawable/ic_pic_magnifier_back_landing"
+            android:paddingLeft="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="37dp"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_pic_del"
+            android:layout_width="83dp"
+            android:layout_height="28dp"
+            android:background="@drawable/bg_picture_magnifier"
+            android:text="删除"
+            android:textSize="16sp"
+            android:textColor="#ff333333"
+            android:gravity="center_vertical"
+            app:drawableLeftCompat="@drawable/ic_pic_magnifier_photo_delete"
+            android:paddingLeft="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="13dp"
+            android:layout_marginTop="37dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/preview_recycler"
+            android:layout_width="335dp"
+            android:layout_height="500dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pic_del"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginEnd="13dp"/>
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/ib_pic_previous_page"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_pic_magnifier_photo_left_turn"
+            app:layout_constraintStart_toStartOf="@+id/preview_recycler"
+            app:layout_constraintTop_toTopOf="@+id/preview_recycler"
+            app:layout_constraintBottom_toBottomOf="@+id/preview_recycler"
+            android:layout_marginStart="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/ib_pic_next_page"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_pic_magnifier_photo_right_turn"
+            app:layout_constraintEnd_toEndOf="@+id/preview_recycler"
+            app:layout_constraintTop_toTopOf="@+id/preview_recycler"
+            app:layout_constraintBottom_toBottomOf="@+id/preview_recycler"
+            android:layout_marginEnd="10dp"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_pic_small"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:text="小"
+            android:textColor="#ffff8244"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:visibility="gone"
+            android:background="@drawable/bg_pic_magnifier_big_and_small"
+            app:layout_constraintBottom_toTopOf="@+id/btn_save"
+            app:layout_constraintStart_toStartOf="@+id/preview_recycler"
+            android:layout_marginStart="22dp"
+            android:layout_marginBottom="16dp"/>
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/sb_pic_seekbar"
+            android:layout_width="207dp"
+            android:layout_height="13dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_save"
+            app:layout_constraintStart_toEndOf="@+id/btn_pic_small"
+            app:layout_constraintEnd_toStartOf="@+id/btn_pic_big"
+            android:thumbOffset="2dp"
+            android:visibility="gone"
+            android:max="3"
+            android:min="1"
+            android:thumb="@drawable/ic_pic_magnifier_photo_sliding"
+            android:progressDrawable="@drawable/bg_pic_seek_bar"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="24dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_pic_big"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:text="大"
+            android:textColor="#ffff8244"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:gravity="center"
+            android:background="@drawable/bg_pic_magnifier_big_and_small"
+            app:layout_constraintBottom_toTopOf="@+id/btn_save"
+            app:layout_constraintEnd_toEndOf="@+id/preview_recycler"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="16dp"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_pic_btn_save"
+            android:gravity="center"
+            android:text="保存"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:textColor="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="39dp"/>
+
+        <LinearLayout
+            android:id="@+id/empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="226dp"
+                android:layout_height="149dp"
+                android:scaleType="center"
+                android:src="@drawable/cleanupx_gallery_empty_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无内容，去其他相册看看"
+                android:textColor="#999999"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

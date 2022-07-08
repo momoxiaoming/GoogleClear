@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cleanup_available">可用</string>
+    <string name="cleanup_used">已用</string>
+    <string name="cleanup_used_memory">已使用内存</string>
+    <string name="cleanup_feature">特色功能</string>
+
+
+<!--    首页推荐-->
+    <string name="cleanup_home_recomend_power_save_title">开始优化电池</string>
+    <string name="cleanup_home_recomend_power_save_desc">检测到当前手机存在较多耗电应用，点击优化立即开启超级省电！</string>
+    <string name="cleanup_home_recomend_power_save_btn">优化</string>
+    <string name="cleanup_home_recomend_junck_clean_title" >开始清理垃圾</string>
+    <string name="cleanup_home_recomend_junck_clean_desc">检测到%s残余垃圾，可能会影响手机运行速度！点击清理为手机提速</string>
+    <string name="cleanup_home_recomend_junck_clean_btn" >清理</string>
+    <string name="cleanup_home_recomend_app_lock_title">体验应用锁功能</string>
+    <string name="cleanup_home_recomend_app_lock_desc" >应用锁功能可加密您的应用，避免重要应用数据泄露，保障您的隐私，点击立即体验</string>
+    <string name="cleanup_home_recomend_app_lock_btn" >体验</string>
+    <string name="cleanup_home_recomend_phone_speed_title">立即加速</string>
+    <string name="cleanup_home_recomend_phone_speed_btn">扫描</string>
+    <string name="cleanup_home_recomend_phone_speed_desc">内存使用量达到%s,立即提升</string>
+    <string name="cleanup_home_recommend_skip">跳过</string>
+    <string name="cleanup_home_recomend_ovs_wallpaper_btn">开启</string>
+    <string name="cleanup_home_recomend_ovs_wallpaper_title">壁纸一键加速</string>
+    <string name="cleanup_home_recomend_ovs_wallpaper_desc">支持快速便捷的手机提速</string>
+
+    <string name="cleanup_home_recomend_power_save">发现%s个应用耗电异常，可能影响手机电池寿命</string>
+    <string name="cleanup_home_recomend_power_save_unit">个</string>
+    <string name="cleanup_home_recomend_power_save_btn_two">一键省电</string>
+    <string name="cleanup_home_recomend_power_save_title_one">%s个耗电异常</string>
+
+    <string name="cleanup_home_recomend_phone_speed_desc_two">支持快速便捷的手机提速</string>
+    <string name="cleanup_home_recomend_phone_speed">发现%s个应用活动异常，可能影响手机寿命</string>
+    <string name="cleanup_home_recomend_phone_speed_unit">个</string>
+    <string name="cleanup_home_recomend_phone_speed_btn_two">立即处理</string>
+    <string name="cleanup_home_recomend_phone_speed_title_one">%s个应用异常</string>
+
+    <string name="cleanup_home_recomend_junk_clean">手机垃圾内存超过%sGB，手机运行效率很慢</string>
+    <string name="cleanup_home_recomend_junk_clean_unit">GB</string>
+    <string name="cleanup_home_recomend_junk_clean_btn">快速清理</string>
+    <string name="cleanup_home_recomend_junk_clean_title_one">超过%sGB垃圾</string>
+
+    <string name="cleanup_home_recomend_cool_down">手机发热严重，CPU温度已达%s℃</string>
+    <string name="cleanup_home_recomend_cool_down_btn">快速散热</string>
+    <string name="cleanup_home_recomend_cool_down_title_one">温度过高%s℃</string>
+
+    <string name="cleanup_home_recomend_antivirus">发现%s个恶意风险软件，非法获取手机权限</string>
+    <string name="cleanup_home_recomend_antivirus_unit">个</string>
+    <string name="cleanup_home_recomend_antivirus_btn">手机杀毒</string>
+    <string name="cleanup_home_recomend_antivirus_title_one">%s个恶意软件</string>
+
+    <string name="cleanup_home_recomend_uninstall_clean">发现手机顽固残留文件%sMB存在自动隐藏风险</string>
+    <string name="cleanup_home_recomend_uninstall_clean_btn">快速清理</string>
+    <string name="cleanup_home_recomend_uninstall_clean_title_one">残留文件%sMB</string>
+
+    <string name="cleanup_home_recomend_video_clean">手机内存紧张，视频文件占比较多</string>
+    <string name="cleanup_home_recomend_video_clean_key">内存紧张</string>
+    <string name="cleanup_home_recomend_video_clean_btn">短视频清理</string>
+    <string name="cleanup_home_recomend_video_clean_title_one">视频文件过多%s</string>
+
+    <string name="cleanup_home_recomend_net_speed">手机网络下载速度被恶意限制，影响正常使用</string>
+    <string name="cleanup_home_recomend_net_speed_key">恶意限制</string>
+    <string name="cleanup_home_recomend_net_speed_btn">网络加速</string>
+    <string name="cleanup_home_recomend_net_speed_title_one">网络受限%skb/s</string>
+
+
+
+    <!-- 2022.4.14新增-->
+    <string name="cleanup_home_recomend_gallery_clean_title">图片清理</string>
+    <string name="cleanup_home_recomend_gallery_clean_desc">在小游戏中快速管理照片</string>
+    <string name="cleanup_home_recomend_gallery_clean_btn">使 用</string>
+</resources>

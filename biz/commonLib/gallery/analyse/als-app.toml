@@ -1,0 +1,99 @@
+
+# "Config" is the reserved word which to mark the env
+
+[Config]
+package="com.mckj.gen"
+dir= "../src/main/java"
+#author= "[leo]"
+#nameKey="nm"
+#typeKey="t"
+#commentKey="c"
+
+# "Params" is the reserved word which to define the analyse sub params of a event
+# param=alias, the alias use to write this toml
+
+# the "c" is reserved word to param
+[Params]
+what="w"
+where="wh"
+when="wn"
+from="f"
+type="t"
+
+
+# the events
+# [event_name]
+# c="the event comment"
+# act="the act params comment"
+# content=""    if comment is empty , ignore
+
+[photo_clean_page_up_glide]
+c="相册清理_清理页面_上滑"
+
+[photo_clean_page_both_sides]
+c="相册清理_清理页面_左右划"
+
+[photo_clean_thumbnail_click]
+c="相册清理_缩略图_点击"
+
+[photo_clean_thumbnail_slide]
+c="相册清理_缩略图_滑动"
+
+[classify_pop_show]
+c="相册分类弹窗_展示"
+
+[recycle_photo_preview]
+c="回收站_图片_大图预览"
+
+[recycle_auto_delete]
+c="回收站_7天自动删除_删除"
+t="删除张数"
+
+[photo_clean_guidance_show]
+c="相册清理_引导_展示"
+t="步骤展示名称"
+
+[photo_clean_function_click]
+c="相册清理_功能_点击"
+t="步骤展示名称"
+
+[photo_clean_popup_show]
+c="图片清理介绍弹窗_展示"
+
+[photo_clean_popup_click]
+c="图片清理介绍弹窗_点击"
+t="点击功能名"
+
+[photo_clean_no_photo]
+c="图片清理页_无照片_展示"
+
+[photo_clean_show]
+c="图片清理页_展示"
+
+[photo_select_show]
+c="图片选择页_展示"
+f="上报来源"
+
+[photo_select_click]
+c="图片选择页_点击Clean Up"
+f="上报来源"
+t="上报删除图片数量"
+
+[photo_clean_action]
+c="相册清理 操作记录"
+t="操作类型"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

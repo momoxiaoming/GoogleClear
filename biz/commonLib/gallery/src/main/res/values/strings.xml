@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gallery_save">已节省%s%s</string>
+    <string name="gallery_swipe_up_to_delete_pictures">上滑删除图片</string>
+    <string name="gallery_albums">相册分类</string>
+    <string name="gallery_left_right_change_between_photos">左右切换</string>
+    <string name="gallery_swipe_up_to_delete">上划删除不要的照片</string>
+    <string name="gallery_7day_find1">删除的图片和视频在这里，</string>
+    <string name="gallery_7day_find2">7天</string>
+    <string name="gallery_7day_find3">内可找回</string>
+    <string name="album_classify">相册分类</string>
+    <string name="gallery_null">暂无内容，去其他相册看看</string>
+    <string name="gallery_trash">回收站</string>
+    <string name="gallery_photos">图片</string>
+    <string name="gallery_video">视频</string>
+    <string name="gallery_restoreing">恢复中</string>
+    <string name="gallery_goto">去看看</string>
+    <string name="gallery_restore">恢复</string>
+    <string name="gallery_delete_sure">彻底删除</string>
+    <string name="gallery_tips_7_image">7天内删除的图片可在这里恢复</string>
+    <string name="gallery_tips_7_video">7天内删除的视频可在这里恢复</string>
+    <string name="gallery_selected_x">已选%d张</string>
+    <string name="gallery_x_images">张图片</string>
+    <string name="gallery_x_videos">个视频</string>
+    <string name="gallery_x_restored_successfully">%s恢复成功</string>
+    <string name="gallery_x_delete_successfully">%s删除成功</string>
+    <string name="gallery_x_image_deleted_sure">您勾选了%s，删除后将无法恢复，确定要删除吗?</string>
+    <string name="gallery_x_restored_successfully_tips">%s已恢复至手机相册</string>
+    <string name="cancel">取消</string>
+    <string name="delete">删除</string>
+    <string name="gallery_ok">我知道了</string>
+    <string name="select_all">全选</string>
+    <string name="x_day">%d天</string>
+
+    <string name="welcome_dialog_title">图片清理</string>
+    <string name="welcome_dialog_content">滑动管理你的图片</string>
+    <string name="welcome_dialog_instructions">介绍</string>
+    <string name="welcome_dialog_remove_tips">左滑移除</string>
+    <string name="welcome_dialog_keep_tips">右滑保留</string>
+    <string name="welcome_dialog_go">开始</string>
+    <string name="welcome_dialog_clean_up_size">已增加 %s 存储</string>
+    <string name="gallery_no_photos">暂无图片</string>
+    <string name="gallery_swipe_up">上滑快速删除</string>
+    <string name="gallery_clean_size_content">&lt;font color=&quot;#3198F4&quot;&gt;%d&lt;/font&gt; 选择图片</string>
+
+    <string name="exit_dialog_title">退出?</string>
+    <string name="exit_dialog_content">退出将不会保留你的操作，继续清理？</string>
+    <string name="exit_dialog_exit">退出</string>
+    <string name="exit_dialog_continue">继续</string>
+
+    <string name="gallery_clean_complete">完成!</string>
+    <string name="gallery_clean_btn_content">清理</string>
+
+    <string name="result_title">结果</string>
+    <string name="result_content_tips">恭喜</string>
+    <string name="result_content">已删除 &lt;font color=&quot;#3198F4&quot;&gt;%d&lt;/font&gt; 张图片，释放 &lt;font color=&quot;#3198F4&quot;&gt;%s&lt;/font&gt; MB</string>
+    <string name="result_content_again">再来一次</string>
+    <string name="result_content_finish">相册已全部整理完毕</string>
+    <string name="gallery_clean_size_content_finish">全部图片已整理，请及时删除</string>
+</resources>

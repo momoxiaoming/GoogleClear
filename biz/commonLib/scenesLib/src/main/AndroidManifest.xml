@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mckj.sceneslib">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+    <uses-feature android:name="android.hardware.camera.any" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <!--存储图像或者视频权限-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application>
+
+        <activity
+            android:name=".ui.scenes.model.envelopetest.EnvelopeTestActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:preserveLegacyExternalStorage="true"
+            android:requestLegacyExternalStorage="true"
+            android:theme="@style/OpenTheme" />
+
+        <receiver
+            android:name=".manager.AppBroadcastReceiver"
+            android:permission="0">
+            <intent-filter>
+                <action android:name="${applicationId}.action.home.notify" />
+                <action android:name="${applicationId}.action.home.widget" />
+                <action android:name="${applicationId}.action.speed.notify" />
+                <action android:name="${applicationId}.action.speed.widget" />
+                <action android:name="${applicationId}.action.WIDGET_ADDED" />
+                <action android:name="${applicationId}.action.overseas.click" />
+                <action android:name="${applicationId}.action.homestatus.change" />
+                <action android:name="${applicationId}.action.homestatus.wall.change" />
+
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ui.scenes.ScenesContainerActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/OpenTheme" />
+        <activity
+            android:name=".ui.overseas.ScenesContainerOsActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/OpenTheme" />
+        <activity
+            android:name=".permission.RPermissionActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/OpenBaseThemeDialog" />
+
+        <activity
+            android:name="com.mckj.sceneslib.permission.RPermissionGuideActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <activity
+            android:name="com.mckj.sceneslib.permission.AndroidDataActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/OpenBaseThemeDialog" />
+        <activity
+            android:name=".ui.scenes.model.tools.newtools.ui.fragment.magnifier.PictureMagnifierActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/OpenTheme" />
+
+        <service
+            android:name=".ui.scenes.model.tools.newtools.utils.notify.NotifyService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

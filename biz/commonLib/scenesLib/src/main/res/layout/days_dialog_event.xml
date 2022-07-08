@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        god_normal_radius="@{10}"
+        god_normal_solidColor="@{@color/white}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/scenes_textview13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:text="设置"
+            android:textColor="#333333"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/daysClose"
+            android:layout_marginRight="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_reciprocal_close"
+            app:layout_constraintBottom_toBottomOf="@+id/scenes_textview13"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/scenes_textview13" />
+
+        <EditText
+            android:id="@+id/daysEventName"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:textSize="13sp"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:singleLine="true"
+            android:gravity="center_vertical"
+            android:background="@drawable/shape_days_edit_bg"
+            android:drawableLeft="@drawable/ic_reciprocal_name"
+            android:drawablePadding="4dp"
+            android:hint="点击这里输入事件名称"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="10dp"
+            android:textColor="@color/back"
+            android:textColorHint="#8F959E"
+            app:layout_constraintEnd_toEndOf="@+id/daysClose"
+            app:layout_constraintStart_toStartOf="@+id/scenes_textview13"
+            app:layout_constraintTop_toBottomOf="@+id/scenes_textview13" />
+
+
+        <EditText
+            android:id="@+id/daysEventTime"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:lines="1"
+            android:textSize="13sp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/shape_days_edit_bg"
+            android:drawableLeft="@drawable/ic_reciprocal_target"
+            android:drawablePadding="4dp"
+            android:hint="目标日"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="10dp"
+            android:textColor="@color/back"
+            android:textColorHint="#8F959E"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/daysEventName"
+            app:layout_constraintStart_toStartOf="@+id/daysEventName"
+            app:layout_constraintTop_toBottomOf="@+id/daysEventName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

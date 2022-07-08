@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="361dp"
+        android:background="@drawable/scenes_img_pop_phone">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="94dp"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/forward_settings"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="28dp"
+            android:gravity="center"
+            android:text="@string/scenes_clean_need_permiss"
+            android:textColor="#222222"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/forward_settings"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/scenes_dialog_btn"
+            android:gravity="center"
+            android:text="@string/scenes_to_setting"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/scenes_dialog_cancel" />
+    </RelativeLayout>
+
+</layout>

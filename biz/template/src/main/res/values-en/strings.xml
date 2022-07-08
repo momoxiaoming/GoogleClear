@@ -1,0 +1,34 @@
+<resources>
+    <string name="cleanup_available">available</string>
+    <string name="cleanup_used">used</string>
+    <string name="cleanup_used_memory">Used memory</string>
+    <string name="cleanup_feature">Features</string>
+
+    <!--    首页推荐-->
+    <string name="cleanup_home_recomend_power_save_title">Battery Saver</string>
+    <string name="cleanup_home_recomend_power_save_desc">High power consumption apps detected</string>
+    <string name="cleanup_home_recomend_power_save_btn">Optimize</string>
+    <string name="cleanup_home_recomend_junck_clean_title">Junk Clean</string>
+    <string name="cleanup_home_recomend_junck_clean_desc">%s of files could be optimized</string>
+    <string name="cleanup_home_recomend_junck_clean_btn">Clean</string>
+    <string name="cleanup_home_recomend_app_lock_title">App Lock</string>
+    <string name="cleanup_home_recomend_ovs_wallpaper_title">Smart Boost Wallpaper</string>
+    <string name="cleanup_home_recomend_ovs_wallpaper_desc">Support quick and easy speed up phone</string>
+    <string name="cleanup_home_recomend_app_lock_desc">Encrypt apps to avoid data leakage. Protect your private files easily</string>
+
+    <string name="cleanup_home_recomend_ovs_wallpaper_btn">Use it</string>
+    <string name="cleanup_home_recomend_app_lock_btn">Enable</string>
+    <string name="cleanup_home_recomend_phone_speed_title">Phone Booster</string>
+    <string name="cleanup_home_recomend_phone_speed_btn">Boost Now</string>
+    <string name="cleanup_home_recomend_phone_speed_desc">Memory usage reaches %s</string>
+    <string name="cleanup_home_recommend_skip">skip</string>
+
+
+    <!-- 2022.4.14新增-->
+    <string name="cleanup_home_recomend_gallery_clean_title">Photo Cleaner</string>
+    <string name="cleanup_home_recomend_gallery_clean_desc">Quick  manage  your  photos  in-game</string>
+    <string name="cleanup_home_recomend_gallery_clean_btn">Use  it</string>
+    <string name="scenes_text_clean">phone is faster</string>
+
+
+</resources>

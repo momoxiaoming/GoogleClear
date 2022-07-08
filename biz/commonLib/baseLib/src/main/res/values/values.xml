@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="QueueTextView">
+        <attr format="color" name="first_textColor"/>
+        <attr format="string" name="first_text"/>
+        <attr format="dimension" name="first_textSize"/>
+        <attr name="first_textStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <attr format="color" name="second_textColor"/>
+        <attr format="string" name="second_text"/>
+        <attr format="dimension" name="second_textSize"/>
+        <attr name="second_textStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <attr format="color" name="end_textColor"/>
+        <attr format="string" name="end_text"/>
+        <attr format="dimension" name="end_textSize"/>
+        <attr name="end_textStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+    </declare-styleable>
+
+</resources>

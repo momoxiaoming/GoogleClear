@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <com.org.openlib.view.EmptyStatusBarView
+            android:id="@+id/header_stateBar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/AppToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@android:color/transparent"
+            app:contentInsetEnd="@dimen/broadPadding"
+            app:contentInsetStart="@dimen/broadPadding"
+            app:layout_constraintTop_toBottomOf="@+id/header_stateBar" />
+
+        <ImageView
+            android:id="@+id/rc_scenes_icon"
+            android:layout_width="match_parent"
+            android:layout_height="206dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <TextView
+            android:id="@+id/rc_scenes_title"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="13dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="3个耗电异常"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rc_scenes_icon" />
+
+        <TextView
+            android:id="@+id/rc_scenes_des"
+            android:layout_marginHorizontal="50dp"
+            android:layout_width="0dp"
+            android:layout_marginTop="2dp"
+            android:layout_height="wrap_content"
+            android:text="应用活动异常，可能影响 手机寿命66666666"
+            android:gravity="center"
+            android:textColor="#80000000"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rc_scenes_title" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/btn_lottile"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:lottie_repeatCount="-1"
+            app:layout_constraintStart_toStartOf="@id/rc_scenes_bt"
+            app:layout_constraintEnd_toEndOf="@id/rc_scenes_bt"
+            app:layout_constraintTop_toTopOf="@id/rc_scenes_bt"
+            app:layout_constraintBottom_toBottomOf="@id/rc_scenes_bt"/>
+
+
+        <TextView
+            android:id="@+id/rc_scenes_bt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="16dp"
+            android:paddingVertical="12dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="立即处理"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rc_scenes_des"
+           />
+
+        <FrameLayout
+            android:id="@+id/ad_layout"
+            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rc_scenes_bt" />
+
+        <ImageView
+            android:id="@+id/frame_anim"
+            android:background="@drawable/clean_frame_flash"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

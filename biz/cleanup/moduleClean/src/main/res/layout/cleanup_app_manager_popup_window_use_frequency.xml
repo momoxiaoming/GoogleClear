@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_pop_window"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/popupList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="15dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/btnOne"
+                style="@style/AppManagerCheckboxTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:paddingStart="@dimen/dp_10"
+                android:text="@string/cleanup_less_frequent"
+                android:textColor="@drawable/button_check_text"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <RadioButton
+                android:id="@+id/btnTwo"
+                style="@style/AppManagerCheckboxTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="@dimen/dp_10"
+                app:layout_constraintStart_toStartOf="@+id/btnOne"
+                android:text="@string/cleanup_more_frequent"
+                app:layout_constraintTop_toBottomOf="@+id/btnOne"
+                android:textColor="@drawable/button_check_text" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RadioGroup>
+
+</LinearLayout>

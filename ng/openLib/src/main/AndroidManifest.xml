@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.org.openlib">
+	<!--清理内存-->
+	<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+	<uses-permission android:name="android.permission.REORDER_TASKS" />
+
+
+	<application>
+		<activity
+			android:name=".ui.container.ContainerActivity"
+			android:excludeFromRecents="true"
+			android:launchMode="standard"
+			android:screenOrientation="portrait"
+			android:theme="@style/OpenTheme" />
+		<activity
+			android:name=".ui.container.ContainerTitleActivity"
+			android:excludeFromRecents="true"
+			android:launchMode="standard"
+			android:screenOrientation="portrait"
+			android:theme="@style/OpenTheme" />
+	</application>
+</manifest>

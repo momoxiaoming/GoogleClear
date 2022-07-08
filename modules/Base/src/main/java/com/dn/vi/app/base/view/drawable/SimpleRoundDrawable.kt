@@ -122,7 +122,7 @@ class SimpleRoundDrawable(context: Context?, color: Int) : Drawable() {
 
     override fun onBoundsChange(bounds: Rect?) {
         super.onBoundsChange(bounds)
-        roundRectf.set(bounds)
+        roundRectf.set(bounds!!)
         if (fullRound) {
             roundRadius = roundRectf.height() / 2f
         }

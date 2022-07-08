@@ -111,31 +111,33 @@ open class BaseAppDelegate(val app: Application) {
 
         var exitTime = 0L
 
-        override fun onActivityPaused(activity: Activity?) {
+        override fun onActivityPaused(activity: Activity) {
             foregroundCount--
         }
 
-        override fun onActivityResumed(activity: Activity?) {
+        override fun onActivityResumed(activity: Activity) {
             foregroundCount++
         }
 
-        override fun onActivityStarted(activity: Activity?) {
+
+
+        override fun onActivityStarted(activity: Activity) {
         }
 
-        override fun onActivitySaveInstanceState(activity: Activity?, outState: Bundle?) {
+        override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {
         }
 
-        override fun onActivityStopped(activity: Activity?) {
+        override fun onActivityStopped(activity: Activity) {
         }
 
-        override fun onActivityDestroyed(activity: Activity?) {
+        override fun onActivityDestroyed(activity: Activity) {
             aliveCount--
             if (aliveCount == 0) {
                 exitTime = System.currentTimeMillis()
             }
         }
 
-        override fun onActivityCreated(activity: Activity?, savedInstanceState: Bundle?) {
+        override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
             aliveCount++
         }
 

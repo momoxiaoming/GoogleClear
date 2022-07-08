@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_notify_permission_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <ImageView
+                android:id="@+id/scenes_imageview9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27dp"
+                android:layout_marginBottom="28dp"
+                android:src="@drawable/img_clear_permissions"
+                app:layout_constraintBottom_toTopOf="@+id/notify_permission_hint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/notify_permission_hint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="71dp"
+                android:gravity="center"
+
+                android:textColor="#ff333333"
+                android:textSize="19sp"
+                android:layout_marginBottom="57dp"
+                app:layout_constraintBottom_toTopOf="@+id/notify_permission_sure"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+
+            <TextView
+                android:id="@+id/notify_permission_cancel"
+                android:layout_width="120dp"
+                android:layout_height="43dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="46dp"
+                android:background="@drawable/shape_notify_permission_cancel_btn"
+                android:text="关闭"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="19sp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <TextView
+                android:id="@+id/notify_permission_sure"
+                android:layout_width="120dp"
+                android:layout_height="43dp"
+                android:layout_marginRight="46dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/shape_notify_permission_sure_btn"
+                android:gravity="center"
+                android:text="立即开启"
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

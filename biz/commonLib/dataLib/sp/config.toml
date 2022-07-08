@@ -1,0 +1,19 @@
+# "Config" is the reserved word which to mark the env
+
+[Config]
+package="com.mckj.datalib.gen"
+dir= "../src/main/java"
+#author= "[holmes]"
+#nameKey="nm"
+#typeKey="t"
+#commentKey="cm"
+
+# === The perference Group ===
+# === [[Group]] ===
+
+# === nm : name, cm: comment , t: type===
+
+[[Data]]
+    nm = "data:float:data"
+    t = "String"
+    cm = "浮动控件数据集"

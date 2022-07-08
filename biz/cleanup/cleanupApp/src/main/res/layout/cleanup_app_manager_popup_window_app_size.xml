@@ -1,0 +1,35 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_pop_window">
+
+    <RadioGroup
+        android:id="@+id/popupList"
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/btnOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cleanup_largest"
+            android:checked="true"
+            android:textColor="@drawable/button_check_text"
+            style="@style/AppManagerCheckboxTheme"/>
+
+        <RadioButton
+            android:layout_marginTop="10dp"
+            android:id="@+id/btnTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cleanup_smallest"
+            android:textColor="@drawable/button_check_text"
+            style="@style/AppManagerCheckboxTheme"/>
+    </RadioGroup>
+
+</LinearLayout>

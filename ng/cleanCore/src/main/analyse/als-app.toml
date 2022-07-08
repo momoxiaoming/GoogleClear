@@ -1,0 +1,37 @@
+
+# "Config" is the reserved word which to mark the env
+
+[Config]
+package="com.mckj.core.gen"
+dir= "../src/main/java"
+#author= "[Author name or empty]"
+#nameKey="nm"
+#typeKey="t"
+#commentKey="c"
+
+# "Params" is the reserved word which to define the analyse sub params of a event
+# param=alias, the alias use to write this toml
+
+# the "c" is reserved word to param
+[Params]
+what="w"
+where="wh"
+when="wn"
+from="f"
+type="t"
+
+
+# the events
+# [event_name]
+# c="the event comment"
+# act="the act params comment"
+# content=""    if comment is empty , ignore
+
+
+[data_dialog_pop]
+c="data文件夹权限弹窗展示"
+f="触发功能来源"
+
+[data_permission_result]
+c="data文件夹权限结果"
+t="授权结果和失败步骤"

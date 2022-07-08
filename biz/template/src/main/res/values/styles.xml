@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="cleanupDialogHomeFullScreen" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <!--隐藏状态栏内容和高度，适用于SDK19（4.4）及以上版本-->
+        <item name="android:windowFullscreen">true</item>
+        <!-- 对于28及以上的版本，需要指定该属性，否则对于异形屏的手机，无法让布局铺满异性区域 -->
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 透明导航栏 -->
+        <item name="android:windowTranslucentNavigation">true</item>
+        <!--防止暗黑-->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+</resources>

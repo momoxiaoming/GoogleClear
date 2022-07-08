@@ -2,6 +2,7 @@
 buildscript {
     apply from: 'modules/config.gradle'
 
+
     repositories {
         maven { url "http://dnsdk.vimedia.cn:8081/repository/vimedia-public/" }
         maven { url "http://dnsdk.vimedia.cn:8081/repository/Viapp-public/" }

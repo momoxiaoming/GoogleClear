@@ -1,0 +1,324 @@
+<resources>
+    <string name="app_name">Smart Cleaner</string>
+    <string name="cleanup_open_permissions">Grant Permissions</string>
+    <string name="cleanup_very_clean">Very Clean</string>
+    <string name="cleanup_stop_scanning">Stop Scanning</string>
+    <string name="cleanup_click_rescan">Click to re-scan</string>
+    <string name="cleanup_scanning">Scanning</string>
+    <string name="cleanup_junk">junk</string>
+    <string name="cleanup_click_to_cleanup">Click to Clean</string>
+    <string name="cleanup_view_trash_details"><![CDATA[Details >]]></string>
+    <string name="speed_report">Test Results</string>
+    <string name="delay_time">" Latency"</string>
+    <string name="download_speed">Download Speed</string>
+    <string name="upload_speed">Upload Speed</string>
+    <string name="how_fast">" How Fast is your internet:"</string>
+    <string name="scenes_phone_boost">Phone Boost</string>
+    <string name="scenes_release_room">Release RAM</string>
+    <string name="scenes_release_now">Release</string>
+    <string name="scenes_release_success">Released</string>
+    <string name="scenes_app_lock">AppLock</string>
+    <string name="scenes_protect_privacy">Protect your privacy</string>
+    <string name="scenes_open_protect">Protect</string>
+    <string name="scenes_ram_high">RAM High</string>
+    <string name="scenes_memory_used_percentage">Memory used %s</string>
+    <string name="scenes_free_up_ram">Boosting RAM usage</string>
+    <string name="scenes_optimizing_storage_space">Optimizing storage space</string>
+    <string name="scenes_clean_ads_boosting">Cleaning up ads is boosting</string>
+    <string name="scenes_phone_boost_ing">Phone Boosting…</string>
+    <string name="scenes_phone_run_slow">" Phone to running slow"</string>
+    <string name="scenes_apps_running_background">Apps are running in the background</string>
+    <string name="scenes_expect_10s">It takes about 10s</string>
+    <string name="scenes_ing">%s…</string>
+    <string name="scenes_x_finish">%s finish</string>
+    <string name="scenes_x_day_partner_with_you">%s Thanks for being with us for %s days</string>
+    <string name="scenes_faster_than_x_user">Your connection is faster than %s%% of the users.</string>
+    <string name="scenes_historical_high">Historical High: %s%s/s</string>
+    <string name="scenes_download_episode_time">"Download a TV episode in %s"</string>
+    <string name="scenes_download_movie_time">Download a whole season of a show in %s</string>
+    <string name="scenes_download_music_time">Download a high quality music file in %s</string>
+    <string name="scenes_more_than_day"><![CDATA[> 1 day]]></string>
+    <string name="scenes_less_1s"><![CDATA[< 1 sec]]></string>
+    <string name="scenes_x_sec">%ds</string>
+    <string name="scenes_x_min">%dmin</string>
+    <string name="scenes_x_hour">%dh</string>
+    <string name="scenes_x_day">%d days</string>
+    <string name="scenes_wifi_speed_test">WiFi Speed Test</string>
+    <string name="scenes_wifi_testing">WIFI Testing…</string>
+    <string name="scenes_testing_connect_latency">Testing latency of your connection</string>
+    <string name="scenes_testing_download">Testing download speed of your connection</string>
+    <string name="scenes_testing_upload">Testing upload speed of your connection</string>
+    <string name="scenes_current_speed">Current Speed</string>
+    <string name="scenes_testing_latency">Testing latency…</string>
+    <string name="scenes_net_test_error_net_error">net_error</string>
+    <string name="scenes_snail">Snails</string>
+    <string name="scenes_bicycle">Bicycle</string>
+    <string name="scenes_car">Car</string>
+    <string name="scenes_airplane">Airplane</string>
+    <string name="scenes_rocket">Rocket</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="scenes_battery_saver">Battery Saver</string>
+    <string name="scenes_optimizing_now">Optimizing now</string>
+    <string name="scenes_optimizing_finish">Optimized</string>
+    <string name="scenes_analyzing_power_consumption">Analyzing power consumption</string>
+    <string name="scenes_optimizing_battery">Optimizing Battery…</string>
+    <string name="scenes_shutting_down_power_draining_apps">Shutting down power draining apps</string>
+    <string name="scenes_releasing_storage_space">Releasing storage space</string>
+    <string name="scenes_cpu_cooler">CPU Cooler</string>
+    <string name="scenes_cooler_now">Cool Down</string>
+    <string name="scenes_cooler_down_success">Cool Down Success</string>
+    <string name="scenes_caton_boost">Lag Reducer</string>
+    <string name="scenes_unstall_clean">"Residual Clean"</string>
+    <string name="scenes_phone_cooling">Cooling Down…</string>
+    <string name="scenes_tools_unknown">Unknown</string>
+    <string name="scenes_tools_box">Toolbox</string>
+    <string name="scenes_tools_gprs_use">Data usage</string>
+    <string name="scenes_tools_phone_parameters">About Phone</string>
+    <string name="scenes_tools_flashlight">Flashlight</string>
+    <string name="scenes_tools_font">Font size</string>
+    <string name="scenes_tools_alarm_clock">Alarm</string>
+    <string name="scenes_tools_photo">Pictures</string>
+    <string name="scenes_tools_calendar">Calendar</string>
+    <string name="scenes_tools_weather">Weather</string>
+    <string name="scenes_photo_cleaner">Photo Cleaner</string>
+    <string name="scenes_residual_clean">Residual Clean</string>
+    <string name="scenes_clean_to_freeup_space">Clean to free up space</string>
+    <string name="scenes_unloading_residual">Residual Clean...</string>
+    <string name="scenes_scanning_for_junk_from_uninstalling_software">Scanning for residual junk from uninstallation</string>
+    <string name="scenes_cleaning_up_image_junk_files">Scanning for junk files</string>
+    <string name="scenes_click_to_clean">Clean</string>
+    <string name="scenes_app_manager">App Manager</string>
+    <string name="scenes_optimizing_phone_residue">Optimizing Residual Junk</string>
+    <string name="scenes_optimizing_phone_memory">Optimizing RAM</string>
+    <string name="scenes_freeing_up_phone_space">Optimizing storage space</string>
+    <string name="scenes_caton_optimization_in_progress">Optimizing Lag...</string>
+    <string name="scenes_caton_cache_slowing_down_your_phone">Cache junk is slowing down performance</string>
+    <string name="scenes_clean_up_junk_and_keep_your_phone_smooth">Clean junk, keep your device running smoothly</string>
+    <string name="scenes_keep_your_phone_smooth">Keep your device running smoothly</string>
+    <string name="scenes_one_click_optimization">Optimize</string>
+    <string name="scenes_clean_up">Cleaned</string>
+    <string name="scenes_the_best_current_mobile_phone_optimization">Device is optimized</string>
+    <string name="scenes_slow_down">slow down</string>
+    <string name="scenes_too_many_programs_running_in_the_background">Too many apps are running in the background</string>
+    <string name="scenes_severely_reduced_mobility">Mobile performance affected</string>
+    <string name="scenes_leftover_junk_files_after_uninstallation">Leftover junk files after uninstallation</string>
+    <string name="scenes_junk_files_produced_during_uninstallation">Junk files produced during uninstallation</string>
+    <string name="scenes_junk_images_produced_during_uninstallation">Junk images produced during uninstallation</string>
+    <string name="scenes_cleaning_junk_files">Cleaning junk files</string>
+    <string name="scenes_optimized">Optimized</string>
+    <string name="scenes_manage_less_used_apps">Manage less used apps</string>
+    <string name="scenes_too_many_applications">Too many applications</string>
+    <string name="scenes_view_now">Manager</string>
+    <string name="scenes_app_manage_completed">App Manage Completed</string>
+    <string name="scenes_app_manager_recommend_desc">Delete unused apps</string>
+    <string name="scenes_app_optimized">App Optimized</string>
+    <string name="scenes_haven_not_manage_your_apps_in_a_long_time">Haven\'t manage your apps in a long time</string>
+    <string name="scenes_rarely_used_apps_taking_up_storage_space">Rarely used apps taking up storage space</string>
+    <string name="scenes_x_memory_junk_clean">Cleaned %s Memory Junk</string>
+    <string name="scenes_x_junk_flie_clean">Cleaned %s Junk Files</string>
+    <string name="scenes_inquiry_net_speed">Check your internet speed</string>
+    <string name="scenes_test_now">Start Test</string>
+    <string name="scenes_test_speed_finish">Test Completed</string>
+    <string name="scenes_speed_like">Your speed is as fast as a %s</string>
+    <string name="scenes_close_all_consuming_power_apps">Shut down all power draining apps</string>
+    <string name="scenes_consuming_power_1">Apps are draining battery in the background</string>
+    <string name="scenes_consuming_power_2">Stealing battery</string>
+    <string name="scenes_background_apps_more">Too many apps running in the background.</string>
+    <string name="scenes_power_consumption_fast">Battery dropping too fast.</string>
+    <string name="scenes_hot_effect_performance">Overheating affects performance</string>
+    <string name="scenes_temperature_high">Temperature too high</string>
+    <string name="scenes_closed_all_cause_hot_apps">Shut down apps that causes device to heat up</string>
+    <string name="scenes_cooler_text_1">Overheating affects performance</string>
+    <string name="scenes_cooler_text_1_key">performance</string>
+    <string name="scenes_phone_temperature_high">Phone temperature too high</string>
+    <string name="scenes_overheating_affects_performance">Overheating affects performance</string>
+    <string name="scenes_performance">performance</string>
+    <string name="scenes_wx_has_junk">微信中还有%d MB%n深层聊天垃圾待清理</string>
+    <string name="scenes_draining_battery">draining battery</string>
+    <string name="scenes_apps_draining_battery_background">Apps are draining battery in the background</string>
+    <string name="scenes_mb">%s MB</string>
+    <string name="scenes_power_consuming_batter">Apps draining battery  in the background</string>
+    <string name="scenes_organize_albums">Manage photos regularly</string>
+    <string name="scenes_organize_albums_1">Manage photos regularly to release space</string>
+    <string name="scenes_album_clean">Clean Now</string>
+    <string name="scenes_album_clean_recommend_desc">Clean your photo gallery regularly</string>
+    <string name="scenes_look_video">Watch a short video to relax</string>
+    <string name="scenes_to_tools_box">One tap to enjoy our powerful tools</string>
+    <string name="scenes_optimized_best">Optimized</string>
+    <string name="scenes_scanning_phone_hardware">Scanning device\'s hardware</string>
+    <string name="scenes_close_apps_cause_heat">Shutting down apps that overheat your device</string>
+    <string name="scenes_phone_starts_cool_down">Cooling down the device</string>
+    <string name="scenes_cleanup_title_recommend">Recommended</string>
+    <string name="scenes_cleanup_title_feature">Features</string>
+    <string name="scenes_tips">Tips</string>
+    <string name="scenes_tools_unavailable">Unavailable</string>
+    <string name="scenes_tools_ok">OK</string>
+    <string name="scenes_look_at_your_current_internet_speed">Check to see how your internet connection compares to the rest of the country.</string>
+    <string name="scenes_how_net_defeat">How your internet connection compares to the rest of the country.</string>
+    <string name="scenes_junk_details">Details</string>
+    <string name="scenes_clean_x_file">Clean</string>
+    <string name="scenes_app_cache">App cache</string>
+    <string name="scenes_ad_cache">Ad cache</string>
+    <string name="scenes_log_cache">Log cache</string>
+    <string name="scenes_download_cache">Download cache</string>
+    <string name="scenes_other">Other</string>
+    <string name="scenes_junk_clean">Junk Clean</string>
+    <string name="scenes_album_clean_finish">Cleaned</string>
+    <string name="scenes_junk_clean_now">Clean</string>
+    <string name="scenes_junk_clean_finish">Cleaned</string>
+    <string name="scenes_video_clean">short video clean</string>
+    <string name="scenes_clean_finish">Cleaned</string>
+    <string name="scenes_release_space_no_caton">Free up space without lag</string>
+    <string name="scenes_junk_have_lot_junk">Found a lot of junk files</string>
+    <string name="scenes_junk_need_clean">Phone space needs to be cleaned up</string>
+    <string name="scenes_clean_junk_free_ram">Clean up junk to free up storage</string>
+    <string name="scenes_best_optimized_for_mobile">Your phone is Optimized</string>
+    <string name="scenes_x_freed">Freed %s Space</string>
+    <string name="scenes_clean_junk_files_ing">Cleaning junk files…</string>
+    <string name="scenes_junk_clean_app_cache">Clear app cache</string>
+    <string name="scenes_junk_clean_log_file">Clean up log files</string>
+    <string name="scenes_junk_clean_unstall_residual">Clean up residual file</string>
+
+
+    <!--手机加速 -->
+    <string name="scenes_scanning">Scanning...</string>
+    <string name="scenes_analyzing_your_device">Analyzing your device</string>
+    <string name="scenes_checking_ram_usage">Checking RAM usage</string>
+    <string name="scenes_finding_running_apps">Finding running apps</string>
+
+    <!-- CPU降温 -->
+    <string name="scenes_checking_cpu_status">Checking CPU status</string>
+    <string name="scenes_locating_power_draining_operations">Locating power-draining operations</string>
+    <string name="scenes_finding_over_heating_applications">Finding over-heating applications</string>
+
+    <!-- 超级省电 -->
+    <string name="scenes_checking_battery_health">Checking battery health</string>
+    <string name="scenes_analyzing_charge_capacity">Analyzing charge capacity</string>
+    <string name="scenes_recognizing_power_consumption">Recognizing power consumption</string>
+
+
+    <!-- 残留清理-->
+    <string name="scenes_checking_storage_space">Checking storage space</string>
+    <string name="scenes_searching_uninstall_traces">Searching uninstall traces</string>
+    <string name="scenes_analyzing_junk_creating_behavior">Analyzing junk-creating behavior</string>
+
+
+    <string name="scenes_optimizing">Optimizing...</string>
+    <string name="scenes_optimization_is_complete">Optimization is complete</string>
+
+
+    <string name="scenes_app_caches">App Cache</string>
+    <string name="scenes_useless_package">Useless Package</string>
+    <string name="scenes_log_files">Log Files</string>
+    <string name="scenes_ad_spam">Ad Spam</string>
+    <string name="scenes_empty_folder">Empty Folder</string>
+
+    <string name="scenes_dump"> </string>
+
+    <string name="scenes_mobile_phone_antivirus">手机杀毒</string>
+    <string name="scenes__never_scanned_for_viruses">从来没有扫描过病毒</string>
+    <string name="scenes_detect_immediately">立即检测</string>
+    <string name="scenes_antivirus_completed">杀毒完成</string>
+    <string name="scenes_the_phone_is_already_safe">手机已经很安全了</string>
+    <string name="scenes_mobile_phone_virus_will_threaten_internet_security2">手机病毒会%n威胁上网安全</string>
+    <string name="scenes_mobile_phone_lost_protection">手机失去保护</string>
+    <string name="scenes_mobile_phone_security_is_threatened">手机安全受到威胁</string>
+    <string name="scenes_detecting_privacy_risks">正在检测隐私风险</string>
+    <string name="scenes_scanning_for_virus_apps">正在扫描病毒应用</string>
+    <string name="scenes_checking_network_security">正在检查网络安全</string>
+    <string name="scenes_mobile_phone_virus_killing">手机病毒查杀中...</string>
+
+    <string name="scenes_camera_detection">摄像头检测</string>
+    <string name="scenes_find_cameras">找出非法摄像头</string>
+    <string name="scenes_check_now">立即检测</string>
+    <string name="scenes_detection_completed">检测完成</string>
+    <string name="scenes_camera_no_exception_found">未发现异常</string>
+    <string name="scenes_camera_check_privacy_leaks">检查是否有隐私泄露风险</string>
+    <string name="scenes_camera_privacy_leaks">隐私泄露</string>
+    <string name="scenes_camera_network_wait_check">网络环境待检测</string>
+    <string name="scenes_network_intrusion_need_check">网络入侵风险待检测</string>
+    <string name="scenes_check_network_security_ing">正在检测网络环境安全</string>
+    <string name="scenes_network_intrusion_discover">正在检测网络入侵风险</string>
+    <string name="scenes_looking_camera">正在查找可疑摄像头</string>
+    <string name="scenes_camera_detection_ing">摄像头检测中...</string>
+
+    <string name="scenes_network_acceleration">网络加速</string>
+    <string name="scenes_optimize_network_increase_internet_speed">优化网络 提高上网速度</string>
+    <string name="scenes_one_key_acceleration">一键加速</string>
+    <string name="scenes_the_current_network_speed_is_slow_and_can_be_optimized">当前网速较慢 还可以优化</string>
+    <string name="scenes_optimizing_router">正在优化路由器</string>
+    <string name="scenes_looking_for_a_premium_internet_connection">正在查找优质上网线路</string>
+    <string name="scenes_optimizing_network_security_configuration">正在优化网络安全配置</string>
+    <string name="scenes_the_network_is_accelerating">网络加速中...</string>
+
+    <string name="scenes_signal_optimization">信号优化</string>
+    <string name="scenes_analyze_signal_interference_factors">分析信号干扰因素</string>
+    <string name="scenes_optimize_now">立即优化</string>
+    <string name="scenes_optimization_completed">优化完成</string>
+    <string name="scenes_signal_optimized_to_the_best">信号已优化到最佳</string>
+    <string name="scenes_check_and_fix_problems_affecting_internet_access">检查修复影响上网的问题</string>
+    <string name="scenes_the_network_needs_to_be_optimized">网络需优化</string>
+    <string name="scenes_find_a_better_internet_connection">发现更优质的上网线路</string>
+    <string name="scenes_checking_wifi_network_status">正在检查wifi网络状态</string>
+    <string name="scenes_optimizing_network_signal">正在优化网络信号</string>
+    <string name="scenes_signal_optimizing">信号优化中...</string>
+
+    <string name="scenes_to_be_cleaned_up2">微信中还有%s MB%n深层聊天垃圾待清理</string>
+    <string name="scenes_internet_safety">上网安全</string>
+    <string name="scenes_clear_short_video_cache">专项清理抖音%n快手等短视频缓存</string>
+    <string name="scenes_special_cleaning">专项清理</string>
+    <string name="scenes_privacy_leak">隐私泄露</string>
+    <string name="scenes_check_privacy_risk">检查是否有%n隐私泄露风险</string>
+    <string name="scenes_defeat">打败</string>
+    <string name="scenes_slow">慢</string>
+    <string name="scenes_grab_the_red_envelope">抢红包手速%n老是比别人慢？</string>
+    <string name="scenes_mobile_phone_virus_will_threaten_internet_security">手机病毒会威胁上网安全</string>
+    <string name="scenes_network_acceleration_more">网络加速%s%%以上</string>
+    <string name="scenes_network_needs_to_be_optimized">网络需优化</string>
+    <string name="scenes_to_be_cleaned_up">QQ中还有%s MB%n深层聊天垃圾待清理</string>
+    <string name="scenes_junk_scan_app_cache">Scanning Cache Files</string>
+    <string name="scenes_test_timeout">TimeOut</string>
+    <string name="scenes_test_request_timeout">TimeOut</string>
+
+    <string name="scenes_stop">Stop</string>
+    <string name="scenes_continue">Continue</string>
+    <string name="scenes_stop_optimized_tips">Your device is being optimized, stop now?</string>
+    <string name="scenes_junk_scanning">Scanning…</string>
+    <string name="scenes_booster_not_delete_private">will not delete your private data</string>
+
+
+
+    <string name="scenes_storge_used">Storage Used %s</string>
+
+
+    <string name="android_r_need_permission">Need permissions to temporarily access files</string>
+    <string name="excess_garbage_files">excess garbage files</string>
+    <string name="video_cache_files">Youtube cache files</string>
+    <string name="facebook_cache_files">Facebook cache files</string>
+    <string name="blue_button">blue button</string>
+    <string name="grant">Grant</string>
+    <string name="grant_permission_to_clean">Grant permission to clean</string>
+    <string name="on_new_page">On new page, scroll to the bottom and click the blue button</string>
+    <string name="too_much_system_junk_files">Too much system junk files!</string>
+    <string name="rp_quick_check">Quick system cache junk scan,  boost your phone with ease!</string>
+    <string name="rp_scan_ram_usage">Scan RAM usage</string>
+    <string name="rp_scan_cache_files">Scan Cache files</string>
+    <string name="rp_scan_residual_files">Scan Residual files</string>
+    <string name="rp_tips_clean_junk">Clean junk files can effectively boost your phone\'s speed.</string>
+    <string name="rp_click_here_and_start"> Click here  and start boosting</string>
+    <string name="rp_boosting">boosting</string>
+    <string name="scenes_have_rest">Let\'s take a break</string>
+    <string name="scenes_junk_very_clean">Completely Clean</string>
+    <string name="scenes_junk_perfect">Perfect</string>
+    <string name="scenes_clean_ing">Cleaning</string>
+    <string name="scenes_clean_need_permiss">Allow access files permissions to enjoy our service.</string>
+    <string name="scenes_to_setting">Allow Now</string>
+    <string name="scenes_write_phone_permission">WRITE_EXTERNAL_STORAGE</string>
+
+
+
+    <string name="scenes_power_save_landing_name">Optimized</string>
+    <string name="scenes_power_save_landing_desc">Shut down all power draining apps</string>
+    <string name="scenes_phone_speed_landing_header_name">phone is fast</string>
+
+</resources>

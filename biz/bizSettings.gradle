@@ -1,11 +1,34 @@
 //公共库
-include ':biz:common:baseLib'
-include ':biz:common:openLib'
+//include ':biz:common:baseLib'
+//include ':biz:common:openLib'
+//include ':biz:common:dataLib'
+//include ':biz:common:gallery'
+//include ':biz:common:guide'
+//
+////业务
+//include ':biz:clean:cleanupApp'
+//include ':biz:clean:scenesLib'
+//include ':biz:clean:cleanCore'
+//include ':biz:clean:template'
+//include ':biz:clean:moduleClean'
+//
+//
+//include ':biz:clean:vest:vestBlue45'
+//include ':biz:clean:vest:greenACleanup'
 
-include ':biz:dataLib'
-//业务
-include ':biz:clean:cleanupApp'
-include ':biz:clean:greenACleanup'
-include ':biz:clean:scenesLib'
-include ':biz:clean:cleanCore'
+include ':biz:commonLib:dataLib'
+include ':biz:commonLib:scenesLib'
+include ':biz:commonLib:baseLib'
+include ':biz:commonLib:gallery'
+include ':biz:commonLib:openSource'
+include ':biz:commonLib:widget:guide'
+
+include ':biz:cleanup:gallery'
+include ':biz:cleanup:moduleClean'
+include ':biz:cleanup:cleanupApp'
+
+
+include ':biz:cleanup:vest:vestBlue45'
+include ':biz:template'
+
 

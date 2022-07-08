@@ -1,0 +1,51 @@
+{{- if ne .Data.Config.Package "" -}} package {{.Data.Config.Package}} {{- end}}
+
+import android.content.Context
+import androidx.collection.ArrayMap
+import com.org.proxy.EvAgent
+import com.dn.vi.app.base.app.AppMod
+
+
+/**
+ * Analyse
+ * Created by [als-gen] at {{.Date}}.
+ */
+object St {
+
+    private val context: Context
+        get() = AppMod.app
+
+{{- with .Data.Events}}
+
+
+
+    // ================================
+    // Events count: {{ len . }}
+    // ================================
+
+    // arrayMap.clear() 会让arrayMap使用缓存池
+
+{{ range . }}
+
+    {{- $count := len .Params -}}
+    {{- $funcName := toFuncName .Name }}
+    /**
+     * {{ .Comment }} {{ if gt $count 0}} {{ range .Params }}
+     * @param {{ .Name }} {{ .Comment }}  {{ end }}
+     {{- end }}
+     */
+    fun st{{firstCap $funcName }}( {{- if gt $count 0}} {{- range $index, $item := .Params }} {{- if gt $index 0}}, {{ end -}} {{ $item.Name }}: String {{- end -}} {{ end -}} ){
+        {{ if gt $count 0 -}}
+        val map: ArrayMap<String, String> = ArrayMap()
+        {{ range .Params -}}
+        map["{{.Name}}"] = {{.Name}}
+        {{ end }}
+        EvAgent.sendEventMap("{{.Name}}", map)
+        map.clear()
+        {{- else -}}
+        EvAgent.sendEvent("{{.Name}}")
+        {{- end }}
+    }
+{{ end }}
+{{ end }}
+}

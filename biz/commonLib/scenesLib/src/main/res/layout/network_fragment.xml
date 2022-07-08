@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="#EFEFF4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <View
+            android:id="@+id/scenes_view"
+            android:layout_width="match_parent"
+            android:layout_height="283dp"
+            android:background="#4565ED"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.mckj.sceneslib.ui.scenes.model.tools.newtools.ui.weight.NewTitleBar2
+            android:id="@+id/networkTitleBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/current_network"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已连接：Vimdia-5G"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_marginTop="89dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/scenes_imageview10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/img_network_wifi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/current_network" />
+
+        <TextView
+            android:id="@+id/network_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="33dp"
+            android:drawablePadding="4dp"
+            android:layout_marginRight="28dp"
+            android:drawableLeft="@drawable/ic_network_top"
+            android:text="0KB/s"
+            android:textColor="#32db9d"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/scenes_imageview10"
+            app:layout_constraintEnd_toStartOf="@+id/scenes_imageview10" />
+
+        <TextView
+            android:id="@+id/network_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#F7963F"
+            android:layout_marginBottom="33dp"
+            android:layout_marginLeft="28dp"
+            android:drawablePadding="4dp"
+            android:drawableLeft="@drawable/ic_network_bottom"
+            android:text="0KB/s"
+            app:layout_constraintBottom_toBottomOf="@+id/scenes_imageview10"
+            app:layout_constraintStart_toEndOf="@+id/scenes_imageview10" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/network_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/shape_net_work_rv_bg"
+            android:elevation="3dp"
+            android:paddingHorizontal="7dp"
+            android:paddingTop="7dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scenes_imageview10" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

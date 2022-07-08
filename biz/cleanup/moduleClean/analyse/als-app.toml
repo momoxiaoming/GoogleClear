@@ -1,0 +1,109 @@
+
+# "Config" is the reserved word which to mark the env
+
+[Config]
+package="com.mckj.module.gen"
+dir= "../src/main/java"
+#author= "[leo]"
+#nameKey="nm"
+#typeKey="t"
+#commentKey="c"
+
+# "Params" is the reserved word which to define the analyse sub params of a event
+# param=alias, the alias use to write this toml
+
+# the "c" is reserved word to param
+[Params]
+what="w"
+where="wh"
+when="wn"
+from="f"
+type="t"
+
+
+# the events
+# [event_name]
+# c="the event comment"
+# act="the act params comment"
+# content=""    if comment is empty , ignore
+
+#微信清理
+
+[appclean_scan_start]
+c="软件专清_扫描_开始"
+t="专清软件type"
+
+[appclean_scan_result_show]
+c="软件专清_扫描结果_展示"
+t="专清软件type"
+w="垃圾大小"
+
+[appclean_clean_click]
+c="软件专清_一键清理_点击"
+t="专清软件type"
+
+[appclean_clean_check_box_click]
+c="软件专清_一键清理_勾选框_点击"
+t="专清软件type"
+
+
+[appclean_manual_clean_picture_click]
+c="软件专清_手动清理_类型_点击"
+t="软件type"
+w="类型（图片、视频、文件）"
+
+[appclean_empty_show]
+c="软件专清_空状态_展示"
+t="软件type"
+w="空状态来源(一键清理、手动清理_图片、无垃圾等等)"
+
+[appclean_picture_button_cilck]
+c="软件专清_图片_按钮点击"
+t="软件type"
+w="操作按钮名称(保存、删除、删除弹窗_删除等)"
+
+[appclean_video_button_cilck]
+c="软件专清_视频_按钮点击"
+t="软件type"
+w="操作按钮名称（保存、删除、删除弹窗_删除等）"
+
+[appclean_file_button_cilck]
+c="软件专清_文件_按钮点击"
+t="软件type"
+w="操作按钮名称（保存、删除、删除弹窗_删除等）"
+
+[appclean_picture_detail_up_glide]
+c="软件专清_图片_大图详情_上滑删除"
+t="软件type"
+
+[appclean_video_detail_up_glide]
+c="软件专清_视频_大图详情_上滑删除"
+t="软件type"
+
+[appclean_file_share]
+c="软件专清_文件_分享"
+t="软件type"
+
+[appclean_file_delete]
+c="软件专清_文件_删除"
+t="软件type"
+
+[management_button_click]
+c="应用管理_功能按钮_点击"
+t="按钮名称"
+
+[speed_button_click]
+c="网络测速_功能按钮_点击"
+t="按钮名称"
+
+[speed_scan_start]
+c="网络测速_扫描_开始"
+
+[speed_report_show]
+c="网络测速_测速报告_展示"
+
+[red_packet_scan_start]
+c="抢红包测速_扫描_开始"
+
+[red_packet_result_show]
+c="抢红包测速_扫描结果_展示"

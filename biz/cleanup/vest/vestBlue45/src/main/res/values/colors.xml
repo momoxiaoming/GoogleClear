@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#677eff</color>
+    <color name="primaryDarkColor">#677eff</color>
+    <color name="secondaryColor">#677eff</color>
+    <color name="vest_color">#677eff</color>
+    <color name="bottomColorNor">#B0B0B0</color>
+    <color name="bottomColorSel">#6578FF</color>
+
+    <!--首页app名称颜色-->
+    <color name="app_name_color">#ffffff</color>
+    <color name="scan_warn">#E85F3F</color>
+    <color name="scan_healthy">#3778FF</color>
+    <color name="color_f3f3f3">#BFBFBF</color>
+
+</resources>

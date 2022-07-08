@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/cons_root"
+		god_normal_radius="@{5}"
+		god_normal_strokeColor="@{@color/color_f3f3f3}"
+		god_normal_strokeWidth="@{1}"
+		android:layout_width="match_parent"
+		android:layout_height="70dp"
+		android:layout_marginTop="10dp">
+
+		<ImageView
+			android:id="@+id/menu_iv"
+			android:layout_width="40dp"
+			android:layout_height="40dp"
+			android:contentDescription="@null"
+			android:scaleType="fitXY"
+			android:src="@drawable/ic_antivirus_function"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toStartOf="@+id/menu_name_tv"
+			app:layout_constraintHorizontal_chainStyle="packed"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<TextView
+			android:id="@+id/menu_name_tv"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="10dp"
+			android:fontFamily="sans-serif-condensed-medium"
+			android:gravity="left"
+			android:textColor="#333841"
+			android:textSize="20sp"
+			android:textStyle="bold"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@id/menu_iv"
+			app:layout_constraintTop_toTopOf="parent"
+			tools:text="手机加速" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

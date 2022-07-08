@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="#F7F7F7"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_marginBottom="20dp">
+
+    <RadioButton
+        android:id="@+id/popup_item_select"
+        android:layout_width="18.5dp"
+        android:layout_height="18.5dp"
+        android:layout_marginEnd="14dp"
+        style="@style/AppManagerCheckboxTheme"/>
+
+    <TextView
+        android:id="@+id/popup_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        android:layout_marginStart="5dp"
+        android:text="很久未用"/>
+
+</LinearLayout>

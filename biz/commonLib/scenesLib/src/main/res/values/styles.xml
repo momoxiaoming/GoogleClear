@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="VerticalVolumeBar" parent="@android:style/Widget.Holo.SeekBar">
+        <item name="android:progressDrawable">@drawable/bg_verricalseekbar_progress</item>
+        <item name="android:thumb">@drawable/ic_magnifier_shooting_sliding</item>
+    </style>
+
+
+    <style name="roundedCornerImageStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+</resources>

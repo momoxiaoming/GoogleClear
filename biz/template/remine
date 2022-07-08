@@ -1,0 +1,35 @@
+
+菜单模板配置：
+template  菜单模板（主菜单，推荐菜单，特色菜单）
+目前支持的模板类型：
+1.MenuTemplate ：默认的主菜单模板
+2.MenuPlusTemplate ： 默认的菜单长模板（推荐菜单）
+3.MenuPlusTemplate01 ： 带分割框的菜单长模板
+
+style:item样式
+1.DefaultMenuStyle：默认的主菜单item样式
+2.MenuStyle01：主菜单item样式（上下排版）
+3.MenuPlusStyle ：菜单长模板item样式
+4.MenuPlusStyle01:拓展长模板item样式
+5.DefaultDayUsedStyle：应用陪伴天数样式
+
+
+Header配置：
+AbsHeader：任何一个头部模板的基类
+清理头部配置
+1.DefaultLottieHeader lottie动画的头部
+
+
+
+
+马甲开发方式：
+1.执行newVest.gradle 一键生成 一个默认的马甲模块
+2.开发根据ui状态复用模板
+3.菜单和头部互相解耦，可自由定制，组装不同的模板样式成1个马甲
+
+
+
+
+
+
+

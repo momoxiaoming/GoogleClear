@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/rootView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/scenes_cir_bg">
+
+        <ImageView
+            android:id="@+id/percent_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/scenes_cir_1" />
+
+        <TextView
+            android:id="@+id/percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#2E4326"
+            android:visibility="visible"
+            tools:visibility="visible"
+            tools:text="41"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

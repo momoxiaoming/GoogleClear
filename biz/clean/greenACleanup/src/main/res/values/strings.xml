@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-	<string name="cleanup_stop">停止扫描</string>
-	<string name="cleanup_scaning">扫描中</string>
-	<string name="cleanup_clean_1">一键清理</string>
-	<string name="cleanup_junk_detail">查看垃圾详情></string>
-	<string name="cleanup_clear_junk_desc">垃圾清理，手机更快速</string>
-</resources>

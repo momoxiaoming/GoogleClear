@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingHorizontal="10dp"
+        android:paddingBottom="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/scenes_landing_bottom_icon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/scenes_landing_bottom_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:text="卡慢时长超过30s"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@+id/scenes_landing_bottom_icon"
+                app:layout_constraintTop_toTopOf="@+id/scenes_landing_bottom_icon" />
+
+        <TextView
+            android:id="@+id/scenes_landing_bottom_hint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxEms="10"
+            android:maxLines="1"
+            android:text="15+应用过度占用资源"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/scenes_landing_bottom_icon"
+            app:layout_constraintEnd_toStartOf="@+id/scenes_landing_bottom_bt"
+            app:layout_constraintStart_toStartOf="@+id/scenes_landing_bottom_title" />
+
+            <TextView
+                android:id="@+id/scenes_landing_bottom_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:background="@drawable/scenes_bg_landing_btn"
+                android:gravity="center"
+                android:paddingHorizontal="20dp"
+                android:text="立即加速"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/scenes_landing_bottom_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/scenes_landing_bottom_icon"
+                tools:background="#3198F4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

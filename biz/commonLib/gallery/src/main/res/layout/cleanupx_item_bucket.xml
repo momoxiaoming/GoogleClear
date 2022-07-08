@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/icon_container"
+            android:layout_width="137dp"
+            android:layout_height="131dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:id="@+id/cover_ll"
+                android:layout_width="137dp"
+                android:layout_height="131dp">
+
+                <ImageView
+                    android:id="@+id/cover"
+                    android:layout_width="137dp"
+                    android:layout_height="131dp"
+                    android:padding="10dp"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/play_icon"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/cleanupx_play_icon"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/empty_ll"
+                android:layout_width="137dp"
+                android:layout_height="131dp"
+                android:background="@drawable/cleanupx_shape_rec_gray">
+
+                <ImageView
+                    android:layout_width="69dp"
+                    android:layout_height="54dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="center"
+                    android:src="@drawable/cleanup_gallery_images_placeholder" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/display_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:singleLine="true"
+            android:textColor="#333333"
+            android:textSize="22sp"
+            app:layout_constraintLeft_toLeftOf="@id/icon_container"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/icon_container" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

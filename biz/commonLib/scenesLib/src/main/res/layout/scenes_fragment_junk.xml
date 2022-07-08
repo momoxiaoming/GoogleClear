@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <View
+            android:id="@+id/view_junk_status"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="?attr/OpenPrimaryBackground"
+            app:layout_constraintDimensionRatio="h,360:223"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/header_layout"
+            layout="@layout/open_include_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_file_path"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="9dp"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:text="@string/scenes_junk_scanning"
+            android:textColor="#ffffffff"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view_junk_status"
+            app:layout_constraintStart_toStartOf="@+id/view_junk_status" />
+
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="@style/ScenesWhiteProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="9dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="0"
+            app:layout_constraintBottom_toTopOf="@+id/tv_file_path"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/junk_size_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:text="0"
+            android:textColor="#ffffffff"
+            android:textSize="47sp"
+            app:layout_constraintBottom_toTopOf="@+id/progress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header_layout" />
+
+
+        <com.mckj.sceneslib.ui.LSNTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header_layout" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/scenes_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toTopOf="@+id/scenes_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_junk_status"
+            app:layout_constraintVertical_bias="0"
+            tools:itemCount="100" />
+
+        <TextView
+            android:id="@+id/scenes_button"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="1dp"
+            android:text="@string/scenes_clean_x_file"
+            android:textColor="@color/white"
+            android:translationY="1dp"
+            android:translationZ="1dp"
+            android:gravity="center"
+            android:background="@drawable/scenes_btn_press_selector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+

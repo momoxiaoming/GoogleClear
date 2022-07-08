@@ -1,0 +1,16 @@
+photo_clean_page_up_glide,相册清理_清理页面_上滑,0
+photo_clean_page_both_sides,相册清理_清理页面_左右划,0
+photo_clean_thumbnail_click,相册清理_缩略图_点击,0
+photo_clean_thumbnail_slide,相册清理_缩略图_滑动,0
+classify_pop_show,相册分类弹窗_展示,0
+recycle_photo_preview,回收站_图片_大图预览,0
+recycle_auto_delete,回收站_7天自动删除_删除,0
+photo_clean_guidance_show,相册清理_引导_展示,0
+photo_clean_function_click,相册清理_功能_点击,0
+photo_clean_popup_show,图片清理介绍弹窗_展示,0
+photo_clean_popup_click,图片清理介绍弹窗_点击,0
+photo_clean_no_photo,图片清理页_无照片_展示,0
+photo_clean_show,图片清理页_展示,0
+photo_select_show,图片选择页_展示,0
+photo_select_click,图片选择页_点击Clean_Up,0
+photo_clean_action,相册清理_操作记录,0

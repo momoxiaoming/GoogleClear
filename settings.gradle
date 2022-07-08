@@ -3,4 +3,6 @@ include ':app'
 
 apply from: 'modules/mdSettings.gradle'
 apply from: 'biz/bizSettings.gradle'
+apply from: 'ng/ngSettings.gradle'
+
 

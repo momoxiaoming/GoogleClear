@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/landing_news_header_clean"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/landing_header_image"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:src="@drawable/scenes_icon_landing"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="29dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.mc.cpyr.guide.view.AutoScaleTextView
+            android:id="@+id/landing_header_name_tv_clean"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginStart="12dp"
+            android:singleLine="true"
+            android:layout_marginEnd="5dp"
+            android:text="name"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/white"
+            android:textSize="29sp"
+            app:layout_constraintTop_toTopOf="@+id/landing_header_image"
+            app:layout_constraintStart_toEndOf="@+id/landing_header_image"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/landing_header_desc_tv_clean"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="14dp"
+            android:singleLine="false"
+            android:text="desc"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginEnd="23dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/landing_header_name_tv_clean"
+            app:layout_constraintStart_toStartOf="@+id/landing_header_name_tv_clean"
+          />
+
+        <FrameLayout
+            android:id="@+id/ad_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="18dp"
+            android:elevation="3dp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/landing_header_desc_tv_clean" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

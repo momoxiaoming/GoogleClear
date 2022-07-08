@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/root_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="105dp"
+            android:layout_height="105dp">
+
+            <ImageView
+                android:id="@+id/photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="4dp"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/play_icon"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/cleanupx_play_icon"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/check_status_ll"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:id="@+id/check_status"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginRight="6dp"
+                    android:scaleType="center" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/pass_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/cleanupx_shape_translucenc"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                tools:text="7天"
+                android:textColor="@color/CleanUpx_ffffff"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

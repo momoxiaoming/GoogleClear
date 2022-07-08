@@ -1,0 +1,20 @@
+
+
+1.创建1个新的模块
+2.重写马甲资源（马甲色,背景色，按钮色）
+3.在生成的VestHomeFragment中
+    3.1：getMenuData,getBusMenuData,getRecommendMenuData 分别配置 主菜单数据,特色菜单数据,推荐菜单数据
+    3.2：getMainMenu,getBusMenu，getRecommendMenu 配置菜单模板样式
+    3.3：若主页面需要根据扫描状态切换背景色：监听BaseHomeViewModel.uiStatus
+4.VestMenuStyle，VestBusMenuStyle ，VestRecommendMenuStyle 分别是菜单模板，选择继承现有的模板，修改字体颜色大小等模板配置信息即可
+5.头部开发配置
+    静态图片的头部基类：AbsCleanImgHeader
+    动画的头部基类：AbsCleanLottieHeader
+
+    5.1根据马甲选择头部基类继承
+    5.2传入布局文件，返回指定控件
+    5.3若当前马甲有自定义的一些行为
+        normalView 中处理普通状态的行为
+        scanView中处理扫描状态的行为
+        endView中处理结束扫描状态的行为
+6.生成的VestCleanHeaderFragment中指定头部

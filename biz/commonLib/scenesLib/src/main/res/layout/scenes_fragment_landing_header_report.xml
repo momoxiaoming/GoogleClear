@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/header_report"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F0F0F0"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="18dp"
+            android:text="@string/speed_report"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cl_speed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            app:cardCornerRadius="7dp"
+            app:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/scenes_imageview1"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginHorizontal="7dp"
+                    android:layout_marginVertical="14dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/scenes_ic_net_delay"
+                    app:layout_constraintBottom_toTopOf="@+id/scenes_imageview2"
+                    app:layout_constraintEnd_toStartOf="@+id/scenes_textview"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/scenes_imageview2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginHorizontal="7dp"
+
+                    android:layout_marginVertical="14dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/scenes_ic_net_down_speed"
+                    app:layout_constraintBottom_toTopOf="@+id/scenes_imageview3"
+                    app:layout_constraintEnd_toEndOf="@+id/scenes_imageview1"
+                    app:layout_constraintStart_toStartOf="@+id/scenes_imageview1"
+                    app:layout_constraintTop_toBottomOf="@+id/scenes_imageview1" />
+
+                <ImageView
+                    android:id="@+id/scenes_imageview3"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginHorizontal="7dp"
+
+                    android:layout_marginVertical="14dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/scenes_ic_net_up_speed"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/scenes_imageview1"
+                    app:layout_constraintStart_toStartOf="@+id/scenes_imageview1"
+                    app:layout_constraintTop_toBottomOf="@+id/scenes_imageview2" />
+
+                <TextView
+                    android:id="@+id/tv_delay_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="33dp"
+                    android:text="--ms"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/scenes_imageview1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/scenes_imageview1" />
+
+                <TextView
+                    android:id="@+id/scenes_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:text="@string/delay_time"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/scenes_imageview1"
+                    app:layout_constraintStart_toEndOf="@id/scenes_imageview1"
+                    app:layout_constraintTop_toTopOf="@+id/scenes_imageview1" />
+
+                <TextView
+                    android:id="@+id/scenes_textview3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/download_speed"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/scenes_imageview2"
+                    app:layout_constraintStart_toStartOf="@+id/scenes_textview"
+                    app:layout_constraintTop_toTopOf="@+id/scenes_imageview2"
+                    app:layout_constraintVertical_bias="0.666" />
+
+                <TextView
+                    android:id="@+id/scenes_textview4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/upload_speed"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/scenes_imageview3"
+                    app:layout_constraintStart_toStartOf="@+id/scenes_textview"
+                    app:layout_constraintTop_toTopOf="@+id/scenes_imageview3"
+                    app:layout_constraintVertical_bias="0.666" />
+
+                <TextView
+                    android:id="@+id/tv_download"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--Mbps"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/scenes_imageview2"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_delay_time"
+                    app:layout_constraintTop_toTopOf="@+id/scenes_imageview2" />
+
+                <TextView
+                    android:id="@+id/tv_upload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--Mbps"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/scenes_imageview3"
+                    app:layout_constraintEnd_toEndOf="@+id/tv_delay_time"
+                    app:layout_constraintTop_toTopOf="@+id/scenes_imageview3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cl_beat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            app:cardCornerRadius="7dp"
+            app:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/scenes_constraintlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cl_speed">
+
+
+                <TextView
+                    android:id="@+id/tv_defeat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="18dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="15dp"
+                    app:layout_constraintHorizontal_bias="0"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_history"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/scenes_imageview4"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="击败全国--%的WiFi用户!击败全国--%的WiFi用户!" />
+
+                <TextView
+                    android:id="@+id/tv_history"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="18dp"
+                    android:text="历史最高网速：--Mbps"
+                    android:layout_marginEnd="15dp"
+                    app:layout_constraintHorizontal_bias="0"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tv_defeat"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_defeat" />
+
+                <ImageView
+                    android:id="@+id/scenes_imageview4"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginVertical="14dp"
+                    android:layout_marginStart="7dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/scenes_ic_net_beat"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_defeat"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_defeat" />
+
+                <ImageView
+                    android:id="@+id/scenes_imageview5"
+
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginVertical="14dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/scenes_ic_net_history_speed"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_history"
+                    app:layout_constraintStart_toStartOf="@+id/scenes_imageview4"
+                    app:layout_constraintTop_toTopOf="@+id/tv_history" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cl_equal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginVertical="8dp"
+            app:cardCornerRadius="7dp"
+            app:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scenes_constraintlayout">
+
+                <TextView
+                    android:id="@+id/scenes_textview10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/how_fast"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_series"
+                    app:layout_constraintStart_toEndOf="@+id/scenes_imageview6"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_music"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="下载一首音乐需要--秒钟"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tv_movie"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_movie" />
+
+                <TextView
+                    android:id="@+id/tv_movie"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:text="下载一部电影需要--分钟"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="16dp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_music"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tv_series"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_series" />
+
+                <TextView
+                    android:id="@+id/tv_series"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="下载一集电视剧需要--分钟"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="16dp"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_movie"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/scenes_textview10"
+                    app:layout_constraintTop_toBottomOf="@+id/scenes_textview10" />
+
+                <ImageView
+                    android:id="@+id/scenes_imageview6"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="7dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/scenes_ic_net_current_speed"
+                    app:layout_constraintBottom_toBottomOf="@+id/scenes_textview10"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/scenes_textview10" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/footer_report"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F0F0F0"
+            android:paddingTop="30dp"
+            android:visibility="gone">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/cl_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="25dp"
+                    android:background="@drawable/scenes_bg_envelop_test_btn"
+                    android:gravity="center"
+                    android:text="抢红包测速"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</layout>

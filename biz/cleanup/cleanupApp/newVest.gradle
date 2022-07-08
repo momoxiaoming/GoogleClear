@@ -1,0 +1,22 @@
+def vestName = "vest02"
+task produceVest() {
+    group "produceVest"
+    doLast {
+        def defaultVest = "$rootDir/biz/cleanup/vest/vest01"
+        def to = "$rootDir/biz/cleanup/vest/$vestName"
+        println "执行初始化工作}"
+        copy {
+            if (!file(defaultVest).exists()) {
+                print("默认马甲不存在")
+                return
+            }
+            from file(defaultVest)
+            into to
+        }
+        File bizSetting = new File("$rootDir/biz/cleanup/vest/cleanVestSettings.gradle")
+        bizSetting.withWriter { writer ->
+            def config = "include ':biz:cleanup:vest:$vestName'"
+            writer.append(config)
+        }
+    }
+}

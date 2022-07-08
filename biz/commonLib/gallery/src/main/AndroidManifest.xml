@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mckj.gallery">
+
+    <application>
+        <activity android:name=".newstyle.GalleryResultActivity"></activity>
+        <activity
+            android:name=".GalleryActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/OpenTheme" />
+        <activity
+            android:name=".PreviewActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/OpenTheme"></activity>
+        <activity
+            android:name=".RecycledActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/OpenTheme" />
+        <activity
+            android:name=".newstyle.ImageGalleryActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@style/OpenTheme" />
+    </application>
+
+</manifest>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/specialContainer"
+            android:paddingHorizontal="10dp"
+            android:paddingTop="22dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/scenes_landing_top_icon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/scenes_landing_top_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:text="卡慢时长超过30s"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@+id/scenes_landing_top_icon"
+                app:layout_constraintTop_toTopOf="@+id/scenes_landing_top_icon" />
+
+            <TextView
+                android:id="@+id/scenes_landing_top_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15+应用过度占用资源"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="@+id/scenes_landing_top_icon"
+                app:layout_constraintStart_toStartOf="@+id/scenes_landing_top_title" />
+
+            <TextView
+                android:id="@+id/scenes_landing_top_bt"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/scenes_bg_landing_btn"
+                android:gravity="center"
+                android:text="立即加速（3s）"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@+id/scenes_landing_top_hint"
+                tools:background="#3198F4" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/scenes_landing_top_lottieView"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:visibility="visible"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="111dp"
+                app:layout_constraintEnd_toEndOf="@+id/scenes_landing_top_bt"
+                app:layout_constraintTop_toTopOf="@+id/scenes_landing_top_title" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</layout>

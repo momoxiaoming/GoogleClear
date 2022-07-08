@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="string_open_lx">Contact Us</string>
+	<string name="string_open_privacy">Privacy Policy</string>
+	<string name="string_open_version">Version</string>
+	<string name="string_open_setting">Setting</string>
+
+</resources>

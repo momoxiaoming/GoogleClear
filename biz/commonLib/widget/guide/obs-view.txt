@@ -1,0 +1,2 @@
+com.mc.cpyr.guide.view.AutoScaleTextView
+com.mc.cpyr.guide.Guide

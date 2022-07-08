@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/ref_anim_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/ref_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginBottom="57dp"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/ref_recycle_icon"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/cleanupx_recycle_icon" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ref_tip_ll"
+            android:layout_width="228dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cleanupx_recycle_tip_bg"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ref_recycle_icon">
+
+            <TextView
+                android:id="@+id/tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="7天内删除的内容可以在回收站找回哦~"
+                android:textColor="@color/menu_color"
+                android:textSize="22sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/ref_guide_see"
+            android:layout_width="140dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="44dp"
+            android:background="@drawable/cleanupx_shape_blue"
+            android:gravity="center"
+            android:text="@string/gallery_goto"
+            android:textColor="#ffffff"
+            android:textSize="22sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ref_tip_ll" />
+
+        <RelativeLayout
+            android:id="@+id/back"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/cleanupx_icon_back" />
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/recycle_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="ref_guide_see,ref_tip_ll,ref_recycle_icon" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/anim_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="ref_anim_view,ref_desc" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

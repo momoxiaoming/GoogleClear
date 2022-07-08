@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <ImageView
+            android:id="@+id/ac_day_icon"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/ac_day_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="交通"
+            android:textColor="#333333"
+            android:layout_marginLeft="4dp"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ac_day_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ac_day_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-20.2"
+            android:textColor="#333333"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/indexView"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#D6D6D6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/ac_day_money"
+            app:layout_constraintStart_toEndOf="@+id/ac_day_icon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

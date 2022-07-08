@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryTextColor">#262626</color>
+    <color name="secondaryTextColor">#666666</color>
+    <color name="gray_999">#999999</color>
+    <color name="gray_96">#969696</color>
+    <color name="white">#ffffff</color>
+    <color name="CleanUpx_ff5043">#ff5043</color>
+    <color name="menu_color">#040000</color>
+    <color name="theme_color">?attr/colorPrimary</color>
+    <color name="notify_color">#1273F5</color>
+    <color name="bg_verrical_seek_bar_not">#80000000</color>
+    <color name="bg_varrical_seek_bar_yes">#ffffff</color>
+
+    <color name="app_name_color">#ffffff</color>
+    <color name="trans">#00000000</color>
+
+    <!--场景文字颜色-->
+    <color name="scenes_text_color">#ffffff</color>
+
+
+    <color name="account_record_color">#5BDBD9</color>
+    <color name="font_theme_color">#14B4FF</color>
+</resources>

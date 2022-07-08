@@ -121,7 +121,7 @@ class AppIconLoader(context: Context) : ModelLoader<AppIconReq, Drawable> {
                 val appInfo = model.appInfo
 
                 val icon = try {
-                    pm.getApplicationIcon(appInfo)
+                    pm.getApplicationIcon(appInfo!!)
                 } catch (e: Exception) {
                     callback.onLoadFailed(e)
                     return
@@ -153,7 +153,7 @@ class AppIconLoader(context: Context) : ModelLoader<AppIconReq, Drawable> {
                     return
                 }
 
-                val appInfo = archivePackage.applicationInfo
+                val appInfo = archivePackage!!.applicationInfo
                 if (appInfo == null) {
                     callback.onLoadFailed(RuntimeException("Can not parser app info for: $filepath"))
                     return

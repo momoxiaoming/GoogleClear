@@ -1,8 +1,8 @@
 package com.dn.gc.ui.splash
 
 import androidx.lifecycle.MutableLiveData
-import com.dn.baselib.base.databinding.AbstractViewModel
-import com.dn.baselib.ext.launch
+import com.mckj.api.util.ScopeHelper.launch
+import com.mckj.baselib.base.databinding.AbstractViewModel
 
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay

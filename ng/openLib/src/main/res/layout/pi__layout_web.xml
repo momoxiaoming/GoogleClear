@@ -1,0 +1,82 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.org.openlib.ui.web.WebViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ProgressBar
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:progress="@{vm.progressBarProgress.data}"
+            android:progressDrawable="@drawable/web_top_progress_bar"
+            app:isGone="@{!vm.progressBarProgress.loading}"
+
+            />
+
+        <LinearLayout
+            android:id="@+id/load_error_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:isGone="@{!vm.webState.error}">
+
+            <Button
+                android:id="@+id/retryBtn"
+                android:layout_width="148.0dip"
+                android:layout_height="48.0dip"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:text="@string/web_retry"
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="50dp"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/AppText.Item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/web_error_hint1"
+                    android:textSize="16dp" />
+
+                <TextView
+                    style="@style/AppText.Item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/web_error_hint2"
+                    android:textSize="16dp"
+
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+</layout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <color name="primaryColor">#18D96E</color>-->
+<!--    <color name="primaryDarkColor">#4EF09A</color>-->
+<!--    <color name="secondaryColor">#4EF09A</color>-->
+    <color name="cleanup_tq_transparent">#00000000</color>
+
+    <color name="scene_name_color">#333333</color>
+    <color name="scene_desc_color">#888888</color>
+</resources>

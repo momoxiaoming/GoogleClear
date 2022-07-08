@@ -1,0 +1,20 @@
+# "Config" is the reserved word which to mark the env
+
+[Config]
+package="com.mckj.gen"
+dir= "../src/main/java"
+#author= "[leo]"
+#nameKey="nm"
+#typeKey="t"
+#commentKey="cm"
+
+# === The perference Group ===
+# === [[Group]] ===
+
+# === nm : name, cm: comment , t: type===
+
+
+    [[Gallery]]
+        nm = "galleryGuideProgress"
+        t = "Int"
+        cm = "图库引导进度"

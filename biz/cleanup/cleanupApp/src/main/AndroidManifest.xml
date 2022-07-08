@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.mckj.module.cleanup"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES"/>
+
+    <application>
+        <activity
+            android:name=".ui.appManager.AppManagerActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+        </activity>
+        
+        <receiver android:name=".ui.appManager.receiver.InstallReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ui.appManager.widget.SpinnerActivity"
+            android:exported="true">
+        </activity>
+    </application>
+
+</manifest>

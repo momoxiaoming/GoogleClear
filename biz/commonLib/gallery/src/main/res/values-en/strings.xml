@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gallery_save">Saved %s%s</string>
+    <string name="gallery_albums">Albums</string>
+    <string name="gallery_swipe_up_to_delete_pictures">Swipe up to delete</string>
+    <string name="gallery_left_right_change_between_photos">Left or Right to change between photos</string>
+    <string name="gallery_swipe_up_to_delete">Swipe up to delete</string>
+    <string name="gallery_7day_find1">"Any images or videos you delete will stay here for "</string>
+    <string name="gallery_7day_find2">"7 days "</string>
+    <string name="gallery_7day_find3">before they are deleted forever.</string>
+    <string name="album_classify">Album Classify</string>
+    <string name="gallery_trash">Trash</string>
+    <string name="gallery_photos">Photos</string>
+    <string name="gallery_video">Video</string>
+    <string name="gallery_restoreing">Restore…</string>
+    <string name="gallery_goto">Go</string>
+    <string name="gallery_restore">Restore</string>
+    <string name="gallery_delete_sure">Delete</string>
+    <string name="gallery_selected_x">%d selected</string>
+    <string name="gallery_tips_7_image">Images deleted with in 7 days can be restored here</string>
+    <string name="gallery_tips_7_video">Video deleted with in 7 days can be restored here</string>
+    <string name="gallery_x_images">" images"</string>
+    <string name="gallery_x_videos">" videos"</string>
+    <string name="gallery_x_restored_successfully">%s have been restored successfully</string>
+    <string name="gallery_x_delete_successfully">%s have been delete successfully</string>
+    <string name="gallery_x_image_deleted_sure">"  %s will be permanently deleted."</string>
+    <string name="gallery_x_restored_successfully_tips">%s have been restored successfully</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="gallery_ok">OK</string>
+    <string name="gallery_null">No image available, check out other albums</string>
+    <string name="select_all">Select all</string>
+    <string name="x_day">%d day</string>
+
+    <!-- 新样式-->
+    <string name="welcome_dialog_title">Photo Clean</string>
+    <string name="welcome_dialog_content">Swipe to organize your photos</string>
+    <string name="welcome_dialog_instructions">Instructions</string>
+    <string name="welcome_dialog_remove_tips">Swipe Left to Remove</string>
+    <string name="welcome_dialog_keep_tips">Swipe Right to Keep</string>
+    <string name="welcome_dialog_go">go</string>
+    <string name="welcome_dialog_clean_up_size">%s Totally Increased</string>
+    <string name="gallery_no_photos">No photos available</string>
+    <string name="gallery_swipe_up">Swipe Up to Quick Delete</string>
+    <string name="gallery_clean_size_content">&lt;font color=&quot;#3198F4&quot;&gt;%d&lt;/font&gt; photos seleted</string>
+
+    <string name="exit_dialog_title">Exit?</string>
+    <string name="exit_dialog_content">Exit now will not save you clean up Continue to clean your photos?</string>
+    <string name="exit_dialog_exit">Exit</string>
+    <string name="exit_dialog_continue">Continue</string>
+
+    <string name="gallery_clean_complete">Complete!</string>
+    <string name="gallery_clean_btn_content">Clean Up</string>
+
+    <string name="result_title">Result</string>
+    <string name="result_content_tips">Congratulations</string>
+    <string name="result_content">&lt;font color=&quot;#3198F4&quot;&gt;%d&lt;/font&gt; photos deleted,&lt;font color=&quot;#3198F4&quot;&gt;%s&lt;/font&gt; free up</string>
+    <string name="result_content_again">Play Again</string>
+    <string name="result_content_finish">Great! The album is organized</string>
+
+    <string name="gallery_clean_size_content_finish">All pictures are organized, please clear in time</string>
+
+</resources>

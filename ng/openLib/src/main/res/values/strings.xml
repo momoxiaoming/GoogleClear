@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="string_open_lx">联系我们</string>
+	<string name="string_open_privacy">隐私政策</string>
+	<string name="string_open_version">当前版本</string>
+	<string name="string_open_setting">关于</string>
+</resources>

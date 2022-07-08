@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cleanup_app_manager">应用管理</string>
+    <string name="cleanup_software_count">软件数量:</string>
+    <string name="cleanup_size">占用:</string>
+    <string name="cleanup_search">搜索软件名</string>
+    <string name="cleanup_uninstall">卸载</string>
+    <string name="cleanup_frequency">使用频率</string>
+    <string name="cleanup_app_size">应用大小</string>
+    <string name="cleanup_install_date">安装日期</string>
+    <string name="cleanup_latest">最新</string>
+    <string name="cleanup_oldest">最久</string>
+    <string name="cleanup_largest">最大</string>
+    <string name="cleanup_smallest">最小</string>
+    <string name="cleanup_less_frequent">很久未用</string>
+    <string name="cleanup_more_frequent">最近使用</string>
+    <string name="cleanup_loading_apps">应用加载中...</string>
+    <string name="cleanup_no_select_app">没有选中的应用</string>
+
+</resources>

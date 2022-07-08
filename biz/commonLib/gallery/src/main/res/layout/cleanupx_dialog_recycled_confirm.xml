@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/confirm_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cleanupx_shape_white"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/confirm_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="19dp"
+                    android:gravity="center"
+                    android:text="删除图片"
+                    android:layout_marginHorizontal="15dp"
+                    android:textColor="@color/menu_color"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/confirm_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="18dp"
+                    android:gravity="center"
+                    android:layout_marginRight="15dp"
+                    android:textColor="#333333"
+                    android:textSize="21sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/cancel"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/cleanupx_shape_rec_normal_button"
+                        android:gravity="center"
+                        android:text="@string/cancel"
+                        android:textColor="@color/CleanUpx_ffffff"
+                        android:textSize="21sp" />
+
+                    <TextView
+                        android:id="@+id/delete"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/cleanupx_shape_rec_normal_button"
+                        android:gravity="center"
+                        android:text="@string/delete"
+                        android:textColor="@color/CleanUpx_ffffff"
+                        android:textSize="21sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/remind_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cleanupx_shape_white"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/remind_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="19dp"
+                    android:text="图片恢复成功"
+                    android:gravity="center"
+                    android:textColor="@color/menu_color"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/remind_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="18dp"
+                    android:gravity="center"
+                    android:layout_marginRight="18dp"
+                    android:text="1张图片已恢复至手机相册"
+                    android:textColor="#333333"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/i_see"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginLeft="31dp"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginRight="31dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/cleanupx_shape_rec_normal_button"
+                    android:gravity="center"
+                    android:text="@string/gallery_ok"
+                    android:textColor="@color/CleanUpx_ffffff"
+                    android:textSize="21sp" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/ad_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/cleanupx_shape_white"></FrameLayout>
+
+    </LinearLayout>
+</layout>

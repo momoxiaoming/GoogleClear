@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="BezierBackgroundView">
+        <!--曲线高度-->
+        <attr name="bezierHeight" format="dimension" />
+        <!--曲线百分比（0-1）-->
+        <attr name="bezierProgress" format="float" />
+    </declare-styleable>
+
+
+    <declare-styleable name="FocusImageView">
+        <attr name="focus_focusing_id" format="integer" />
+        <attr name="focus_success_id" format="integer" />
+        <attr name="focus_fail_id" format="integer" />
+    </declare-styleable>
+    
+    <declare-styleable name="VSeekBar">
+        <attr name="seek_bar_max" format="integer|float"/>
+        <attr name="seek_bar_min" format="integer|float"/>
+        <attr name="seek_bar_boolean" format="boolean"/>
+    </declare-styleable>
+</resources>

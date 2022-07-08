@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="cleanup_subtitle">#262626</color>
+    <color name="cleanup_desc_unselected">#969696</color>
+    <color name="cleanup_junk_health">#15B464</color>
+    <color name="cleanup_junk_waring">#F95632</color>
+    <color name="cleanup_divider">#fff5f5f5</color>
+</resources>

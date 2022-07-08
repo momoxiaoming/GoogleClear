@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/header_bg"
+            android:layout_width="213dp"
+            android:layout_height="203dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_view"
+                android:layout_width="142dp"
+                android:layout_height="142dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY" />
+        </FrameLayout>
+
+
+        <!--扫描展示区域：有垃圾展示，无垃圾的空展示-->
+        <LinearLayout
+            android:id="@+id/menu"
+            android:layout_width="213dp"
+            android:layout_height="203dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/junk_scan_result_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+                
+                <FrameLayout
+                    android:id="@+id/top_img"
+                    android:layout_width="37dp"
+                    android:layout_height="45dp"
+                    app:layout_constraintVertical_bias="0.2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/junk_size_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/top_img"
+                    android:layout_centerInParent="true"
+                    tools:text="40.86" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/junk_size_tv"
+                    app:layout_constraintTop_toTopOf="@+id/junk_size_tv">
+
+                    <TextView
+                        android:id="@+id/junk_unit_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:layout_marginTop="-5dp"
+                        tools:text="MB" />
+
+                    <TextView
+                        android:id="@+id/junk_desc_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:textColor="#ffffff"
+                        android:textSize="13sp"
+                        tools:text="垃圾" />
+                </LinearLayout>
+                <!--            空垃圾提示-->
+                <LinearLayout
+                    android:id="@+id/empty_junk_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:gravity="center"
+                    app:layout_constraintVertical_bias="0.31"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/empty_icon"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginBottom="7dp"
+                        android:background="@drawable/cleanup_empty_icon" />
+
+                    <TextView
+                        android:id="@+id/empty_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        tools:text="非常干净" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_bg">
+
+            <TextView
+                android:id="@+id/scan_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="11dp"
+                android:text="@string/cleanup_scanning"
+                android:textColor="#000000"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/scan_action"
+                android:layout_width="172dp"
+                android:layout_height="44dp"
+                android:background="@drawable/clean_scan_btn_normal"
+                android:gravity="center"
+                android:text="@string/scenes_junk_clean"
+                android:textStyle="bold"
+                android:layout_marginBottom="30dp"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

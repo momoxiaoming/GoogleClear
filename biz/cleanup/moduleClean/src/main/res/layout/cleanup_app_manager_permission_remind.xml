@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="312dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/dialog_uninstall_bg"
+    android:orientation="vertical"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="center"
+        android:text="显示已安装应用需要授予访问应用使用的权限，否则不显示"
+        android:textColor="#040000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="是否前往授权？"
+        android:textColor="#333333"
+        android:textSize="19sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="35dp">
+
+        <Button
+            android:id="@+id/button_cancel"
+            android:layout_width="128dp"
+            android:layout_height="37dp"
+            android:background="@drawable/bg_line_app"
+            android:text="取消"
+            android:textColor="#15B464"
+            android:layout_marginEnd="12.5dp"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button_unInstall"
+            android:layout_width="128dp"
+            android:layout_height="37dp"
+            android:background="@drawable/bg_uninstall_bg"
+            android:text="前往"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="12.5dp"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

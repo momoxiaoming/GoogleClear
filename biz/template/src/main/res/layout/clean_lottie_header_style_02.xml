@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_view"
+            android:layout_width="312dp"
+            android:layout_height="312dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_loop="true" />
+
+        <!--扫描展示区域：有垃圾展示，无垃圾的空展示-->
+        <LinearLayout
+            android:layout_width="312dp"
+            android:layout_height="312dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:id="@+id/junk_scan_result_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/junk_size_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#010101"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:text="20.45" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/junk_size_tv"
+                    android:gravity="top"
+                    android:layout_marginTop="-3dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/junk_unit_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#010101"
+                        tools:text="MB"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/junk_desc_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#010101"
+                        android:visibility="gone"
+                        android:layout_marginTop="6dp"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <!--            空垃圾提示-->
+                <LinearLayout
+                    android:id="@+id/empty_junk_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/empty_icon"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/cleanup_empty_icon" />
+
+                    <TextView
+                        android:id="@+id/empty_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="非常干净"
+                        android:textStyle="bold"
+                        android:textColor="#343334"
+                        android:textSize="21sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/scan_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="垃圾清理"
+                tools:textColor="@color/black"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_alignBottom="@+id/junk_size_tv"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/scan_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在扫描中..."
+            android:textColor="#696969"
+            app:layout_constraintBottom_toBottomOf="@+id/lottie_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="15sp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

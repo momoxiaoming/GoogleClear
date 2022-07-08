@@ -1,0 +1,19 @@
+<resources>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cleanup_app_manager">App Manager</string>
+    <string name="cleanup_software_count">Software Count</string>
+    <string name="cleanup_size">Size</string>
+    <string name="cleanup_search">Search</string>
+    <string name="cleanup_uninstall">Uninstall</string>
+    <string name="cleanup_frequency">Frequency</string>
+    <string name="cleanup_app_size">Size</string>
+    <string name="cleanup_install_date">Date</string>
+    <string name="cleanup_latest">Latest</string>
+    <string name="cleanup_oldest">Oldest</string>
+    <string name="cleanup_largest">Largest</string>
+    <string name="cleanup_smallest">Smallest</string>
+    <string name="cleanup_less_frequent">Less Frequent</string>
+    <string name="cleanup_more_frequent">More Frequent</string>
+    <string name="cleanup_loading_apps">Loading Apps…</string>
+    <string name="cleanup_no_select_app">No Application Selected</string>
+</resources>

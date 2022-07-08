@@ -1,0 +1,14 @@
+<manifest package="com.mckj.datalib"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+
+        <activity
+            android:name=".ui.permissionGuide.PermissionGuideActivity"
+            android:excludeFromRecents="true"
+            android:taskAffinity=":permission.guide"
+            android:theme="@style/OpenTheme.TransParent" />
+
+    </application>
+
+</manifest>

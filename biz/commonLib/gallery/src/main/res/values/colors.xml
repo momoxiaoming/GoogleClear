@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <color name="primaryColor">#40A7FF</color>-->
+<!--    <co5lor name="primaryDarkColor">#4EF09A</co5lor>-->
+<!--    <color name="secondaryColor">#4EF09A</color>-->
+
+    <color name="menu_color">#040000</color>
+    <!--主页默认字体颜色-->
+    <color name="CleanupXDataTextNor">#40A7FF</color>
+    <!--主页选中字体颜色-->
+    <color name="CleanupXRecommendDataTextNor">#FF6C04</color>
+
+    <!--    大字版清理提示字体色-->
+    <color name="CleanUpxDataTextImportant">#FA232A</color>
+
+    <color name="CleanUpx_262626">#262626</color>
+    <color name="CleanUpx_007EFF">#007EFF</color>
+    <color name="CleanUpx_ffffff">#ffffff</color>
+    <color name="CleanUpx_ff5043">#ff5043</color>
+
+    <color name="CleanUpx_font">#999999</color>
+    <color name="CleanUpx_stroke_color">#cccccc</color>
+</resources>

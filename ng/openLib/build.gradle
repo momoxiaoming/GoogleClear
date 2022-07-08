@@ -1,0 +1,52 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+
+def getDateVersion() {
+    return new Date().format('yyyy.MM.dd')
+}
+android {
+    compileSdkVersion rootProject.android.compileSdkVersion
+    buildToolsVersion rootProject.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.android.minSdkVersion
+        targetSdkVersion rootProject.android.targetSdkVersion
+        versionCode 1_0_00
+        versionName "1.0.0"
+        // 定义一些内部依赖版本
+        def dateVer = getDateVersion()
+        def pipeCodeVersion = "${dateVer}-1"
+        resValue('string', 'pipe__code_ver', "${pipeCodeVersion}")
+        buildConfigField("String", "CODE_VER", "\"${pipeCodeVersion}\"")
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude '.readme'
+        exclude '/z/**'
+    }
+
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+
+    api project(":modules:Base")
+    api project(":modules:Ext")
+    implementation project(path: ':ng:proxy')
+
+}
