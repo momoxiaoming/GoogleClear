@@ -36,13 +36,14 @@ android {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+//    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     api project(path: ':biz:commonLib:dataLib')
 //    implementation project(":biz:common:baseLib")
     implementation project(':biz:cleanup:vest:vestBlue45')
 //    implementation project(path: ':biz:common:dataLib')
     api project(path: ':ng:openLib')
 
-    implementation ('com.google.android.exoplayer:exoplayer:2.16.1')
+//    implementation ('com.google.android.exoplayer:exoplayer:2.16.1')
+//    implementation rootProject.work
 
 }
