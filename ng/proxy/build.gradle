@@ -37,9 +37,10 @@ android {
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
 
+    api project(":ng:adModule")
     api project(":modules:Base")
     api project(":modules:Ext")
     implementation files('libs\\bcprov-jdk16-139.jar')
-    implementation 'com.google.firebase:firebase-analytics-ktx:21.0.0'
+    implementation 'com.google.firebase:firebase-analytics:21.0.0'
 
 }

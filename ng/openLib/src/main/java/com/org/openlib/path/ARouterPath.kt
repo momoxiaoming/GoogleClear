@@ -7,6 +7,8 @@ package com.org.openlib.path
  */
 object ARouterPath {
 
+    const val EXTRA_APP_MAIN = "/app/main"
+
     /**
      * fragment路径
      */

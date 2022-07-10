@@ -3,6 +3,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 
+apply from: 'topon.gradle'
 
 android {
     compileSdkVersion rootProject.android.compileSdkVersion
@@ -16,6 +17,10 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
+
+        ndk {
+            abiFilters 'armeabi-v7a', 'x86'
+        }
     }
 
     buildTypes {
@@ -36,5 +41,22 @@ android {
 
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
+    api project(":modules:Base")
+    api project(":modules:Ext")
+//    api "com.anythink.sdk:core:5.9.62"
+//    api "com.anythink.sdk:nativead:5.9.62"
+//    api "com.anythink.sdk:banner:5.9.62"
+//    api "com.anythink.sdk:interstitial:5.9.62"
+//    api "com.anythink.sdk:rewardedvideo:5.9.62"
+//    api "com.anythink.sdk:splash:5.9.62"
+//
+//    //Androidx (Necessary)
+//    api "androidx.appcompat:appcompat:1.1.0"
+//
+//    //Admob
+//    api "com.anythink.sdk:adapter-admob:5.9.62"
+//    api "com.google.android.gms:play-services-ads:20.6.0"
+
+//     project(path: ':ng:openLib')
 
 }

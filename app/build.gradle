@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+
 }
 
 android {
@@ -41,5 +43,6 @@ dependencies {
 //    implementation project(path: ':biz:common:dataLib')
     api project(path: ':ng:openLib')
 
+    implementation ('com.google.android.exoplayer:exoplayer:2.16.1')
 
 }

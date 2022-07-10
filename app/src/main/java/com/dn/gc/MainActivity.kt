@@ -8,7 +8,8 @@ import com.org.openlib.utils.SystemUiUtil
 import com.dn.vi.app.base.app.ViActivity
 import com.mckj.datalib.entity.ARouterPath
 import com.org.openlib.utils.FragmentUtil
-@Route(path = "/app/main")
+
+@Route(path = com.org.openlib.path.ARouterPath.EXTRA_APP_MAIN)
 class MainActivity : ViActivity() {
 
     private lateinit var mbinding: ActivityMainBinding

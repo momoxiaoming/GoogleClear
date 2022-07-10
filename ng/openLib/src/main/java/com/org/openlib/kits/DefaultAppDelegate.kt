@@ -118,6 +118,7 @@ abstract class DefaultAppDelegate(app: Application) : BaseAppDelegate(app)
         OkApi.DEBUG = Debuger.debugOn
 
 
+
 //        val lifeMonitor = AppLife()
 //        app.registerActivityLifecycleCallbacks(lifeMonitor)
 //        LogHelper.registerLogService()

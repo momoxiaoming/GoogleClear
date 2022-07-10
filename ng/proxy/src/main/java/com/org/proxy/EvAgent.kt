@@ -1,8 +1,8 @@
 package com.org.proxy
 
 import android.os.Bundle
-import com.google.firebase.analytics.ktx.analytics
-import com.google.firebase.ktx.Firebase
+import com.dn.vi.app.base.app.AppMod
+import com.google.firebase.analytics.FirebaseAnalytics
 
 /**
  * EvAgent
@@ -17,10 +17,12 @@ object EvAgent {
     }
 
     fun sendEventMap(event: String, map: Map<String, String>) {
-        Firebase.analytics.logEvent(event, mapToBundle(map))
+        FirebaseAnalytics.getInstance(AppMod.app).logEvent(event, mapToBundle(map))
     }
+
     private fun mapToBundle(map: Map<String, String>): Bundle {
         val bundle = Bundle()
+
         map.keys.forEach {
             bundle.putString(it, map[it])
         }

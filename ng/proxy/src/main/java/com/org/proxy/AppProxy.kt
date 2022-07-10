@@ -3,6 +3,7 @@ package com.org.proxy
 import android.app.Application
 import com.dn.vi.app.repo.kv.KvLite
 import com.dn.vi.app.repo.kv.KvSp
+import com.org.admodule.PlamflatManager
 
 /**
  * AppProxy
@@ -43,6 +44,8 @@ object AppProxy {
     }
 
     fun initSdk(app: Application,  codeVersion: String) {
-
+        PlamflatManager.init(app)
+//
+        AppProxyEnv.increaseInitState()
     }
 }

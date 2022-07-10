@@ -4,6 +4,12 @@ import android.app.Application
 import com.dn.vi.app.base.app.BaseAppDelegate
 import com.dn.vi.app.base.app.BaseApplication
 import com.org.openlib.kits.DefaultAppDelegate
+import android.webkit.WebView
+
+import android.os.Build
+
+
+
 
 /**
  * App
@@ -18,7 +24,17 @@ class App : BaseApplication() {
 
 
     private class AppDelegate(app: Application) : DefaultAppDelegate(app) {
+        override fun onCreateEnv(processName: String, remoteProc: Boolean) {
+            //Android 9及以上必须设置
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                val processName: String = getProcessName()
+                if (!(app.getPackageName() == processName)) {
+                    WebView.setDataDirectorySuffix(processName)
+                }
+            }
+            super.onCreateEnv(processName, remoteProc)
 
+        }
     }
 
 
