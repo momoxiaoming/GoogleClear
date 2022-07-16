@@ -7,7 +7,7 @@ import com.mckj.gallery.bean.GalleryConstants
 import com.mckj.gallery.bean.MediaBean
 
 /**
- *@author leix
+ *@author xx
  *@version 1
  *@createTime 2021/7/20 15:22
  *@desc 定义用户和媒体库的交互能力

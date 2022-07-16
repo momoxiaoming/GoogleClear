@@ -17,7 +17,7 @@ import com.mckj.datalib.helper.FingerHelper
 import com.mckj.sceneslib.R
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/12/15 17:22
  * @desc 设置页权限开关引导弹窗

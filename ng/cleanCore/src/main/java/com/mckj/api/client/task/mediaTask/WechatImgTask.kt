@@ -10,7 +10,7 @@ import com.mckj.gallery.impl.PictureImpl
 import io.reactivex.rxjava3.functions.Consumer
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/10/28 17:36
  * @desc

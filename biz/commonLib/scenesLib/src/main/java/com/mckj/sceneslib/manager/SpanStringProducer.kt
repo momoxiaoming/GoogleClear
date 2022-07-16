@@ -5,7 +5,7 @@ import android.text.SpannableStringBuilder
 import android.text.style.ForegroundColorSpan
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/7/26 18:32
  * @desc

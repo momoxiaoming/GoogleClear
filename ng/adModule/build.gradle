@@ -10,6 +10,7 @@ android {
     buildToolsVersion rootProject.android.buildToolsVersion
 
     defaultConfig {
+
         minSdkVersion rootProject.android.minSdkVersion
         targetSdkVersion rootProject.android.targetSdkVersion
         versionCode 1_0_00
@@ -18,9 +19,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
 
-        ndk {
-            abiFilters 'armeabi-v7a', 'x86'
-        }
+
     }
 
     buildTypes {
@@ -43,6 +42,7 @@ dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
     api project(":modules:Base")
     api project(":modules:Ext")
+    
 //    api "com.anythink.sdk:core:5.9.62"
 //    api "com.anythink.sdk:nativead:5.9.62"
 //    api "com.anythink.sdk:banner:5.9.62"

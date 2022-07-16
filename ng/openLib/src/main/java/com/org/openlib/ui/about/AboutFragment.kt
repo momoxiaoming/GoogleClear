@@ -37,7 +37,7 @@ import okio.ByteString.Companion.toByteString
 @Route(path = ARouterPath.FRAGMENT_ABOUT)
 open class AboutFragment : DatabindingFragment<OpenFragmentAboutBinding>() {
 
-    companion object{
+    companion object {
         const val PRIVATE_BUTTON_STATUS = "PRIVATE_BUTTON_STATUS"
     }
 
@@ -63,17 +63,28 @@ open class AboutFragment : DatabindingFragment<OpenFragmentAboutBinding>() {
     }
 
     private fun initView() {
-        optList.add( AboutOptItem(
+        optList.add(AboutOptItem(
             0,
             getString(R.string.string_open_version),
             AboutOptItem.TYPE_TEXT,
             {}
         ).also { it.subText = "v${AppProxy.appVersion}" })
 
-        optList.add( AboutOptItem(1, getString(R.string.string_open_privacy), AboutOptItem.TYPE_ARROW, Runnable { WebUtil.openProtocolByWeb() }))
-        optList.add( AboutOptItem(1, getString(R.string.string_open_lx), AboutOptItem.TYPE_TEXT, Runnable { }).also {
-            it.subText="xxx@gmail.com"
-        })
+        optList.add(
+            AboutOptItem(
+                1,
+                getString(R.string.string_open_privacy),
+                AboutOptItem.TYPE_ARROW,
+                Runnable { WebUtil.openProtocolByWeb(requireActivity()) })
+        )
+        optList.add(
+            AboutOptItem(
+                1,
+                getString(R.string.string_open_lx),
+                AboutOptItem.TYPE_TEXT,
+                Runnable { }).also {
+                it.subText = "missluoluo7@gmail.com"
+            })
 
         val adapter = OptAdapter(requireContext())
         binding.list.layoutManager =
@@ -118,29 +129,33 @@ open class AboutFragment : DatabindingFragment<OpenFragmentAboutBinding>() {
                 "https://pro.77pin.net/feedback/questionFeedback.html?imgOff=1&value=${paramChain}"
             }
 
-            WebHelper.openWeb(context, WebHelper.Request(
-                webUrl = finalUrl,
-                title = "反馈",
-                contentKey = "feedback",
-            ))
+            WebHelper.openWeb(
+                context, WebHelper.Request(
+                    webUrl = finalUrl,
+                    title = "反馈",
+                    contentKey = "feedback",
+                )
+            )
 
         }
     }
 
-    fun checkButtonStatus(binding: OpenItemAboutOpt2Binding){
-        KvLite.async.getBool(PRIVATE_BUTTON_STATUS,true).observeOn(AndroidSchedulers.mainThread()).subscribeBy {
-            VLog.i("checkUnlock get value:${it}")
-            buttonStatus = it
-            if (it){
-                binding.button.setBackgroundResource(R.drawable.shape_switch_btn)
-            }else{
-                binding.button.setBackgroundResource(R.drawable.shape_switch_btn_un)
+    fun checkButtonStatus(binding: OpenItemAboutOpt2Binding) {
+        KvLite.async.getBool(PRIVATE_BUTTON_STATUS, true).observeOn(AndroidSchedulers.mainThread())
+            .subscribeBy {
+                VLog.i("checkUnlock get value:${it}")
+                buttonStatus = it
+                if (it) {
+                    binding.button.setBackgroundResource(R.drawable.shape_switch_btn)
+                } else {
+                    binding.button.setBackgroundResource(R.drawable.shape_switch_btn_un)
+                }
             }
-        }
     }
 
-    fun saveButtonStatus(status:Boolean){
-        KvLite.async.putBool(PRIVATE_BUTTON_STATUS,status).observeOn(AndroidSchedulers.mainThread()).subscribeBy {
+    fun saveButtonStatus(status: Boolean) {
+        KvLite.async.putBool(PRIVATE_BUTTON_STATUS, status)
+            .observeOn(AndroidSchedulers.mainThread()).subscribeBy {
             VLog.i("ButtonStatus put value :${status}")
             //执行检查unlock的操作
             buttonStatus = status
@@ -184,7 +199,7 @@ open class AboutFragment : DatabindingFragment<OpenFragmentAboutBinding>() {
             binding.opt = item
             binding.executePendingBindings()
             checkButtonStatus(binding)
-            if (item.type== TYPE_BUTTON){
+            if (item.type == TYPE_BUTTON) {
                 changeButtonStatus(binding)
             }
         }
@@ -200,9 +215,9 @@ open class AboutFragment : DatabindingFragment<OpenFragmentAboutBinding>() {
     private fun changeButtonStatus(binding: OpenItemAboutOpt2Binding) {
         binding.holder.setOnClickListener {
             saveButtonStatus(!buttonStatus)
-            if (buttonStatus){
+            if (buttonStatus) {
                 binding.button.setBackgroundResource(R.drawable.shape_switch_btn_un)
-            }else{
+            } else {
                 binding.button.setBackgroundResource(R.drawable.shape_switch_btn)
             }
         }

@@ -9,7 +9,7 @@ import android.util.DisplayMetrics
 import java.util.*
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2022/1/18 15:34
  * @desc 应用内语言适配

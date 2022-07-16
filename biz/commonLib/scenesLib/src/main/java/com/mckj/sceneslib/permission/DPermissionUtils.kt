@@ -16,7 +16,7 @@ import com.tbruyelle.rxpermissions3.RxPermissions
 import java.util.function.Consumer
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/11/29 16:50
  * @desc 权限申请类

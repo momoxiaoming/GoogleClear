@@ -37,7 +37,7 @@ android {
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
 
-//    api project(":ng:adModule")
+    api project(":ng:adModule")
     api project(":modules:Base")
     api project(":modules:Ext")
     implementation files('libs\\bcprov-jdk16-139.jar')

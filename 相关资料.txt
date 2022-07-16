@@ -1,0 +1,19 @@
+相关账号
+google邮箱：账号：missluoluo7@gmail.com,密码：399567962lly
+FB账号：008613560738820  密码：XLx220703
+topOn: 账号：84016893@qq.com，密码：uyWE0XGX123$
+
+
+相关链接
+topOn技术接入文档: https://docs.toponad.com/#/zh-cn/android/GetStarted/TopOn_Get_Started
+1. 创建TopOn账号。注册地址：https://app.toponad.com/#/register
+2. 在TopOn运营后台创建应用和广告位，并获取ID提供给技术。
+3. 在各个广告平台创建账号，应用和广告位，并将对应ID绑定在TopOn的对应参数下面。
+> 平台账号创建请参考：https://docs.toponad.com/#/zh-cn/android/NetworkAccess/tt/tt_cn
+> 配置绑定详细操作请参考：https://docs.toponad.com/#/zh-cn/android/DeveloperAccess/Application/app_cn
+4. 在TopOn运营后台给每个广告位配置逻辑，如展示哪个广告平台的广告，展示几次，等等
+
+虚拟机
+
+FB账号：008613560738820  密码：XLx220703。对应47.242.167.253 虚拟机
+47.242.167.253虚拟机帐号：administrator  密码：uyWE0XGX123

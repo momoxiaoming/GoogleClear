@@ -1,7 +1,7 @@
 package com.mckj.api.http.response
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/8/4 10:32
  * @desc 数据库版本信息

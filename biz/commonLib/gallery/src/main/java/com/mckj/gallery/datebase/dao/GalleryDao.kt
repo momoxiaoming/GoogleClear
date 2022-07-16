@@ -8,7 +8,7 @@ import androidx.room.Query
 import com.mckj.gallery.datebase.entity.RecycledBean
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/7/23 14:50
  * @desc

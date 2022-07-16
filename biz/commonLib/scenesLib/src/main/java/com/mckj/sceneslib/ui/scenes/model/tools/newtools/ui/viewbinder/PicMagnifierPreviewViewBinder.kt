@@ -19,7 +19,7 @@ import com.mckj.sceneslib.ui.scenes.model.tools.newtools.utils.Constants
 
 
 /**
- *@author leix
+ *@author xx
  *@version 1
  *@createTime 2021/7/20 14:22
  *@desc 图库大图Item

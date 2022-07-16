@@ -21,7 +21,7 @@ import com.mckj.gallery.job.GalleryManager
 import com.org.openlib.utils.onceClick
 
 /**
- *@author leix
+ *@author xx
  *@version 1
  *@createTime 2021/7/24 22:17
  *@desc 图库底部Item

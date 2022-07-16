@@ -1,7 +1,7 @@
 package com.mckj.gallery.bean
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/11/3 12:08
  * @desc

@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlin.math.abs
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/7/23 10:26
  * @desc item滑动检测

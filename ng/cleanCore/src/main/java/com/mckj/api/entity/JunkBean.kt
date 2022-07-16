@@ -6,7 +6,7 @@ import com.mckj.api.client.JunkConstants
 import com.mckj.gallery.bean.MediaBean
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/9/28 17:21
  * @desc

@@ -5,7 +5,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/9/15 17:05
  * @desc

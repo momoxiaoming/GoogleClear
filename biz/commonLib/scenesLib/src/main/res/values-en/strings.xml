@@ -242,14 +242,14 @@
     <string name="scenes_looking_camera">正在查找可疑摄像头</string>
     <string name="scenes_camera_detection_ing">摄像头检测中...</string>
 
-    <string name="scenes_network_acceleration">网络加速</string>
-    <string name="scenes_optimize_network_increase_internet_speed">优化网络 提高上网速度</string>
+    <string name="scenes_network_acceleration">Network Speed</string>
+    <string name="scenes_optimize_network_increase_internet_speed">Optimize the network</string>
     <string name="scenes_one_key_acceleration">一键加速</string>
-    <string name="scenes_the_current_network_speed_is_slow_and_can_be_optimized">当前网速较慢 还可以优化</string>
-    <string name="scenes_optimizing_router">正在优化路由器</string>
-    <string name="scenes_looking_for_a_premium_internet_connection">正在查找优质上网线路</string>
-    <string name="scenes_optimizing_network_security_configuration">正在优化网络安全配置</string>
-    <string name="scenes_the_network_is_accelerating">网络加速中...</string>
+    <string name="scenes_the_current_network_speed_is_slow_and_can_be_optimized">network speed is slow, optimizing</string>
+    <string name="scenes_optimizing_router">Optimizing router</string>
+    <string name="scenes_looking_for_a_premium_internet_connection">Looking for a premium internet connection</string>
+    <string name="scenes_optimizing_network_security_configuration">Network security configuration is being optimized</string>
+    <string name="scenes_the_network_is_accelerating">network speeding...</string>
 
     <string name="scenes_signal_optimization">信号优化</string>
     <string name="scenes_analyze_signal_interference_factors">分析信号干扰因素</string>
@@ -273,7 +273,7 @@
     <string name="scenes_slow">慢</string>
     <string name="scenes_grab_the_red_envelope">抢红包手速%n老是比别人慢？</string>
     <string name="scenes_mobile_phone_virus_will_threaten_internet_security">手机病毒会威胁上网安全</string>
-    <string name="scenes_network_acceleration_more">网络加速%s%%以上</string>
+    <string name="scenes_network_acceleration_more">network speed%s%%</string>
     <string name="scenes_network_needs_to_be_optimized">网络需优化</string>
     <string name="scenes_to_be_cleaned_up">QQ中还有%s MB%n深层聊天垃圾待清理</string>
     <string name="scenes_junk_scan_app_cache">Scanning Cache Files</string>

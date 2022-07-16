@@ -3,7 +3,7 @@ package com.mckj.api.data
 import com.mckj.api.http.response.VersionInfo
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/8/7 10:22
  * @desc

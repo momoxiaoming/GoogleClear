@@ -4,7 +4,7 @@ import android.util.Log
 import com.mckj.api.db.JunkDatabase
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/8/7 11:38
  * @desc加载数据库

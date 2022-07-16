@@ -19,7 +19,7 @@ import io.reactivex.rxjava3.schedulers.Schedulers
 import java.util.concurrent.TimeUnit
 
 /**
- *  author : leix
+ *  author : xx
  *  date : 2022/3/6 22:17
  *  description :首页强弹推荐的逻辑
  */

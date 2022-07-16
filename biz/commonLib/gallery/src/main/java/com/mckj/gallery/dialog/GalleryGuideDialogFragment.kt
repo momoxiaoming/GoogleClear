@@ -26,7 +26,7 @@ import com.mckj.utils.EventTrack
 import kotlin.properties.Delegates
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/7/23 10:50
  * @desc 图库使用引导

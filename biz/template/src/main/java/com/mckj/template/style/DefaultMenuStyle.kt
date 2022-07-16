@@ -9,7 +9,7 @@ import com.mckj.template.abs.AbsMenuStyle
 import com.mckj.template.databinding.CleanupMenuItemBinding
 
 /**
- *  author : leix
+ *  author : xx
  *  date : 2022/3/5 10:09
  *  description :默认的首页菜单模板，默认tip提示
  */

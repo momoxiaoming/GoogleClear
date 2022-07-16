@@ -16,7 +16,7 @@ import com.mckj.api.client.task.shallow.RamCacheTask
 import com.mckj.api.client.task.shallow.UninstallResidueTask
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/10/28 16:12
  * @desc

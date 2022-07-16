@@ -7,7 +7,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/7/23 14:51
  * @desc 回收的媒体资源数据类型

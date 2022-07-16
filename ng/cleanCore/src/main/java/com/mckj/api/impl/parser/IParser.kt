@@ -4,7 +4,7 @@ import com.mckj.api.db.entity.JunkDbEntity
 import com.mckj.api.entity.AppJunk
 import io.reactivex.rxjava3.functions.Consumer
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/12/22 9:20
  * @desc

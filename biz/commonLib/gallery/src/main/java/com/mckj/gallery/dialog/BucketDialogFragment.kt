@@ -19,7 +19,7 @@ import com.mckj.gen.St
 import com.mckj.utils.EventTrack
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/7/21 19:24
  * @desc 图片文件夹选择dialog

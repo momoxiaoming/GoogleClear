@@ -13,7 +13,7 @@ import com.mckj.moduleclean.R
 import org.jetbrains.anko.backgroundResource
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/9/15 14:29
  * @desc

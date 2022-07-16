@@ -13,7 +13,7 @@ import com.mckj.sceneslib.manager.scenes.ScenesType
 import io.reactivex.rxjava3.disposables.Disposable
 
 /**
- *  author : leix
+ *  author : xx
  *  date : 2022/3/6 22:17
  *  description :首页强弹推荐的逻辑
  */

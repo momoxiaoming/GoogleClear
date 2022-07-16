@@ -4,7 +4,7 @@ import com.mckj.api.entity.AppJunk
 
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/9/16 19:47
  * @desc

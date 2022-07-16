@@ -6,7 +6,7 @@ import com.mckj.gallery.datebase.dao.GalleryDao
 import com.mckj.gallery.datebase.entity.RecycledBean
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/7/23 15:39
  * @desc 数据交互层仓库

@@ -16,7 +16,7 @@ import com.org.openlib.utils.onceClick
 import kotlinx.android.synthetic.main.cleanupx_item_gallery_preview.view.*
 
 /**
- *@author leix
+ *@author xx
  *@version 1
  *@createTime 2021/7/20 14:22
  *@desc 图库大图Item

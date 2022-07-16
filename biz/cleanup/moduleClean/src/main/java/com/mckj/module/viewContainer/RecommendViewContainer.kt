@@ -18,7 +18,7 @@ import com.mckj.sceneslib.manager.scenes.AbstractScenes
 import com.mckj.sceneslib.ui.viewbinder.LandingGuideViewBinder
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/9/7 16:48
  * @desc

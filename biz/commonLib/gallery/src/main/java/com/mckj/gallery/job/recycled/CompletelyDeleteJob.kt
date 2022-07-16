@@ -9,7 +9,7 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/7/25 15:25
  * @desc 图库彻底删除任务

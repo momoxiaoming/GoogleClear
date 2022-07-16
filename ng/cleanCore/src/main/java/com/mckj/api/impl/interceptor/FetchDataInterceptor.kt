@@ -12,7 +12,7 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/8/7 11:16
  * @desc 拉取服务器数据

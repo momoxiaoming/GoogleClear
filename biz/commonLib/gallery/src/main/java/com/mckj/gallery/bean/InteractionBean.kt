@@ -3,7 +3,7 @@ package com.mckj.gallery.bean
 import com.mckj.gallery.datebase.entity.RecycledBean
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/9/17 15:29
  * @desc

@@ -28,7 +28,7 @@ class NetworkSpeedScenes : AbstractScenes() {
             ResourceUtil.getString(R.string.scenes_optimize_network_increase_internet_speed),
             "",
             ResourceUtil.getString(R.string.scenes_one_key_acceleration),
-            ResourceUtil.getString(R.string.scenes_optimization_completed),
+            ResourceUtil.getString(R.string.scenes_optimizing_finish),
             String.format(ResourceUtil.getString(R.string.scenes_network_acceleration_more),"${(10..20).random()}"),
             "home_network_click",
             recommendDesc = ResourceUtil.getString(R.string.scenes_the_current_network_speed_is_slow_and_can_be_optimized)

@@ -18,7 +18,7 @@ import java.util.concurrent.atomic.AtomicBoolean
 import kotlin.collections.ArrayList
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/12/20 17:51
  * @desc
@@ -50,14 +50,14 @@ class MdRemover {
     }
 
     private fun loop(context: Context, cons: Consumer<MediaBean?>) {
-        Log.d("leix", "Loop：${mdQueue.size}")
+        Log.d("xx", "Loop：${mdQueue.size}")
         if (!mdQueue.isEmpty()) {
             poll()?.let {
-                Log.d("leix", "取出对象：${it.mediaBean.id}")
+                Log.d("xx", "取出对象：${it.mediaBean.id}")
                 mOptQueueBean = it
                 mdQueue.remove(it)
                 preRemove(context, it) { remove ->
-                    Log.d("leix", "预删除结果：${it.mediaBean.id}----remove:$remove")
+                    Log.d("xx", "预删除结果：${it.mediaBean.id}----remove:$remove")
                     if (remove) {
                         cons.accept(it.mediaBean)
                     } else {
@@ -71,7 +71,7 @@ class MdRemover {
 
 
     private fun startRemove() {
-        Log.d("leix", "startRemove:-->${mOptQueueBean?.mediaBean?.id}")
+        Log.d("xx", "startRemove:-->${mOptQueueBean?.mediaBean?.id}")
         mOptQueueBean?.let {
             it.block?.invoke(true)
         } ?: let {
@@ -80,7 +80,7 @@ class MdRemover {
     }
 
     private fun reject() {
-        Log.d("leix", "reject:-->${mOptQueueBean?.mediaBean?.id}")
+        Log.d("xx", "reject:-->${mOptQueueBean?.mediaBean?.id}")
         mOptQueueBean?.let {
             it.block?.invoke(false)
         } ?: let {
@@ -94,15 +94,15 @@ class MdRemover {
 
 
     private fun preRemove(context: Context, queueBean: QueueBean, cons: Consumer<Boolean>) {
-        Log.d("leix", "开始预删除:${queueBean.mediaBean.id}")
+        Log.d("xx", "开始预删除:${queueBean.mediaBean.id}")
         queueBean.mediaBean.let { bean ->
             JobChain.newInstance()
                 .addJob(RecycledJodCreate(bean, context, block = {
                     when (it) {
                         GalleryConstants.RemoveStatus.REJECT_BY_PERMISSION -> {
-                            Log.d("leix", "需要授权")
+                            Log.d("xx", "需要授权")
                             queueBean.block = { removed ->
-                                Log.d("leix", "授权结果:${queueBean.mediaBean.id}：-->$removed")
+                                Log.d("xx", "授权结果:${queueBean.mediaBean.id}：-->$removed")
                                 if (removed) {
                                     preRemove(context, queueBean, cons)
                                 } else {
@@ -111,7 +111,7 @@ class MdRemover {
                             }
                         }
                         GalleryConstants.RemoveStatus.REMOVED -> {
-                            Log.d("leix", "不需要授权")
+                            Log.d("xx", "不需要授权")
                             cons.accept(true)
                         }
                     }

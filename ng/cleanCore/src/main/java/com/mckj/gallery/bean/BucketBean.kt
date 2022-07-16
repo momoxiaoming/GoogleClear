@@ -3,7 +3,7 @@ package com.mckj.gallery.bean
 import android.text.TextUtils
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/7/22 15:23
  * @desc

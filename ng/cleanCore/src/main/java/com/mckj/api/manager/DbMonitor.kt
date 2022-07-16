@@ -10,7 +10,7 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/8/5 14:26
  * @desc 检查DB状态

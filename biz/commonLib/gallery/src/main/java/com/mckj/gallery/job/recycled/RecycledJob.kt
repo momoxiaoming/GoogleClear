@@ -15,7 +15,7 @@ import com.mckj.gallery.datebase.entity.RecycledBean
 import com.mckj.gallery.job.Job
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/7/23 17:07
  * @desc job任务：

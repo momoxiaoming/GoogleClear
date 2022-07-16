@@ -5,7 +5,7 @@ import com.mckj.gallery.job.Job
 import com.mckj.gallery.job.JobCreator
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/7/25 11:20
  * @desc

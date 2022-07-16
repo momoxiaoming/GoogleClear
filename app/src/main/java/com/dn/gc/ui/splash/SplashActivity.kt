@@ -30,7 +30,6 @@ class SplashActivity: SimpleStartupActivity() {
             DataBindingUtil.setContentView<ActivitySplashBinding>(this, R.layout.activity_splash)
         SystemUiUtil.hideSystemUI(window)
         mSplashModel.mLoadTimeLiveData.observe(this) {
-            Log.i("GC","---->${it.toInt()}")
             if(it.toInt()>=90){
                 startMain()
             }
@@ -39,13 +38,14 @@ class SplashActivity: SimpleStartupActivity() {
     }
 
     override fun redirectToMain() {
-        mSplashModel.loadTimeout(3000)
+        mSplashModel.loadTimeout(1500)
     }
 
     fun startMain(){
+        finish()
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
-        finish()
     }
 
     override fun onFinishAction() {

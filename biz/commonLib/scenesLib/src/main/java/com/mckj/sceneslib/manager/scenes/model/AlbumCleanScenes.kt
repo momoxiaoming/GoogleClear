@@ -14,7 +14,7 @@ import com.mckj.sceneslib.permission.DPermissionUtils
 /**
  * Describe:
  *
- * Created By leix on 2021/07/19
+ * Created By xx on 2021/07/19
  */
 open class AlbumCleanScenes : AbstractScenes() {
 

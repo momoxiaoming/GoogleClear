@@ -6,7 +6,7 @@ import com.org.proxy.utils.AESUtil
 
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/8/7 10:31
  * @desc 拼接请求参数并且加密

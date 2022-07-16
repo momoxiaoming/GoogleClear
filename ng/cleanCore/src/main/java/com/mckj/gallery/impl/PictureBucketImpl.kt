@@ -9,7 +9,7 @@ import com.mckj.gallery.bean.GalleryConstants
 import com.mckj.gallery.bean.MediaBean
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/7/22 15:26
  * @desc

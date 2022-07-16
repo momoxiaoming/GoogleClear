@@ -23,7 +23,7 @@ import com.mckj.gallery.bean.ARouterPath
 import com.mckj.gallery.databinding.CleanupxFragmentRecycledBinding
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/7/21 19:24
  * @desc

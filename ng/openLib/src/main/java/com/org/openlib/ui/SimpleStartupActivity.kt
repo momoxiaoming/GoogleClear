@@ -18,6 +18,7 @@ import com.dn.vi.app.cm.log.VLog
 import com.org.openlib.help.SplashHelper
 
 import com.org.openlib.utils.RomUtils
+import com.org.proxy.AppProxy
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.util.concurrent.atomic.AtomicInteger
@@ -115,7 +116,11 @@ open class SimpleStartupActivity : ViActivity() {
             }
 
 
-
+            resumedContStep(this) { cont ->
+                //显示开屏广告
+                AppProxy.postInitSdk()
+                cont.resume(true)
+            }
 
 
             resumedContStep(this) { cont ->

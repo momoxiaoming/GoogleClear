@@ -17,7 +17,7 @@ import com.mckj.template.R
 import com.mckj.template.databinding.CleanupMenuViewBinding
 
 /**
- *  author :leix
+ *  author :xx
  *  date : 2022/3/5 11:46
  *  description : 默认的菜单模板
  *  宫格形式排列

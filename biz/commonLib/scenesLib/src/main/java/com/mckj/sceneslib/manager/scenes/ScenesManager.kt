@@ -124,7 +124,7 @@ class ScenesManager {
         register(PhoneSpeedScenes())//手机加速
         register(CoolDownScenes())//手机降温
         register(PowerSaveScenes())//超级省电
-//        register(NetworkSpeedScenes())//网络加速
+        register(NetworkSpeedScenes())//网络加速
 //        register(AntivirusScenes())//手机杀毒
 //        register(CameraCheckScenes())//短视频清理
         register(UninstallCleanScenes())//残留清理

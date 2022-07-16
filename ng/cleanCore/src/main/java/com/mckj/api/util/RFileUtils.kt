@@ -13,7 +13,7 @@ import com.alibaba.android.arouter.launcher.ARouter
 import com.dn.vi.app.base.app.AppMod
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/12/16 9:34
  * @desc

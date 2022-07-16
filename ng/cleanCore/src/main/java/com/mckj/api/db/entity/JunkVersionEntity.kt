@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/8/16 9:36
  * @desc

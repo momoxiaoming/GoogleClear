@@ -28,7 +28,7 @@ import org.jetbrains.anko.backgroundResource
 import org.jetbrains.anko.textColor
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2022/2/25 11:45
  * @desc 清理头部

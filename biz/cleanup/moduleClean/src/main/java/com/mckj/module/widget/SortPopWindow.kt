@@ -19,7 +19,7 @@ import com.mckj.moduleclean.R
 import com.mckj.moduleclean.databinding.CleanupSortItemBinding
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/9/14 18:16
  * @desc

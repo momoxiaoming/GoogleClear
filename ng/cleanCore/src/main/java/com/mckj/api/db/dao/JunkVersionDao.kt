@@ -5,7 +5,7 @@ import androidx.room.Query
 import com.mckj.api.db.entity.JunkVersionEntity
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/8/16 9:40
  * @desc

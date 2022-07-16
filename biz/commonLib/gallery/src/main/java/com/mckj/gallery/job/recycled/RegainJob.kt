@@ -8,7 +8,7 @@ import com.mckj.gallery.datebase.entity.RecycledBean
 import com.mckj.gallery.job.Job
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/7/25 11:25
  * @desc 图库恢复任务

@@ -4,7 +4,7 @@ import com.mckj.api.db.entity.JunkDbEntity
 
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/8/7 16:10
  * @desc 数据库的实现类，对外抛出的数据获取的唯一入口

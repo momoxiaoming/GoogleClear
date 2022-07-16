@@ -22,7 +22,7 @@ import static androidx.recyclerview.widget.RecyclerView.SCROLL_STATE_IDLE;
 
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/7/22 12:28
  * @desc 自定义的GalleryLayoutManager，处理recycleView  item切换，
@@ -729,7 +729,7 @@ public class GalleryLayoutManager extends RecyclerView.LayoutManager implements 
     }
 
     /**
-     * @author leix
+     * @author xx
      */
     class State {
         /**
@@ -837,7 +837,7 @@ public class GalleryLayoutManager extends RecyclerView.LayoutManager implements 
     }
 
     /**
-     * @author leix
+     * @author xx
      */
     public static class LayoutParams extends RecyclerView.LayoutParams {
 
@@ -892,7 +892,7 @@ public class GalleryLayoutManager extends RecyclerView.LayoutManager implements 
     /**
      * Listen for changes to the selected item
      *
-     * @author leix
+     * @author xx
      */
     public interface OnItemSelectedListener {
         /**
@@ -938,7 +938,7 @@ public class GalleryLayoutManager extends RecyclerView.LayoutManager implements 
     /**
      * Inner Listener to listen for changes to the selected item
      *
-     * @author leix
+     * @author xx
      */
     private class InnerScrollListener extends RecyclerView.OnScrollListener {
         int mState;

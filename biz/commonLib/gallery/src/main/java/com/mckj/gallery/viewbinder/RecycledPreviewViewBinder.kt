@@ -14,7 +14,7 @@ import com.mckj.gallery.databinding.CleanupxItemGalleryPreviewBinding
 import com.mckj.gallery.datebase.entity.RecycledBean
 
 /**
- *@author leix
+ *@author xx
  *@version 1
  *@createTime 2021/7/20 14:22
  *@desc 图库大图Item

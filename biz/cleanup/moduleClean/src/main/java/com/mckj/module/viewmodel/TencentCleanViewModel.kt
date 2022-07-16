@@ -8,7 +8,7 @@ import com.mckj.module.bean.GroupJunkInfo
 import com.mckj.module.bean.UIDealData
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/8/31 11:38
  * @desc

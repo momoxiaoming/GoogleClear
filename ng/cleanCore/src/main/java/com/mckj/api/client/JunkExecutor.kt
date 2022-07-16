@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicBoolean
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/10/28 18:16
  * @desc 扫描任务执行者
@@ -250,7 +250,7 @@ class JunkExecutor internal constructor(builder: Builder) {
     private fun startIdle(scanBean: ScanBean) {
         scanBean.status = JunkConstants.ScanStatus.SCAN_IDLE
         mScanData.postValue(scanBean)
-        Log.d(TAG, "scan startIdle")
+//        Log.d(TAG, "scan startIdle")
     }
 
     private fun error(scanBean: ScanBean) {

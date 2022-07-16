@@ -10,18 +10,39 @@ android {
     buildToolsVersion rootProject.android.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.dn.gc"
+        configurations.all {  //强制以下面版本编译
+            resolutionStrategy {
+                force 'androidx.work:work-runtime:2.4.0'
+                force 'androidx.core:core:1.6.0'
+                force 'com.google.android.exoplayer:exoplayer:2.16.1'
+
+            }
+        }
+        applicationId "com.org.gc.cleanup"
         minSdkVersion rootProject.android.minSdkVersion
         targetSdkVersion rootProject.android.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.0.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+        manifestPlaceholders = [
+                "TOP_ON_CHANNEL"   : "gp_c1",
+                "TOP_ON_SUBCHANNEL": "gp_sub_c1",
+                "TOP_ON_APPID"     : "a5aa1f9deda26d",
+                "TOP_ON_APPKEY"    : "4f7b9ac17decb9babec83aac078742c7",
+                "GOOGLE_APPID"     : "ca-app-pub-9488501426181082~6354662111"
+        ]
+
+        ndk {
+            abiFilters 'armeabi-v7a', 'x86',"arm64-v8a","x86_64"
+        }
     }
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -42,8 +63,6 @@ dependencies {
     implementation project(':biz:cleanup:vest:vestBlue45')
 //    implementation project(path: ':biz:common:dataLib')
     api project(path: ':ng:openLib')
-
-//    implementation ('com.google.android.exoplayer:exoplayer:2.16.1')
 //    implementation rootProject.work
 
 }

@@ -122,7 +122,7 @@ class VestHomeFragment : HomeFragment<CleanupFragmentHomeVestBinding>() {
         list.add(mModel.getBusMenuItem(type = ScenesType.TYPE_CATON_SPEED))
         list.add(mModel.getBusMenuItem(type = ScenesType.TYPE_UNINSTALL_CLEAN))
         list.add(mModel.getBusMenuItem(type = ScenesType.TYPE_JUNK_CLEAN))
-        list.add(mModel.getBusMenuItem(type = ScenesType.TYPE_ONE_KEY_SPEED))
+        list.add(mModel.getBusMenuItem(type = ScenesType.TYPE_NETWORK_SPEED))
         return list
     }
 

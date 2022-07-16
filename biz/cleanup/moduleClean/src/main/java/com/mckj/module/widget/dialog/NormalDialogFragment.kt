@@ -13,7 +13,7 @@ import com.mckj.moduleclean.databinding.CleanupDialogNormalBinding
 import java.io.Serializable
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/7/21 19:24
  * @desc

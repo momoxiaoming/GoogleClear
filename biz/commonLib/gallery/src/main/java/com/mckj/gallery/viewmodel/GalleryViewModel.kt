@@ -10,7 +10,7 @@ import com.mckj.gallery.bean.MediaConstant
 import kotlinx.coroutines.launch
 
 /**
- *@author leix
+ *@author xx
  *@version 1
  *@createTime 2021/7/20
  *@desc

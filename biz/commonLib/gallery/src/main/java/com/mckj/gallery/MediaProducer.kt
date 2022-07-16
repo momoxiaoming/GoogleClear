@@ -9,7 +9,7 @@ import com.mckj.gallery.impl.VideoBucketImpl
 import com.mckj.gallery.impl.VideoImpl
 
 /**
- *@author leix
+ *@author xx
  *@version 1
  *@createTime 2021/7/19 12:22
  *@desc

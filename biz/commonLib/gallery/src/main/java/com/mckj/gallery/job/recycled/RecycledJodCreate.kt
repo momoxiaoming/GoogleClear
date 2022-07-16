@@ -8,7 +8,7 @@ import com.mckj.gallery.job.JobCreator
 import java.security.AccessControlContext
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/7/23 17:20
  * @desc

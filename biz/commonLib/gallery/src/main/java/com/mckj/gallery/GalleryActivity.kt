@@ -57,7 +57,7 @@ import kotlin.math.abs
 import kotlin.properties.Delegates
 
 /**
- *@author leix
+ *@author xx
  *@version 1
  *@createTime 2021/7/20
  *@desc

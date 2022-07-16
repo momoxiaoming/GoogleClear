@@ -8,7 +8,7 @@ import com.dn.vi.app.scaffold.LightDialogBindingFragment
 import com.mckj.gallery.databinding.CleanupxDialogVideoBinding
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/7/21 19:24
  * @desc

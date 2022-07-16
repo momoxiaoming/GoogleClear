@@ -13,7 +13,7 @@ import com.mckj.api.util.FileUtils
 import io.reactivex.rxjava3.functions.Consumer
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/10/28 16:19
  * @desc 无用安装包清理

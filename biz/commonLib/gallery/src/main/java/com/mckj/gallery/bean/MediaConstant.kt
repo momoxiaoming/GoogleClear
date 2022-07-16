@@ -1,7 +1,7 @@
 package com.mckj.gallery.bean
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/7/23 9:45
  * @desc 图库常量

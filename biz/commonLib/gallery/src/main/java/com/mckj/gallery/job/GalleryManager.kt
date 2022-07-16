@@ -6,7 +6,7 @@ import com.mckj.gallery.job.recycled.CleanRecycledDataJodCreate
 
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/7/26 14:32
  * @desc

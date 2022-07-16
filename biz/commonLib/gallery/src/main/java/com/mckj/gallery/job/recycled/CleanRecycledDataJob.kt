@@ -11,7 +11,7 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/7/25 17:18
  * @desc 清理回收站中超过7天的 资源

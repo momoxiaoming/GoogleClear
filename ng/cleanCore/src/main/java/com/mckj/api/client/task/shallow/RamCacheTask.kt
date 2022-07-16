@@ -15,7 +15,7 @@ import io.reactivex.rxjava3.functions.Consumer
 import java.lang.Exception
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/10/28 16:38
  * @desc 清理内存缓存任务

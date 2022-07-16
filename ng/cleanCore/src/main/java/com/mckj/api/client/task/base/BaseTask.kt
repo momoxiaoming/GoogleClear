@@ -4,7 +4,7 @@ import com.mckj.api.entity.AppJunk
 import io.reactivex.rxjava3.functions.Consumer
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/10/28 15:48
  * @desc 基础任务:

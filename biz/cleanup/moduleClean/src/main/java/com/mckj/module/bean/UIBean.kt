@@ -8,7 +8,7 @@ import com.mckj.api.entity.JunkInfo
 import com.mckj.module.viewmodel.MediaCleanViewModel
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/9/2 18:33
  * @desc

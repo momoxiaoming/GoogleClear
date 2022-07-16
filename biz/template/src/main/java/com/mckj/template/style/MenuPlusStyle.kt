@@ -13,7 +13,7 @@ import com.mckj.template.abs.AbsMenuStyle
 import com.mckj.template.databinding.CleanupMenuItemPlusBinding
 
 /**
- *  author : leix
+ *  author : xx
  *  date : 2022/3/5 10:20
  *  description :菜单长模板
  */

@@ -1,6 +1,10 @@
 package com.org.openlib.utils
 
+import android.app.Activity
+import android.content.Intent
+import android.net.Uri
 import com.dn.vi.app.base.app.AppMod
+import com.dn.vi.app.base.app.ViActivity
 import com.dn.vi.app.cm.log.VLog
 import com.org.openlib.R
 import com.org.proxy.AppProxy
@@ -42,11 +46,13 @@ object WebUtil {
     /**
      * 打开隐私政策
      */
-    fun openProtocolByWeb() {
+    fun openProtocolByWeb(activity: Activity) {
+        val intent=Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ebaylo.top/privacy.htm"))
+        activity.startActivity(intent)
 
 //        WebHelper.openWeb(null, WebHelper.Request(
-//            webUrl = url,
-//            title = "隐私政策",
+//            webUrl = "https://www.ebaylo.top/privacy.htm",
+//            title = AppMod.app.getString(R.string.string_open_privacy),
 //            contentKey = "agreement",
 //        ))
     }

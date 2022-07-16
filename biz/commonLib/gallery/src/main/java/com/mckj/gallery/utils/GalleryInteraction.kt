@@ -5,7 +5,7 @@ import com.mckj.gallery.bean.ARouterPath
 import com.mckj.gallery.bean.InteractionBean
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/9/17 15:36
  * @desc

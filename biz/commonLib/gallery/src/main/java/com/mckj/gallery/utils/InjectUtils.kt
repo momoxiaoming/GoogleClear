@@ -6,7 +6,7 @@ import com.mckj.gallery.viewmodel.RecycleRepository
 
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/7/23 15:45
  * @desc

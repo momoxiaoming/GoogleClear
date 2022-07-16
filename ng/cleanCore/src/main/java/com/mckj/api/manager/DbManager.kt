@@ -6,7 +6,7 @@ import com.org.openlib.utils.SpUtil
 
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/8/7 16:21
  * @desc 操作数据库的管理类  所有和数据库相关的操作通过该类处理

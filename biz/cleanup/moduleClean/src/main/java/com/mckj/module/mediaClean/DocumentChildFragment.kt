@@ -25,7 +25,7 @@ import com.mckj.moduleclean.databinding.CleanupFragmentDocumentSortCleanBinding
 import org.jetbrains.anko.backgroundResource
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/9/15 14:09
  * @desc

@@ -1,7 +1,7 @@
 package com.mckj.template.entity
 
 /**
- *  author : leix
+ *  author : xx
  *  date : 2022/3/5 18:23
  *  description : 清理wifi常量池
  */

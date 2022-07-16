@@ -5,7 +5,7 @@ import androidx.room.Query
 import com.mckj.api.db.entity.JunkDbEntity
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/8/4 10:32
  * @desc

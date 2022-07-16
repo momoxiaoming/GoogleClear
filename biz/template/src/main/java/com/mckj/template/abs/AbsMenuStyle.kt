@@ -24,7 +24,7 @@ import org.jetbrains.anko.textColor
 /**
  * Describe:
  *
- * Created By leix on 2022/3/3
+ * Created By xx on 2022/3/3
  */
 open class AbsMenuStyle : DataBindingViewBinder<MenuItem>(), IMenuStyle {
 

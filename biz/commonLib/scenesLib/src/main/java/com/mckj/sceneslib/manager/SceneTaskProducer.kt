@@ -6,7 +6,7 @@ import com.mckj.sceneslib.manager.scenes.ScenesManager
 
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/11/12 11:18
  * @desc

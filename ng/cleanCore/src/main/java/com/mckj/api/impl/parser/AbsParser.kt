@@ -12,7 +12,7 @@ import com.mckj.api.util.FileUtils
 import java.util.concurrent.atomic.AtomicBoolean
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/12/22 9:27
  * @desc
@@ -106,10 +106,10 @@ abstract class AbsParser : IParser {
     }
 
     override fun stop() {
-        Log.d("leix","停止：")
+        Log.d("xx","停止：")
         mOptEnable.set(false)
         mStopFlag.set(true)
-        Log.d("leix","停止后：${mOptEnable.get()}---${mStopFlag.get()}")
+        Log.d("xx","停止后：${mOptEnable.get()}---${mStopFlag.get()}")
     }
 
     //获取单个垃圾颗粒

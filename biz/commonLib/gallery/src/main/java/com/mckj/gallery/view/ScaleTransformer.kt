@@ -5,7 +5,7 @@ import kotlin.math.abs
 
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/7/22 9:28
  * @desc item切换

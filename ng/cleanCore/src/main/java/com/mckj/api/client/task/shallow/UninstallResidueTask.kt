@@ -19,7 +19,7 @@ import io.reactivex.rxjava3.functions.Consumer
 import java.lang.Exception
 
 /**
- * @author leix
+ * @author xx
  * @version 1
  * @createTime 2021/10/28 16:32
  * @desc 卸载残留清理
