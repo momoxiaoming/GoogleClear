@@ -19,6 +19,7 @@ import com.org.openlib.help.SplashHelper
 
 import com.org.openlib.utils.RomUtils
 import com.org.proxy.AppProxy
+import com.org.proxy.helper.SDKHelper
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.util.concurrent.atomic.AtomicInteger
@@ -87,6 +88,9 @@ open class SimpleStartupActivity : ViActivity() {
             super.onCreate(savedInstanceState)
         }
 
+        if(!isTaskRoot){
+            finish()
+        }
         savedInstanceState?.getString(EXTRA_KEY_WALLPAPER_PASS)?.also { passed ->
             if (passed.isNotEmpty()) {
                 wallpaperPassedState = passed
@@ -124,15 +128,12 @@ open class SimpleStartupActivity : ViActivity() {
 
 
             resumedContStep(this) { cont ->
-
-                //显示开屏广告
-                vm.showSplashAd(this@SimpleStartupActivity) { result ->
-                    cont.resume(result)
+                SDKHelper.initSplash(this@SimpleStartupActivity){
+                    cont.resume(true)
                 }
             }
 
             step {
-
                 redirectToMain()
                 true
             }

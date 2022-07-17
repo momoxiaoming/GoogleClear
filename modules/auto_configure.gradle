@@ -88,17 +88,17 @@ allprojects {
             deps.add("androidTestImplementation", rootProject.junitx)
             deps.add("androidTestImplementation", rootProject.espressox)
             //
-            if (hasApplication) {
-                // 纯为了编译时动态生成的反混淆keepjava的类能编译通过用的
-
-                //添加arm64-v8a架构
-                project.android.buildTypes.each { buildItem ->
-                    def buildType = project.android.buildTypes.findByName(buildItem.name)
-                    if (buildType != null) {
-                        buildType.ndk.abiFilters = abi
-                    }
-                }
-            }
+//            if (hasApplication) {
+//                // 纯为了编译时动态生成的反混淆keepjava的类能编译通过用的
+//
+//                //添加arm64-v8a架构
+//                project.android.buildTypes.each { buildItem ->
+//                    def buildType = project.android.buildTypes.findByName(buildItem.name)
+//                    if (buildType != null) {
+//                        buildType.ndk.abiFilters = abi
+//                    }
+//                }
+//            }
 
             // aRouter
             deps.add("implementation", rootProject.arouter)

@@ -1,9 +1,11 @@
 {
     "interstitial": {
-        "All":"b62cc0d6398525"
+        "All":"b5baca53984692",
+        "Admob":"b5baca54674522"
     },
 
     "splash": {
-        "All":"b62ceb41ebef93"
+        "All":"b5bea7cc9a4497",
+        "Admob":"b5f73fe0c5db29"
     }
 }

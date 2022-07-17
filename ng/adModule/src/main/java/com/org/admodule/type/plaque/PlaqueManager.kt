@@ -1,6 +1,11 @@
 package com.org.admodule.type.plaque
 
+import android.annotation.SuppressLint
 import android.app.Activity
+import android.content.Context
+import com.anythink.interstitial.api.ATInterstitial
+import com.anythink.interstitial.api.ATInterstitialAutoAd
+import com.org.admodule.utils.PlacementIdUtil
 
 /**
  * <pre>
@@ -10,9 +15,21 @@ import android.app.Activity
  * </pre>
  */
 object PlaqueManager {
-    fun init(activity:Activity){
-//        ATInterstitialAutoAd.init(activity,placementIds,listener)
-
-
+    @SuppressLint("StaticFieldLeak")
+    lateinit var mInterstitialAd: ATInterstitial
+    fun init(context: Context) {
+        val placementId = PlacementIdUtil.getInterstitialPlacements(context)["All"]
+        ATInterstitialAutoAd.addPlacementId(placementId)
+        mInterstitialAd = ATInterstitial(context, placementId)
+        ATInterstitial.entryAdScenario(placementId, "")
     }
+
+    fun load() {
+        mInterstitialAd.load()
+    }
+
+    fun show(activity: Activity) {
+        mInterstitialAd.show(activity)
+    }
+
 }

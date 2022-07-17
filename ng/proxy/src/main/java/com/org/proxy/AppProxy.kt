@@ -37,7 +37,8 @@ object AppProxy {
     val bootTime: Long = 0L
 
 
-    private val isInit=AtomicBoolean(false)
+    private val isInit = AtomicBoolean(false)
+
     /**
      * 应用代码版本
      * 内部版本，用于表示代码是否有改过
@@ -91,11 +92,12 @@ object AppProxy {
     }
 
     fun initSdk(app: Application, codeVersion: String) {
-        if(isInit.compareAndSet(false,true)){
+        if (isInit.compareAndSet(false, true)) {
             PlamflatManager.init(app)
             AppProxyEnv.increaseInitState()
         }
     }
+
     /**
      * 注册应用内的 生命周期统计
      */
@@ -104,8 +106,7 @@ object AppProxy {
         app.registerActivityLifecycleCallbacks(activityLife)
     }
 
-    private class ActivityLifecycle : Application.ActivityLifecycleCallbacks
-         {
+    private class ActivityLifecycle : Application.ActivityLifecycleCallbacks {
 
         private var topRef: WeakReference<Activity>? = null
 
@@ -144,10 +145,8 @@ object AppProxy {
         }
 
         override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
-           log("ActivityLifecycle","onActivityCreated->${activity.componentName}")
-            if(activity is MainPager){
-                SplashManager.show(activity)
-            }
+            log("ActivityLifecycle", "onActivityCreated->${activity.componentName}")
+
         }
     }
 }

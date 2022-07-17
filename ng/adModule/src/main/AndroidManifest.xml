@@ -38,10 +38,5 @@
 			android:name="com.google.android.gms.ads.AD_MANAGER_APP"
 			android:value="true" />
 
-		<activity
-			android:name=".type.splash.SplashAdShowActivity"
-			android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
-			android:screenOrientation="portrait"
-			android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
 	</application>
 </manifest>

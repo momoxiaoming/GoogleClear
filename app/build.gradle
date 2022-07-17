@@ -15,7 +15,6 @@ android {
                 force 'androidx.work:work-runtime:2.4.0'
                 force 'androidx.core:core:1.6.0'
                 force 'com.google.android.exoplayer:exoplayer:2.16.1'
-
             }
         }
         applicationId "com.org.gc.cleanup"
@@ -32,11 +31,11 @@ android {
                 "TOP_ON_SUBCHANNEL": "gp_sub_c1",
                 "TOP_ON_APPID"     : "a5aa1f9deda26d",
                 "TOP_ON_APPKEY"    : "4f7b9ac17decb9babec83aac078742c7",
-                "GOOGLE_APPID"     : "ca-app-pub-9488501426181082~6354662111"
+                "GOOGLE_APPID"     : "ca-app-pub-8784110031688421~1749366565"
         ]
 
         ndk {
-            abiFilters 'armeabi-v7a', 'x86',"arm64-v8a","x86_64"
+            abiFilters 'armeabi','armeabi-v7a', 'x86',"arm64-v8a","x86_64"
         }
     }
 

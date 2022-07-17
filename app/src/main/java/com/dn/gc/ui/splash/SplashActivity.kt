@@ -10,6 +10,7 @@ import com.dn.gc.databinding.ActivitySplashBinding
 import com.org.openlib.utils.SystemUiUtil
 import com.dn.vi.app.cm.log.VLog
 import com.org.openlib.ui.SimpleStartupActivity
+import kotlinx.coroutines.GlobalScope
 
 /**
  * SplashActivity
@@ -26,6 +27,7 @@ class SplashActivity: SimpleStartupActivity() {
     }
     override fun initLayout() {
         super.initLayout()
+
         binding =
             DataBindingUtil.setContentView<ActivitySplashBinding>(this, R.layout.activity_splash)
         SystemUiUtil.hideSystemUI(window)
@@ -38,14 +40,16 @@ class SplashActivity: SimpleStartupActivity() {
     }
 
     override fun redirectToMain() {
-        mSplashModel.loadTimeout(1500)
+//        mSplashModel.loadTimeout(500)
+        startMain()
     }
 
     fun startMain(){
-        finish()
-        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+        VLog.i("启动页面")
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
+        finish()
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
     }
 
     override fun onFinishAction() {
