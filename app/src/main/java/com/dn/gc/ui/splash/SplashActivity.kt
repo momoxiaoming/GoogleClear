@@ -27,7 +27,6 @@ class SplashActivity: SimpleStartupActivity() {
     }
     override fun initLayout() {
         super.initLayout()
-
         binding =
             DataBindingUtil.setContentView<ActivitySplashBinding>(this, R.layout.activity_splash)
         SystemUiUtil.hideSystemUI(window)

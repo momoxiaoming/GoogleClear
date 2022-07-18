@@ -11,11 +11,16 @@
 		android:id="@+id/root"
 		android:layout_height="match_parent"
 		tools:context=".MainActivity">
-
+		<FrameLayout
+			android:id="@+id/fragment"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			/>
 		<FrameLayout
 			android:id="@+id/splash_ad_container"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
 			/>
+
 	</androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

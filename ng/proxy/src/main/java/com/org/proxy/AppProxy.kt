@@ -10,9 +10,7 @@ import com.dn.vi.app.cm.log.VLog
 import com.dn.vi.app.cm.utils.AppUtil
 import com.dn.vi.app.repo.kv.KvLite
 import com.dn.vi.app.repo.kv.KvSp
-import com.dn.vi.app.scaffold.MainPager
-import com.org.admodule.PlamflatManager
-import com.org.admodule.type.splash.SplashManager
+
 import com.org.proxy.log.log
 
 import java.lang.ref.WeakReference
@@ -93,7 +91,6 @@ object AppProxy {
 
     fun initSdk(app: Application, codeVersion: String) {
         if (isInit.compareAndSet(false, true)) {
-            PlamflatManager.init(app)
             AppProxyEnv.increaseInitState()
         }
     }

@@ -91,7 +91,7 @@ object SplashManager {
     fun show(activity: Activity,container:ViewGroup) {
         loadAd()
         if (isReadly()) {
-            container.visibility = View.GONE
+            container.visibility = View.VISIBLE
             this.container=container
             splashAd.show(activity, container)
         } else {

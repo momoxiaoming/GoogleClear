@@ -125,6 +125,7 @@ open class AppRecyclerAdapter(
         }
 
         viewHolder.itemView.setOnClickListener {
+            viewHolder.checkBoxItem.isChecked=!viewHolder.checkBoxItem.isChecked
             onItemClickListener?.onItemClick(position)
         }
     }
