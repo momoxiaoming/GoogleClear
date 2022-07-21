@@ -16,7 +16,7 @@
 		<item name="colorPrimaryDark">@color/primaryDarkColor</item>
 		<item name="colorAccent">@color/secondaryColor</item>
 
-		<item name="OpenAppIcon">@mipmap/icon</item>
+		<item name="OpenAppIcon">@mipmap/ic_launcher</item>
 		<item name="OpenAppName">@string/app_name</item>
 		<item name="OpenPrimaryBackground">@drawable/bg_primary</item>
 		<item name="OpenPrimaryBtn">@drawable/btn_primary</item>

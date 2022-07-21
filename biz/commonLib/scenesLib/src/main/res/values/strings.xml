@@ -317,4 +317,7 @@
 	<string name="scenes_power_save_landing_name">手机省电已开启</string>
     <string name="scenes_power_save_landing_desc">快去使用别的功能吧</string>
     <string name="scenes_phone_speed_landing_header_name">手机速度很快了</string>
+
+    <string name="ram">内存</string>
+
 </resources>

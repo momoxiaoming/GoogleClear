@@ -24,7 +24,8 @@ class MainActivity : ViActivity(),MainPager {
     }
     override fun initLayout() {
         mbinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        FragmentUtil.show(supportFragmentManager, ARouterPath.Cleanup.FRAGMENT_HOME,R.id.fragment)
+//        FragmentUtil.show(supportFragmentManager, ARouterPath.Cleanup.FRAGMENT_HOME,R.id.fragment)
+
     }
 
 
@@ -34,5 +35,6 @@ class MainActivity : ViActivity(),MainPager {
     }
     override fun onResume() {
         super.onResume()
+        mbinding.csProgress.startProgress(0f,70f)
     }
 }

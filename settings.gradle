@@ -6,3 +6,4 @@ apply from: 'biz/bizSettings.gradle'
 apply from: 'ng/ngSettings.gradle'
 
 
+include ':biz:cleanup:vest:vest1'
