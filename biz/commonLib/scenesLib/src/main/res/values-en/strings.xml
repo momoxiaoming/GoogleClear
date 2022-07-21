@@ -320,6 +320,6 @@
     <string name="scenes_power_save_landing_name">Optimized</string>
     <string name="scenes_power_save_landing_desc">Shut down all power draining apps</string>
     <string name="scenes_phone_speed_landing_header_name">phone is fast</string>
-    <string name="ram">RAM</string>
+    <string name="scenes_ram">RAM</string>
 
 </resources>

@@ -42,7 +42,7 @@ import java.util.function.Consumer
  * @createTime 2022/2/24 20:13
  * @desc
  */
-class BaseHomeViewModel : AbstractViewModel() {
+open class BaseHomeViewModel : AbstractViewModel() {
 
     companion object {
         private const val TAG = "BaseOsHomeViewModel"

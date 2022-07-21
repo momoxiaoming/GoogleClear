@@ -251,7 +251,6 @@
     <string name="scenes_stop_optimized_tips">正在进行优化，您确定要停止优化设备吗？</string>
 
 
-
     <!--手机加速 -->
     <string name="scenes_scanning">扫描...</string>
     <string name="scenes_analyzing_your_device">深度分析后台占用情况</string>
@@ -288,8 +287,6 @@
     <string name="scenes_storge_used">内存已使用%s</string>
 
 
-
-
     <string name="android_r_need_permission">最新安卓系统，需开启文件管理权限</string>
     <string name="excess_garbage_files">垃圾清理</string>
     <string name="video_cache_files">抖音快手清理</string>
@@ -314,10 +311,10 @@
     <string name="scenes_write_phone_permission">读写手机存储</string>
 
     <string name="scenes_junk_perfect">完成</string>
-	<string name="scenes_power_save_landing_name">手机省电已开启</string>
+    <string name="scenes_power_save_landing_name">手机省电已开启</string>
     <string name="scenes_power_save_landing_desc">快去使用别的功能吧</string>
     <string name="scenes_phone_speed_landing_header_name">手机速度很快了</string>
 
-    <string name="ram">内存</string>
+    <string name="scenes_ram">内存</string>
 
 </resources>
