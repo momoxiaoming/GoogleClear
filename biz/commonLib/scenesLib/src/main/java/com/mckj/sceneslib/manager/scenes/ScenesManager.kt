@@ -51,7 +51,7 @@ class ScenesManager {
         return mScenesMap[type]
     }
 
-    /**
+    /**google
      * 获取清理数据
      */
     fun getData(type: Int): ScenesData? {
