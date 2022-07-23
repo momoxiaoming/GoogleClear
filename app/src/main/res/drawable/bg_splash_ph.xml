@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item>
-        <color android:color="@color/white" />
-    </item>
+	<item>
+		<color android:color="@color/white" />
+	</item>
 
-    <item
-        android:drawable="@color/primaryColor"
-        android:gravity="center"
-        android:bottom="431dp"
-        android:top="171dp"
-        android:left="50dp"
-        android:right="50dp"/>
-
+	<item
+		android:width="80dp"
+		android:height="80dp"
+		android:bottom="100dp"
+		android:drawable="@drawable/ic_launcher"
+		android:gravity="bottom|center_horizontal"></item>
 </layer-list>

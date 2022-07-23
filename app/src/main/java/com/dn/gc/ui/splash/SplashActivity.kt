@@ -39,8 +39,8 @@ class SplashActivity: SimpleStartupActivity() {
     }
 
     override fun redirectToMain() {
-//        mSplashModel.loadTimeout(500)
-        startMain()
+        mSplashModel.loadTimeout(1000)
+//        startMain()
     }
 
     fun startMain(){
