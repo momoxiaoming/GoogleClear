@@ -2,8 +2,8 @@ package com.dn.vi.app.cm.log;
 
 import android.content.Context;
 import android.text.TextUtils;
+import android.util.Log;
 
-import com.tencent.mars.xlog.Log;
 
 import java.util.HashMap;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
@@ -19,13 +19,12 @@ public class VLog {
 
     // === 和XLog里面的定义一样 ===
 
-    public static final int LEVEL_VERBOSE = Log.LEVEL_VERBOSE;
-    public static final int LEVEL_DEBUG = Log.LEVEL_DEBUG;
-    public static final int LEVEL_INFO = Log.LEVEL_INFO;
-    public static final int LEVEL_WARNING = Log.LEVEL_WARNING;
-    public static final int LEVEL_ERROR = Log.LEVEL_ERROR;
-    public static final int LEVEL_FATAL = Log.LEVEL_FATAL;
-    public static final int LEVEL_NONE = Log.LEVEL_NONE;
+    public static final int LEVEL_VERBOSE = Log.VERBOSE;
+    public static final int LEVEL_DEBUG = Log.DEBUG;
+    public static final int LEVEL_INFO = Log.INFO;
+    public static final int LEVEL_WARNING = Log.WARN;
+    public static final int LEVEL_ERROR = Log.ERROR;
+
 
     // ===  ===
 
@@ -49,13 +48,13 @@ public class VLog {
      */
     public static void initializeXLog(Context context, String namespace, boolean debug) {
         final Runnable initIt = () -> {
-            XLogInitializer.initializeXLog(context, namespace, debug);
+//            XLogInitializer.initializeXLog(context, namespace, debug);
             // 设置一下默认级别
-            if (debug) {
-                setLogLevel(LEVEL_DEBUG, true);
-            } else {
-                setLogLevel(LEVEL_INFO, true);
-            }
+//            if (debug) {
+//                setLogLevel(LEVEL_DEBUG, true);
+//            } else {
+//                setLogLevel(LEVEL_INFO, true);
+//            }
         };
         initIt.run();
         sReInitialize = initIt;
@@ -88,13 +87,13 @@ public class VLog {
      * @param level
      * @param jni
      */
-    public static void setLogLevel(final int level, final boolean jni) {
-        Log.setLevel(level, jni);
-    }
-
-    public static int getLogLevel() {
-        return Log.getLogLevel();
-    }
+//    public static void setLogLevel(final int level, final boolean jni) {
+//        Log.setLevel(level, jni);
+//    }
+//
+//    public static int getLogLevel() {
+//        return Log.;
+//    }
 
     public synchronized static void setDefaultTag(String tag) {
         final String scopeTag = buildFinalScope(tag);
@@ -199,10 +198,6 @@ public class VLog {
         def.e(msg);
     }
 
-    public static void printErrStackTrace(Throwable tr, final String format, final Object... obj) {
-        final Logger def = getDefault();
-        def.printErrStackTrace(tr, format, obj);
-    }
 
     /**
      * 不建议使用，要tag，配合{@link #scoped(String)}来分组
@@ -223,7 +218,7 @@ public class VLog {
     @Deprecated()
     public static void d(String tag, String msg) {
         final Logger def = getDefault();
-        def.d("[%s] %s", tag, msg);
+        def.d( tag, msg);
     }
 
     /**
@@ -234,7 +229,7 @@ public class VLog {
     @Deprecated()
     public static void i(String tag, String msg) {
         final Logger def = getDefault();
-        def.i("[%s] %s", tag, msg);
+        def.i( tag, msg);
     }
 
     /**
@@ -245,7 +240,7 @@ public class VLog {
     @Deprecated()
     public static void w(String tag, String msg) {
         final Logger def = getDefault();
-        def.w("[%s] %s", tag, msg);
+        def.w( tag, msg);
     }
 
     /**
@@ -256,9 +251,14 @@ public class VLog {
     @Deprecated()
     public static void e(String tag, String msg) {
         final Logger def = getDefault();
-        def.e("[%s] %s", tag, msg);
+        def.e( tag, msg);
     }
 
+
+    public static void printErrStackTrace(String tag,String msg){
+        final Logger def = getDefault();
+        def.e( tag, msg);
+    }
     // ==== ====
 
     /**
@@ -275,7 +275,8 @@ public class VLog {
         public void v(String msg) {
             IMPL_LOCK.readLock().lock();
             try {
-                Log.v(mTag, msg);
+
+                android.util.Log.v(mTag, msg);
             } finally {
                 IMPL_LOCK.readLock().unlock();
             }
@@ -284,7 +285,7 @@ public class VLog {
         public void d(String msg) {
             IMPL_LOCK.readLock().lock();
             try {
-                Log.d(mTag, msg);
+                android.util.Log.d(mTag, msg);
             } finally {
                 IMPL_LOCK.readLock().unlock();
             }
@@ -293,7 +294,7 @@ public class VLog {
         public void i(String msg) {
             IMPL_LOCK.readLock().lock();
             try {
-                Log.i(mTag, msg);
+                android.util.Log.i(mTag, msg);
             } finally {
                 IMPL_LOCK.readLock().unlock();
             }
@@ -302,7 +303,7 @@ public class VLog {
         public void w(String msg) {
             IMPL_LOCK.readLock().lock();
             try {
-                Log.w(mTag, msg);
+                android.util.Log.w(mTag, msg);
             } finally {
                 IMPL_LOCK.readLock().unlock();
             }
@@ -311,63 +312,65 @@ public class VLog {
         public void e(String msg) {
             IMPL_LOCK.readLock().lock();
             try {
-                Log.e(mTag, msg);
+                android.util.Log.e(mTag, msg);
             } finally {
                 IMPL_LOCK.readLock().unlock();
             }
         }
 
-        // format
-        public void v(final String format, final Object... obj) {
+
+
+        public void v(String mTag,String msg) {
             IMPL_LOCK.readLock().lock();
             try {
-                Log.v(mTag, format, obj);
+
+                android.util.Log.v(mTag, msg);
             } finally {
                 IMPL_LOCK.readLock().unlock();
             }
         }
 
-        public void d(final String format, final Object... obj) {
+        public void d(String mTag,String msg) {
             IMPL_LOCK.readLock().lock();
             try {
-                Log.d(mTag, format, obj);
-            } finally {
-                IMPL_LOCK.readLock().unlock();
-            }
-
-        }
-
-        public void i(final String format, final Object... obj) {
-            IMPL_LOCK.readLock().lock();
-            try {
-                Log.i(mTag, format, obj);
+                android.util.Log.d(mTag, msg);
             } finally {
                 IMPL_LOCK.readLock().unlock();
             }
         }
 
-        public void w(final String format, final Object... obj) {
+        public void i(String mTag,String msg) {
             IMPL_LOCK.readLock().lock();
             try {
-                Log.w(mTag, format, obj);
+                android.util.Log.i(mTag, msg);
             } finally {
                 IMPL_LOCK.readLock().unlock();
             }
         }
 
-        public void e(final String format, final Object... obj) {
+
+        public void w(String tag,String msg) {
             IMPL_LOCK.readLock().lock();
             try {
-                Log.e(mTag, format, obj);
+                android.util.Log.w(mTag, msg);
             } finally {
                 IMPL_LOCK.readLock().unlock();
             }
         }
 
-        public void printErrStackTrace(Throwable tr, final String format, final Object... obj) {
+        public void e(String tag,String msg) {
             IMPL_LOCK.readLock().lock();
             try {
-                Log.printErrStackTrace(mTag, tr, format, obj);
+                android.util.Log.e(tag, msg);
+            } finally {
+                IMPL_LOCK.readLock().unlock();
+            }
+        }
+
+        public  void printErrStackTrace(Exception e,String msg){
+            IMPL_LOCK.readLock().lock();
+            try {
+                android.util.Log.e(mTag,e.getMessage());
             } finally {
                 IMPL_LOCK.readLock().unlock();
             }

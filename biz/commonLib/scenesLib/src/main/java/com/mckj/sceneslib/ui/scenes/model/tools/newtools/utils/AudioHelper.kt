@@ -10,7 +10,6 @@ import android.os.Handler
 import android.os.Looper
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
-import com.tencent.mars.xlog.Log
 import kotlin.math.roundToInt
 
 /**

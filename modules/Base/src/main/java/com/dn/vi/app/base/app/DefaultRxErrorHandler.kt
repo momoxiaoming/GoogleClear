@@ -14,14 +14,14 @@ open class DefaultRxErrorHandler : Consumer<Throwable> {
     override fun accept(t: Throwable?) {
         when (t) {
             is UndeliverableException -> {
-                VLog.printErrStackTrace(t.cause, "[No Crash] caught undeliver")
+                VLog.e( "[No Crash] caught undeliver")
             }
             is OnErrorNotImplementedException -> {
                 val stack = t.cause ?: t
-                VLog.printErrStackTrace(stack, "[No Crash] rx error default handle.")
+                VLog.e( "[No Crash] rx error default handle.")
             }
             else -> {
-                VLog.printErrStackTrace(t, "[No Crash] caught error in rx")
+                VLog.e("[No Crash] caught error in rx")
             }
         }
     }

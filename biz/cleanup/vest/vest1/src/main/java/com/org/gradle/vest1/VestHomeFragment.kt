@@ -18,6 +18,9 @@ import com.mckj.template.entity.TepConstants
 import com.mckj.template.entity.UIMenuBean
 import com.mckj.template.template.MenuTemplate
 import com.org.gradle.vest1.databinding.CleanupFragmentHomeVestBinding
+import com.org.gradle.vest1.style.VestBusMenuStyle
+import com.org.gradle.vest1.style.VestMainMenuStyle
+import com.org.gradle.vest1.style.VestRecommendMenuStyle
 
 /**
  * VestHomeFragment
@@ -44,7 +47,7 @@ class VestHomeFragment :HomeFragment<CleanupFragmentHomeVestBinding>() {
     }
 
     override fun registerHeaderFragment(): Fragment {
-        return VestCleanHeaderFragment()
+        return VestHeaderFragment()
     }
 
     override fun registerMenuTemplate(): MutableMap<UIMenuBean, AbsMenuView> {

@@ -70,9 +70,9 @@ class DataCenter {
             if (list.isNullOrEmpty()) {
                 list = mutableListOf()
             }
-            if (!list.contains(type)) {
-                list.add(HomeRecommendConfig(System.currentTimeMillis(), type))
-            }
+//            if (!list.contains(type)) {
+//                list.add(HomeRecommendConfig(System.currentTimeMillis(), type))
+//            }
             it.list = list
             saveHomeConfig(it)
         } ?: let {

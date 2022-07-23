@@ -22,9 +22,9 @@ package com.dn.vi.app.cm.log
  * 一般配合if, 减少非必须 runtime 字符串拼接
  */
 fun considerLog(level: Int): Boolean {
-    if (VLog.getLogLevel() <= level) {
-        return true
-    }
+//    if (VLog.getLogLevel() <= level) {
+//        return true
+//    }
     return false
 }
 
@@ -71,9 +71,9 @@ inline fun error(t: Throwable?, message: () -> Any?) {
     if (considerLog(VLog.LEVEL_ERROR)) {
         val msg = message()?.toString()
         VLog.e(msg)
-        if (t != null) {
-            VLog.printErrStackTrace(t, msg)
-        }
+//        if (t != null) {
+//            VLog.printErrStackTrace(t, msg)
+//        }
     }
 }
 

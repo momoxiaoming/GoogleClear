@@ -1,6 +1,8 @@
 package com.org.gradle.vest1
 
+import android.text.format.Formatter
 import androidx.lifecycle.ViewModelProvider
+import com.dn.vi.app.base.app.AppMod
 import com.mckj.baselib.base.databinding.DataBindingFragment
 import com.mckj.template.BaseHomeViewModel
 
@@ -27,8 +29,9 @@ class VestHeaderFragment : DataBindingFragment<CleanupFragmentHeaderBinding, Ves
 
     override fun initData() {
         mModel.ramLiveData.observe(viewLifecycleOwner){
-            mBinding.ramSizeText.text="${it.first}"
-            mBinding.csProgress.startProgress(0f,it.first/it.second,1000)
+            val size=Formatter.formatFileSize(activity,it.first)
+            mBinding.ramSizeText.text="$size"
+            mBinding.csProgress.startProgress(0f,it.first/it.second.toFloat(),1000)
         }
     }
 

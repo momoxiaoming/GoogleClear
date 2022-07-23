@@ -9,6 +9,7 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.RectF
 import android.util.AttributeSet
+import com.org.gradle.vest1.R
 import com.org.proxy.log.log
 
 

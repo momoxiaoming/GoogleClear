@@ -20,7 +20,7 @@ import java.io.IOException
  */
 class VestHomeViewModel :BaseHomeViewModel() {
 
-    val ramLiveData=MutableLiveData<Pair<Float,Float>>()
+    val ramLiveData=MutableLiveData<Pair<Long,Long>>()
 
     fun getRamInfo(){
         //获得ActivityManager服务的对象
@@ -36,7 +36,9 @@ class VestHomeViewModel :BaseHomeViewModel() {
         val ramSize=memSize-avSize
 
         VLog.i("已用内存：$ramSize---总共：$ramSize")
-//        ramLiveData.value= Pair(ramSize,memSize)
+
+
+        ramLiveData.value= Pair(ramSize,memSize)
     }
 
 }

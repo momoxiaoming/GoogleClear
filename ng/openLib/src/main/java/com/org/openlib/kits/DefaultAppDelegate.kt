@@ -150,7 +150,6 @@ abstract class DefaultAppDelegate(app: Application) : BaseAppDelegate(app)
         GsonQuick.setLogger(object : GsonQuickLogger {
             override fun e(p0: String?, p1: java.lang.Exception?) {
                 VLog.w(p0 ?: "null json")
-                VLog.printErrStackTrace(p1, "gson parse error")
             }
         })
     }

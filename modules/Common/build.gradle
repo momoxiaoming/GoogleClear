@@ -65,7 +65,7 @@ dependencies {
     api rootProject.kotlinCoroutines
     api rootProject.kotlinCoroutinesRx3
 
-    api rootProject.mars_xlog
+//    api rootProject.mars_xlog  //海外禁止使用xlog
 
 //    /**
 //     * 纯接口库，用于平台sdk判断
