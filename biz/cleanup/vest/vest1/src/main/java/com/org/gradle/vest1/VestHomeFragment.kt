@@ -29,7 +29,7 @@ import com.org.gradle.vest1.style.VestRecommendMenuStyle
  * @date 2022/7/21 16:20
  */
 @Route(path = ARouterPath.Cleanup.FRAGMENT_HOME)
-class VestHomeFragment :HomeFragment<CleanupFragmentHomeVestBinding>() {
+class VestHomeFragment : HomeFragment<CleanupFragmentHomeVestBinding>() {
     override fun initView() {
         super.initView()
     }
@@ -109,9 +109,20 @@ class VestHomeFragment :HomeFragment<CleanupFragmentHomeVestBinding>() {
      */
     override fun getMenuData(): MutableList<MenuItem>? {
         val list = mutableListOf<MenuItem>()
-        list.add(mModel.getMenuItem(type = ScenesType.TYPE_PHONE_SPEED))
+//
+        list.add(mModel.getMenuItem(type = ScenesType.TYPE_JUNK_CLEAN))
         list.add(mModel.getMenuItem(type = ScenesType.TYPE_COOL_DOWN))
+        list.add(mModel.getMenuItem(type = ScenesType.TYPE_ALBUM_CLEAN))
         list.add(mModel.getMenuItem(type = ScenesType.TYPE_POWER_SAVE))
+        list.add(mModel.getMenuItem(type = ScenesType.TYPE_APP_MANAGER))
+        list.add(mModel.getMenuItem(type = ScenesType.TYPE_UNINSTALL_CLEAN))
+//        list.add(mModel.getMenuItem(type = ScenesType.TYPE_CATON_SPEED))
+
+
+//        list.add(mModel.getMenuItem(type = ScenesType.TYPE_NETWORK_SPEED))
+//        list.add(mModel.getMenuItem(type = ScenesType.TYPE_PHONE_SPEED))
+
+
 //        list.add(mModel.getMenuItem(type = ScenesType.TYPE_TOOLS))
 //        list.add(mModel.getMenuItem(type = ScenesType.TYPE_ALBUM_CLEAN))
 //        list.add(mModel.getMenuItem(type = ScenesType.TYPE_CATON_SPEED))
@@ -120,12 +131,14 @@ class VestHomeFragment :HomeFragment<CleanupFragmentHomeVestBinding>() {
 
     override fun getBusMenuData(): MutableList<MenuItem>? {
         val list = mutableListOf<MenuItem>()
-        list.add(mModel.getBusMenuItem(type = ScenesType.TYPE_ALBUM_CLEAN))
-        list.add(mModel.getBusMenuItem(type = ScenesType.TYPE_APP_MANAGER))
-        list.add(mModel.getBusMenuItem(type = ScenesType.TYPE_CATON_SPEED))
-        list.add(mModel.getBusMenuItem(type = ScenesType.TYPE_UNINSTALL_CLEAN))
-        list.add(mModel.getBusMenuItem(type = ScenesType.TYPE_JUNK_CLEAN))
-        list.add(mModel.getBusMenuItem(type = ScenesType.TYPE_NETWORK_SPEED))
+//        list.add(mModel.getBusMenuItem(type = ScenesType.TYPE_ALBUM_CLEAN))
+//        list.add(mModel.getBusMenuItem(type = ScenesType.TYPE_APP_MANAGER))
+//        list.add(mModel.getBusMenuItem(type = ScenesType.TYPE_CATON_SPEED))
+//        list.add(mModel.getBusMenuItem(type = ScenesType.TYPE_UNINSTALL_CLEAN))
+//        list.add(mModel.getBusMenuItem(type = ScenesType.TYPE_JUNK_CLEAN))
+//        list.add(mModel.getBusMenuItem(type = ScenesType.TYPE_NETWORK_SPEED))
+
+
         return list
     }
 
@@ -152,7 +165,7 @@ class VestHomeFragment :HomeFragment<CleanupFragmentHomeVestBinding>() {
     }
 
     override fun getBusMenu(): LinearLayout? {
-        return mBinding.busMenu
+        return null
     }
 
     override fun getRecommendMenu(): LinearLayout? {

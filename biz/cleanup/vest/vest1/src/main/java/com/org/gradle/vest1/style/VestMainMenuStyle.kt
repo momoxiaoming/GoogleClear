@@ -10,11 +10,11 @@ class VestMainMenuStyle : MenuStyle01() {
     }
 
     override fun getItemNameColor(): Int {
-        return R.color.color_28292d
+        return R.color.colorPrimary
     }
 
     override fun getItemDescColor(): Int {
-        return R.color.color_999999
+        return R.color.colorPrimary
     }
 
 

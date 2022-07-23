@@ -30,7 +30,7 @@ class CsProgressView @JvmOverloads constructor(
     /**
      * 圆环宽度
      */
-    private var pgWidth = 80f
+    private var pgWidth = 120f
 
     private var mProgress: Float = 0f
     private var mMaxProgress: Float = 100f
@@ -98,7 +98,6 @@ class CsProgressView @JvmOverloads constructor(
     private fun drawCire(canvas: Canvas) {
         val rectf =
             RectF(0f + pgWidth / 2, 0f + pgWidth / 2, mWidth - pgWidth / 2, mHeight - pgWidth / 2)
-        log("CsProgressView", "mHeight->$mHeight--mWidth: $mWidth")
         val angle = 360 * mProgress / mMaxProgress
         canvas.drawArc(rectf, -90f, angle, false, pgPaint)
 

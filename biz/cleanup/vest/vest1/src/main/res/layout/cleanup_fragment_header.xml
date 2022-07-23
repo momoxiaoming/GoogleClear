@@ -12,7 +12,7 @@
 			android:id="@+id/header_layout"
 			android:layout_width="match_parent"
 			android:layout_height="48dp"
-			android:layout_marginTop="21dp"
+			android:layout_marginTop="25dp"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintStart_toStartOf="parent"
 			app:layout_constraintTop_toTopOf="parent">
@@ -24,13 +24,13 @@
 				android:layout_centerVertical="true"
 				android:layout_marginStart="19dp"
 				android:text="@string/app_name"
-				android:textSize="19sp"
+				android:textSize="19sp" android:textColor="@color/colorPrimary"
 				android:textStyle="bold" />
 
 			<ImageView
 				android:id="@+id/setting"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
+				android:layout_width="35dp"
+				android:layout_height="35dp"
 				android:layout_alignParentRight="true"
 				android:layout_centerVertical="true"
 				android:layout_marginEnd="19dp"
@@ -38,20 +38,19 @@
 		</RelativeLayout>
 
 		<androidx.constraintlayout.widget.ConstraintLayout
-			android:paddingTop="20dp"
-			android:paddingBottom="30dp"
 			android:id="@+id/topHeaderLayout"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:background="#fafafb"
+			android:paddingBottom="30dp"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintStart_toStartOf="parent"
 			app:layout_constraintTop_toBottomOf="@+id/header_layout">
 
 			<androidx.constraintlayout.widget.ConstraintLayout
 				android:id="@+id/topLayout"
-				android:layout_width="200dp"
-				android:layout_height="200dp"
+				android:layout_marginTop="40dp"
+				android:layout_width="220dp"
+				android:layout_height="220dp"
 				app:layout_constraintBottom_toTopOf="@id/button"
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintStart_toStartOf="parent"
@@ -87,19 +86,21 @@
 						android:layout_height="wrap_content"
 						android:layout_marginTop="5dp"
 						android:text="@string/scenes_ram"
-						android:textColor="@color/color_8a7aff" />
+						android:textColor="@color/color_8a7aff"
+						android:textSize="20sp"
+						android:textStyle="bold" />
 				</LinearLayout>
 			</androidx.constraintlayout.widget.ConstraintLayout>
 
 			<TextView
 				android:id="@+id/button"
-				android:layout_width="120dp"
+				android:layout_width="140dp"
 				android:layout_height="40dp"
-				android:layout_marginTop="20dp"
+				android:layout_marginTop="30dp"
 				android:background="@drawable/bg_btn_clean"
 				android:gravity="center"
 				android:orientation="vertical"
-				android:text="@string/cleanup_click_to_cleanup"
+				android:text="@string/scenes_optimize"
 				android:textColor="@color/white"
 				android:textStyle="bold"
 				app:layout_constraintEnd_toEndOf="parent"

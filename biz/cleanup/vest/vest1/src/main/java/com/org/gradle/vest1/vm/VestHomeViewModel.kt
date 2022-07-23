@@ -35,7 +35,7 @@ class VestHomeViewModel :BaseHomeViewModel() {
         val avSize=memoryInfo.availMem  //可用内存大小
         val ramSize=memSize-avSize
 
-        VLog.i("已用内存：$ramSize---总共：$ramSize")
+        VLog.i("已用内存：$ramSize---总共：$memSize")
 
 
         ramLiveData.value= Pair(ramSize,memSize)

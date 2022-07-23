@@ -244,7 +244,7 @@
 
     <string name="scenes_network_acceleration">Network Speed</string>
     <string name="scenes_optimize_network_increase_internet_speed">Optimize the network</string>
-    <string name="scenes_one_key_acceleration">一键加速</string>
+    <string name="scenes_one_key_acceleration">One key Speed</string>
     <string name="scenes_the_current_network_speed_is_slow_and_can_be_optimized">network speed is slow, optimizing</string>
     <string name="scenes_optimizing_router">Optimizing router</string>
     <string name="scenes_looking_for_a_premium_internet_connection">Looking for a premium internet connection</string>
@@ -321,5 +321,5 @@
     <string name="scenes_power_save_landing_desc">Shut down all power draining apps</string>
     <string name="scenes_phone_speed_landing_header_name">phone is fast</string>
     <string name="scenes_ram">RAM</string>
-
+    <string name="scenes_optimize">Optimize</string>
 </resources>

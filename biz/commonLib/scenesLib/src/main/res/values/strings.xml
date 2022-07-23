@@ -316,5 +316,5 @@
     <string name="scenes_phone_speed_landing_header_name">手机速度很快了</string>
 
     <string name="scenes_ram">内存</string>
-
+    <string name="scenes_optimize">优化</string>
 </resources>

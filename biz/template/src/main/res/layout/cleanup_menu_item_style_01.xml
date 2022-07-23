@@ -8,8 +8,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
         <ImageView
+            android:layout_marginTop="20dp"
             android:id="@+id/menu_iv"
             android:layout_width="37dp"
             android:layout_height="37dp"
@@ -27,8 +27,9 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed-medium"
             android:gravity="center"
-            android:singleLine="true"
+            android:singleLine="true" android:textStyle="bold"
             tools:text="手机加速"
+            android:layout_marginTop="10dp"
             android:textColor="#333841"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"

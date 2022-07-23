@@ -17,9 +17,9 @@ class ScenesLandingCommonViewModel : AbstractViewModel() {
         val iterator = ScenesManager.getInstance().getScenesMap().iterator()
         while (iterator.hasNext()) {
             val next = iterator.next()
-            if (ScenesType.TYPE_ALBUM_CLEAN == next.key){
-                continue
-            }
+//            if (ScenesType.TYPE_ALBUM_CLEAN == next.key){
+//                continue
+//            }
             mScenesList.add(next.value)
         }
 
