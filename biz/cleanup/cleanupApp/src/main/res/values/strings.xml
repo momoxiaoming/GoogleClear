@@ -69,4 +69,5 @@
     <string name="cleanup_home_recomend_gallery_clean_title">图片清理</string>
     <string name="cleanup_home_recomend_gallery_clean_desc">在小游戏中快速管理照片</string>
     <string name="cleanup_home_recomend_gallery_clean_btn">使 用</string>
+	<string name="cleanup_app_empty">未获取到应用列表</string>
 </resources>

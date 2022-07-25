@@ -11,6 +11,7 @@ import android.graphics.RectF
 import android.util.AttributeSet
 import com.org.gradle.vest1.R
 import com.org.proxy.log.log
+import org.jetbrains.anko.dip
 
 
 /**
@@ -30,7 +31,7 @@ class CsProgressView @JvmOverloads constructor(
     /**
      * 圆环宽度
      */
-    private var pgWidth = 120f
+    private var pgWidth = dip(40).toFloat()
 
     private var mProgress: Float = 0f
     private var mMaxProgress: Float = 100f

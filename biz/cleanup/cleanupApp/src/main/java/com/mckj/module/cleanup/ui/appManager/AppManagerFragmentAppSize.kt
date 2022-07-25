@@ -16,11 +16,14 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.activity.ComponentActivity
 import androidx.annotation.RequiresApi
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.dn.vi.app.base.view.gone
+import com.dn.vi.app.base.view.show
 import com.mckj.module.cleanup.R
 import com.mckj.module.cleanup.data.model.appManagerViewModel
 import com.mckj.module.cleanup.entity.AppInfoHolder
@@ -48,6 +51,9 @@ import java.util.*
 class AppManagerFragmentAppSize : Fragment() {
     private lateinit var mViewModel: appManagerViewModel
     private var rv_appList: RecyclerView? = null
+    private var emptyLayout: ConstraintLayout? = null
+
+
     private var appList: MutableSet<ApplicationLocal> = mutableSetOf()
     private lateinit var appRecyclerAdapter: AppRecyclerAdapter
     private lateinit var searchEt: EditText
@@ -217,6 +223,9 @@ class AppManagerFragmentAppSize : Fragment() {
     private fun initView() {
 
         rv_appList = view?.findViewById(R.id.rv_appList)
+        emptyLayout = view?.findViewById(R.id.emptyLayout)
+
+
 
         appRecyclerAdapter = AppRecyclerAdapter(appList, requireActivity(), true)
 
@@ -234,6 +243,11 @@ class AppManagerFragmentAppSize : Fragment() {
             override fun onItemClick(position: Int) {
             }
         })
+        if(appList.size==0){
+            emptyLayout?.show()
+        }else{
+            emptyLayout?.gone()
+        }
     }
 
     private fun searchEtListener() {

@@ -344,9 +344,9 @@ class AppManagerActivity : AppCompatActivity() {
                         if (popupWindow == null || !popupWindow!!.isShowing) {
                             showPopWindow("appSize")
                         }
-                        if(isPermission) {
+                        if (isPermission) {
                             initTabViewAtIndex(R.drawable.app_manager_pop_down, 1)
-                        }else{
+                        } else {
                             initTabViewAtIndex(R.drawable.app_manager_pop_down, 0)
                         }
                     }
@@ -355,9 +355,9 @@ class AppManagerActivity : AppCompatActivity() {
                         if (popupWindow == null || !popupWindow!!.isShowing) {
                             showPopWindow("installTime")
                         }
-                        if(isPermission) {
+                        if (isPermission) {
                             initTabViewAtIndex(R.drawable.app_manager_pop_down, 2)
-                        }else{
+                        } else {
                             initTabViewAtIndex(R.drawable.app_manager_pop_down, 1)
                         }
                     }
@@ -385,7 +385,7 @@ class AppManagerActivity : AppCompatActivity() {
         list.add(ResourceUtil.getString(R.string.cleanup_app_size))
         list.add(ResourceUtil.getString(R.string.cleanup_install_date))
 
-        if(!isPermission){
+        if (!isPermission) {
             list.removeAt(0)
         }
 
@@ -508,7 +508,7 @@ class AppManagerActivity : AppCompatActivity() {
         })
 
         popupWindow?.setOnDismissListener {
-            if(isPermission) {
+            if (isPermission) {
                 when (type) {
                     "useFrequency" -> {
                         initTabViewAtIndex(R.drawable.app_manager_pop_up, 0)
@@ -522,7 +522,7 @@ class AppManagerActivity : AppCompatActivity() {
                         initTabViewAtIndex(R.drawable.app_manager_pop_up, 2)
                     }
                 }
-            }else{
+            } else {
                 when (type) {
                     "appSize" -> {
                         initTabViewAtIndex(R.drawable.app_manager_pop_up, 0)
@@ -553,9 +553,9 @@ class AppManagerActivity : AppCompatActivity() {
     }
 
     override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
-        if(ev?.action == MotionEvent.ACTION_DOWN){
+        if (ev?.action == MotionEvent.ACTION_DOWN) {
             val view: View? = currentFocus
-            if(isShouldHideKeyboard(view,ev)){
+            if (isShouldHideKeyboard(view, ev)) {
                 hideKeyboard(view?.windowToken)
             }
         }

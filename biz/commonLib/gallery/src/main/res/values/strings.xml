@@ -57,4 +57,5 @@
     <string name="result_content_again">再来一次</string>
     <string name="result_content_finish">相册已全部整理完毕</string>
     <string name="gallery_clean_size_content_finish">全部图片已整理，请及时删除</string>
+	<string name="string_back">返回</string>
 </resources>

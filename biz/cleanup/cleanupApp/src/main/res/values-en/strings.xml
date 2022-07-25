@@ -28,4 +28,7 @@
     <string name="cleanup_home_recomend_gallery_clean_title">Photo Cleaner</string>
     <string name="cleanup_home_recomend_gallery_clean_desc">Quick  manage  your  photos  in-game</string>
     <string name="cleanup_home_recomend_gallery_clean_btn">Use  it</string>
+
+    <string name="cleanup_app_empty">App list not obtained</string>
+
 </resources>
