@@ -3,7 +3,6 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 
-
 android {
     compileSdkVersion rootProject.android.compileSdkVersion
     buildToolsVersion rootProject.android.buildToolsVersion
@@ -41,6 +40,6 @@ dependencies {
     api project(":modules:Base")
     api project(":modules:Ext")
     implementation files('libs\\bcprov-jdk16-139.jar')
-    implementation 'com.google.firebase:firebase-analytics:21.0.0'
+ //   implementation 'com.google.firebase:firebase-analytics:21.0.0'
 
 }

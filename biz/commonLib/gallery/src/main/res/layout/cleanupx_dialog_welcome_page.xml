@@ -19,7 +19,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_width="311dp"
-        android:layout_height="476dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <ImageView
@@ -107,7 +107,7 @@
         <Button
             android:id="@+id/welcome_go_btn"
             android:layout_width="271dp"
-            android:layout_height="39dp"
+            android:layout_height="48dp"
             android:layout_marginTop="17dp"
             android:background="@drawable/cleanupx_shape_welcome_go_bg"
             android:text="@string/welcome_dialog_go"
@@ -133,8 +133,9 @@
 
         <ImageView
             android:id="@+id/welcome_close"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="5dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:src="@drawable/cleanupx_welcome_close"

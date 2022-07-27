@@ -152,7 +152,6 @@ abstract class AbstractScenes() {
     private fun getLandingBeforeAdName(): String {
         val rewardPercent = CommonScenesSp.instance.landingBeforeAdRat
         val random = (1..100).random()
-        log.d("插屏激励广告配比：${rewardPercent} 本次随机：${random}")
         return if (random <= rewardPercent) {
             "clean_video"
         } else {

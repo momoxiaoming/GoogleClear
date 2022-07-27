@@ -82,6 +82,7 @@
         android:visibility="invisible"/>
 
     <CheckBox
+        android:checked="false"
         android:id="@+id/app_select"
         android:layout_width="18.5dp"
         android:layout_height="18.5dp"

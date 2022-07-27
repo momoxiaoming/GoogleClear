@@ -1,5 +1,6 @@
 package com.mckj.module.cleanup.ui.appManager
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
@@ -14,12 +15,17 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.annotation.RequiresApi
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.dn.vi.app.base.view.gone
+import com.dn.vi.app.base.view.show
 import com.mckj.module.cleanup.R
 import com.mckj.module.cleanup.data.model.appManagerViewModel
+import com.mckj.module.cleanup.databinding.CleanupItemAppManagerPageInstallTimeBinding
 import com.mckj.module.cleanup.entity.AppInfoHolder
 import com.mckj.module.cleanup.entity.ApplicationLocal
 import com.mckj.module.cleanup.ui.adapter.AppRecyclerAdapter
@@ -37,11 +43,9 @@ class AppManagerFragmentInstallTime : Fragment() {
 
     private lateinit var searchEt: EditText
 
-    private lateinit var uninstallBt: LinearLayout
 
     private var progressDialog: AppManagerLoadingDialog? = null
 
-    private var rv_appList: RecyclerView? = null
 
     private lateinit var checkSize: TextView
 
@@ -49,25 +53,33 @@ class AppManagerFragmentInstallTime : Fragment() {
 
     private lateinit var mInstallReceiver: AppManagerFragmentInstallTime.installReceiver
 
+    private lateinit var dataBinding:CleanupItemAppManagerPageInstallTimeBinding
+
+
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(
-            R.layout.cleanup_item_app_manager_page_install_time,
-            container,
-            false
-        )
+    ): View {
+        dataBinding=DataBindingUtil.inflate(inflater,R.layout.cleanup_item_app_manager_page_install_time,container,false)
+        initView()
+        return dataBinding.root
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         mViewModel = ViewModelProvider(requireActivity()).get(appManagerViewModel::class.java)
 
         mViewModel.appAllList.observe(viewLifecycleOwner, androidx.lifecycle.Observer {
-            appList = mViewModel.appAllList.value!!
-            initView()
+            appList = it
+            appRecyclerAdapter.notifyDataSetChanged()
+            if (it.isEmpty()){
+                dataBinding.emptyLayout2.show()
+            }else{
+                dataBinding.emptyLayout2.gone()
+            }
         })
 
         mViewModel.checkList.observe(viewLifecycleOwner, androidx.lifecycle.Observer {
@@ -95,13 +107,10 @@ class AppManagerFragmentInstallTime : Fragment() {
 
     //初始化view
     private fun initView() {
-        rv_appList = view?.findViewById(R.id.rv_appList)
-
         appRecyclerAdapter = AppRecyclerAdapter(appList, requireActivity(), true)
         mViewModel.sharedAdapter[3] = appRecyclerAdapter
-
-        rv_appList?.layoutManager = LinearLayoutManager(requireContext())
-        rv_appList?.adapter = appRecyclerAdapter
+        dataBinding.rvAppList.layoutManager = LinearLayoutManager(requireContext())
+        dataBinding.rvAppList.adapter = appRecyclerAdapter
 
         appRecyclerAdapter.setOnItemClickListener(object : AppRecyclerAdapter.OnItemClickListener {
             override fun onItemClick(position: Int) {

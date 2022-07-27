@@ -80,7 +80,7 @@ class AppManagerFragmentAppSize : Fragment() {
         mViewModel = ViewModelProvider(requireActivity()).get(appManagerViewModel::class.java)
 
         mViewModel.appAllList.observe(viewLifecycleOwner, androidx.lifecycle.Observer {
-            appList = mViewModel.appAllList.value!!
+            appList = it
             initView()
 
             //初始化默认排序
@@ -91,6 +91,12 @@ class AppManagerFragmentAppSize : Fragment() {
                 } else {
                     mViewModel.checkClick(3, true)
                 }
+            }
+
+            if(appList.size==0){
+                emptyLayout?.show()
+            }else{
+                emptyLayout?.gone()
             }
         })
 
@@ -243,11 +249,7 @@ class AppManagerFragmentAppSize : Fragment() {
             override fun onItemClick(position: Int) {
             }
         })
-        if(appList.size==0){
-            emptyLayout?.show()
-        }else{
-            emptyLayout?.gone()
-        }
+
     }
 
     private fun searchEtListener() {

@@ -17,9 +17,9 @@
 
             <ImageView
                 android:id="@+id/gallery_close"
-                android:layout_width="22dp"
+                android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginLeft="23dp"
+                android:padding="10dp"
                 android:src="@drawable/cleanupx_gallery_close"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
