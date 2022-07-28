@@ -19,6 +19,8 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
+import com.dn.vi.app.base.view.gone
+import com.dn.vi.app.base.view.show
 import com.mckj.baselib.helper.getApplicationContext
 import com.mckj.baselib.util.ResourceUtil
 import com.mckj.module.cleanup.R
@@ -207,7 +209,7 @@ open class AppRecyclerAdapter(
         startActivity(mContext, unInstallIntent, null)
     }
 
-    fun updateAdapterList(list: MutableSet<ApplicationLocal>) {
+    fun updateAdapterList(list: MutableSet<ApplicationLocal>,viewGroup: ViewGroup?) {
         val iterator = list.iterator()
         while (iterator.hasNext()){
             val next = iterator.next()
@@ -225,5 +227,11 @@ open class AppRecyclerAdapter(
 
         this.appList = list
         notifyDataSetChanged()
+
+        if(appList.isEmpty()){
+            viewGroup?.show()
+        }else{
+            viewGroup?.gone()
+        }
     }
 }

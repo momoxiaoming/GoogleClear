@@ -17,6 +17,7 @@ import android.widget.TextView
 import androidx.activity.ComponentActivity
 import androidx.annotation.RequiresApi
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -26,6 +27,8 @@ import com.dn.vi.app.base.view.gone
 import com.dn.vi.app.base.view.show
 import com.mckj.module.cleanup.R
 import com.mckj.module.cleanup.data.model.appManagerViewModel
+import com.mckj.module.cleanup.databinding.CleanupItemAppManagerPageAppSizeBinding
+import com.mckj.module.cleanup.databinding.CleanupItemAppManagerPageInstallTimeBinding
 import com.mckj.module.cleanup.entity.AppInfoHolder
 import com.mckj.module.cleanup.entity.ApplicationLocal
 import com.mckj.module.cleanup.ui.adapter.AppRecyclerAdapter
@@ -50,9 +53,6 @@ import java.util.*
  */
 class AppManagerFragmentAppSize : Fragment() {
     private lateinit var mViewModel: appManagerViewModel
-    private var rv_appList: RecyclerView? = null
-    private var emptyLayout: ConstraintLayout? = null
-
 
     private var appList: MutableSet<ApplicationLocal> = mutableSetOf()
     private lateinit var appRecyclerAdapter: AppRecyclerAdapter
@@ -65,24 +65,24 @@ class AppManagerFragmentAppSize : Fragment() {
     private lateinit var occupySize: TextView
     private lateinit var checkedSize: TextView
     private lateinit var mInstallReceiver: installReceiver
+    private lateinit var dataBinding: CleanupItemAppManagerPageAppSizeBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.cleanup_item_app_manager_page_app_size, container, false)
+        dataBinding= DataBindingUtil.inflate(inflater,R.layout.cleanup_item_app_manager_page_app_size,container,false)
+        initView()
+        return dataBinding.root
     }
 
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP_MR1)
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        mViewModel = ViewModelProvider(requireActivity()).get(appManagerViewModel::class.java)
 
         mViewModel.appAllList.observe(viewLifecycleOwner, androidx.lifecycle.Observer {
             appList = it
-            initView()
-
             //初始化默认排序
             if (appList.isNotEmpty()) {
                 mViewModel.checkList.value?.clear()
@@ -93,11 +93,7 @@ class AppManagerFragmentAppSize : Fragment() {
                 }
             }
 
-            if(appList.size==0){
-                emptyLayout?.show()
-            }else{
-                emptyLayout?.gone()
-            }
+            appRecyclerAdapter.notifyDataSetChanged()
         })
 
         mViewModel.checkList.observe(viewLifecycleOwner, Observer {
@@ -139,15 +135,21 @@ class AppManagerFragmentAppSize : Fragment() {
         }).subscribeOn(Schedulers.io()).doOnSubscribe {
             startLoading()
         }.doFinally {
-            activity?.runOnUiThread {
-                cancelLoading()
-            }
+//            activity?.runOnUiThread {
+//
+//            }
         }.observeOn(AndroidSchedulers.mainThread()).subscribe({
             appList.clear()
             appList.addAll(it)
         }, {
         }, {
+            cancelLoading()
             mViewModel.setAppList(appList)
+            if(appList.size==0){
+                dataBinding.emptyLayout.show()
+            }else{
+                dataBinding.emptyLayout.gone()
+            }
         })
     }
 
@@ -197,7 +199,7 @@ class AppManagerFragmentAppSize : Fragment() {
                 }
 
                 appList.removeIf { "package:"+it.packageName == packName }
-                appRecyclerAdapter.updateAdapterList(appList)
+                appRecyclerAdapter.updateAdapterList(appList,dataBinding.emptyLayout)
                 mViewModel.sharedAdapter[2]?.notifyDataSetChanged()
 
                 softNums.text = appList.size.toString()
@@ -227,23 +229,15 @@ class AppManagerFragmentAppSize : Fragment() {
     }
 
     private fun initView() {
-
-        rv_appList = view?.findViewById(R.id.rv_appList)
-        emptyLayout = view?.findViewById(R.id.emptyLayout)
-
-
-
+        mViewModel = ViewModelProvider(requireActivity()).get(appManagerViewModel::class.java)
         appRecyclerAdapter = AppRecyclerAdapter(appList, requireActivity(), true)
-
         softNums.text = appList.size.toString()
         occupySize.text = appRecyclerAdapter.getTotalAppSize()
 
         mViewModel.sharedAdapter[2] = appRecyclerAdapter
 
-        rv_appList?.layoutManager = LinearLayoutManager(requireContext())
-        rv_appList?.adapter = appRecyclerAdapter
-
-        appRecyclerAdapter.notifyDataSetChanged()
+        dataBinding.rvAppList.layoutManager = LinearLayoutManager(requireContext())
+        dataBinding.rvAppList.adapter = appRecyclerAdapter
 
         appRecyclerAdapter.setOnItemClickListener(object : AppRecyclerAdapter.OnItemClickListener {
             override fun onItemClick(position: Int) {
@@ -293,7 +287,7 @@ class AppManagerFragmentAppSize : Fragment() {
 
     private fun showSearchList(searchAppList: MutableSet<ApplicationLocal>) {
         EventTrack.stManagementSearchClick()
-        appRecyclerAdapter.updateAdapterList(searchAppList)
+        appRecyclerAdapter.updateAdapterList(searchAppList,dataBinding.emptyLayout)
         //搜索结果应用点击监听
         appRecyclerAdapter.setOnItemClickListener(object : AppRecyclerAdapter.OnItemClickListener {
             override fun onItemClick(position: Int) {
@@ -315,7 +309,7 @@ class AppManagerFragmentAppSize : Fragment() {
                 appList.clear()
                 appList.addAll(list)
 
-                appRecyclerAdapter.updateAdapterList(appList)
+                appRecyclerAdapter.updateAdapterList(appList,dataBinding.emptyLayout)
             }
 
             "up" -> {
@@ -327,7 +321,7 @@ class AppManagerFragmentAppSize : Fragment() {
                 appList.clear()
                 appList.addAll(list)
 
-                appRecyclerAdapter.updateAdapterList(appList)
+                appRecyclerAdapter.updateAdapterList(appList,dataBinding.emptyLayout)
             }
         }
     }

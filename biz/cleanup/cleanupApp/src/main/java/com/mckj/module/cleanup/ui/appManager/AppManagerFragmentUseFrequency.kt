@@ -21,15 +21,9 @@ import com.mckj.module.cleanup.data.model.appManagerViewModel
 import com.mckj.module.cleanup.entity.AppInfoHolder
 import com.mckj.module.cleanup.entity.ApplicationLocal
 import com.mckj.module.cleanup.ui.adapter.AppRecyclerAdapter
-import com.mckj.module.cleanup.ui.appManager.widget.AppManagerLoadingDialog
-import com.mckj.module.cleanup.ui.dialog.OpenFailDialog
-import com.mckj.module.gen.St
+
 import com.mckj.module.utils.EventTrack
-import com.org.openlib.utils.Log
-import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
-import io.reactivex.rxjava3.core.Observable
-import io.reactivex.rxjava3.core.ObservableOnSubscribe
-import io.reactivex.rxjava3.schedulers.Schedulers
+
 import java.util.*
 import java.util.zip.Inflater
 
@@ -179,7 +173,7 @@ class AppManagerFragmentUseFrequency : Fragment() {
 
     private fun showSearchList(searchAppList: MutableSet<ApplicationLocal>) {
         EventTrack.stManagementSearchClick()
-        appRecyclerAdapter.updateAdapterList(searchAppList)
+        appRecyclerAdapter.updateAdapterList(searchAppList,null)
         //搜索结果应用点击监听
         appRecyclerAdapter.setOnItemClickListener(object : AppRecyclerAdapter.OnItemClickListener {
             override fun onItemClick(position: Int) {

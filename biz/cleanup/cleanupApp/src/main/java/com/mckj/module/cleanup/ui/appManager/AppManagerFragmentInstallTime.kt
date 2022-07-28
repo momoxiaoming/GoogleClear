@@ -70,8 +70,6 @@ class AppManagerFragmentInstallTime : Fragment() {
     @SuppressLint("NotifyDataSetChanged")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        mViewModel = ViewModelProvider(requireActivity()).get(appManagerViewModel::class.java)
-
         mViewModel.appAllList.observe(viewLifecycleOwner, androidx.lifecycle.Observer {
             appList = it
             appRecyclerAdapter.notifyDataSetChanged()
@@ -107,6 +105,7 @@ class AppManagerFragmentInstallTime : Fragment() {
 
     //初始化view
     private fun initView() {
+        mViewModel = ViewModelProvider(requireActivity()).get(appManagerViewModel::class.java)
         appRecyclerAdapter = AppRecyclerAdapter(appList, requireActivity(), true)
         mViewModel.sharedAdapter[3] = appRecyclerAdapter
         dataBinding.rvAppList.layoutManager = LinearLayoutManager(requireContext())
@@ -159,7 +158,7 @@ class AppManagerFragmentInstallTime : Fragment() {
 
     private fun showSearchList(searchAppList: MutableSet<ApplicationLocal>) {
         EventTrack.stManagementSearchClick()
-        appRecyclerAdapter.updateAdapterList(searchAppList)
+        appRecyclerAdapter.updateAdapterList(searchAppList,dataBinding.emptyLayout2)
         //搜索结果应用点击监听
         appRecyclerAdapter.setOnItemClickListener(object : AppRecyclerAdapter.OnItemClickListener {
             override fun onItemClick(position: Int) {
@@ -181,7 +180,7 @@ class AppManagerFragmentInstallTime : Fragment() {
                 appList.clear()
                 appList.addAll(list)
 
-                appRecyclerAdapter.updateAdapterList(appList)
+                appRecyclerAdapter.updateAdapterList(appList,dataBinding.emptyLayout2)
             }
 
             "up" -> {
@@ -193,7 +192,7 @@ class AppManagerFragmentInstallTime : Fragment() {
                 appList.clear()
                 appList.addAll(list)
 
-                appRecyclerAdapter.updateAdapterList(appList)
+                appRecyclerAdapter.updateAdapterList(appList,dataBinding.emptyLayout2)
             }
         }
     }
@@ -252,7 +251,7 @@ class AppManagerFragmentInstallTime : Fragment() {
                 val packName = intent.dataString
 
                 appList.removeIf { "package:"+it.packageName == packName }
-                appRecyclerAdapter.updateAdapterList(appList)
+                appRecyclerAdapter.updateAdapterList(appList,dataBinding.emptyLayout2)
                 mViewModel.sharedAdapter[3]?.notifyDataSetChanged()
             }
         }
