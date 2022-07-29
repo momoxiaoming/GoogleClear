@@ -1,49 +1,38 @@
 package com.mckj.module.cleanup.ui.appManager
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.Build
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.TextView
-import androidx.activity.ComponentActivity
 import androidx.annotation.RequiresApi
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.dn.vi.app.base.view.gone
 import com.dn.vi.app.base.view.show
 import com.mckj.module.cleanup.R
-import com.mckj.module.cleanup.data.model.appManagerViewModel
+import com.mckj.module.cleanup.data.model.AppManagerViewModel
 import com.mckj.module.cleanup.databinding.CleanupItemAppManagerPageAppSizeBinding
-import com.mckj.module.cleanup.databinding.CleanupItemAppManagerPageInstallTimeBinding
 import com.mckj.module.cleanup.entity.AppInfoHolder
 import com.mckj.module.cleanup.entity.ApplicationLocal
 import com.mckj.module.cleanup.ui.adapter.AppRecyclerAdapter
 import com.mckj.module.cleanup.ui.appManager.receiver.InstallReceiver
 import com.mckj.module.cleanup.ui.appManager.widget.AppManagerLoadingDialog
-import com.mckj.module.cleanup.ui.dialog.OpenFailDialog
-import com.mckj.module.gen.St
 import com.mckj.module.utils.EventTrack
 import com.org.openlib.utils.Log
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.ObservableOnSubscribe
 import io.reactivex.rxjava3.schedulers.Schedulers
-import okhttp3.internal.notifyAll
-import java.math.BigDecimal
 import java.util.*
 
 /**
@@ -52,7 +41,7 @@ import java.util.*
  * Created By yangb on 2021/8/11
  */
 class AppManagerFragmentAppSize : Fragment() {
-    private lateinit var mViewModel: appManagerViewModel
+    private lateinit var mViewModel: AppManagerViewModel
 
     private var appList: MutableSet<ApplicationLocal> = mutableSetOf()
     private lateinit var appRecyclerAdapter: AppRecyclerAdapter
@@ -229,7 +218,7 @@ class AppManagerFragmentAppSize : Fragment() {
     }
 
     private fun initView() {
-        mViewModel = ViewModelProvider(requireActivity()).get(appManagerViewModel::class.java)
+        mViewModel = ViewModelProvider(requireActivity()).get(AppManagerViewModel::class.java)
         appRecyclerAdapter = AppRecyclerAdapter(appList, requireActivity(), true)
         softNums.text = appList.size.toString()
         occupySize.text = appRecyclerAdapter.getTotalAppSize()

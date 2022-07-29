@@ -1,13 +1,10 @@
 package com.mckj.module.cleanup.ui.appManager
 
 import android.animation.Animator
-import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
 import android.app.Activity
 import android.content.Context
-import android.content.res.ColorStateList
 import android.graphics.Color
-import android.graphics.drawable.BitmapDrawable
 import android.os.Build
 import android.os.Bundle
 import android.os.IBinder
@@ -21,44 +18,37 @@ import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.viewpager.widget.ViewPager
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.google.android.material.tabs.TabLayout
 import com.mckj.baselib.util.ResourceUtil
 import com.mckj.baselib.util.SizeUtil
 import com.mckj.datalib.entity.ARouterPath
 import com.mckj.module.cleanup.R
-import com.mckj.module.cleanup.data.model.appManagerViewModel
+import com.mckj.module.cleanup.data.model.AppManagerViewModel
+import com.mckj.module.cleanup.databinding.CleanupFragmentAppManagerMainBinding
 import com.mckj.module.cleanup.entity.AppInfoHolder
 import com.mckj.module.cleanup.ui.adapter.MyPagerAdapter
-import com.mckj.module.cleanup.ui.dialog.OpenFailDialog
 import com.mckj.module.cleanup.util.Log
-import com.mckj.module.gen.St
 import com.mckj.module.utils.EventTrack
 import com.org.openlib.utils.SystemUiUtil
 import org.jetbrains.anko.backgroundResource
-import org.jetbrains.anko.dip
-import org.jetbrains.anko.matchParent
 
 
 @Route(path = ARouterPath.Cleanup.ACTIVITY_APP_MANAGER)
 class AppManagerActivity : AppCompatActivity() {
 
-    private var viewPager: ViewPager? = null
     private var fragmentList: ArrayList<Fragment>? = null
     private var fragAdapter: MyPagerAdapter? = null
     private var tabLayout: TabLayout? = null
-    private lateinit var searchEt: EditText
     private lateinit var searchBt: ImageView
     private lateinit var searchCloseBt: ImageView
     private lateinit var middleText: LinearLayout
     private lateinit var uninstallBtn: LinearLayout
     private lateinit var uninstallBtnSize: TextView
-    private lateinit var title: LinearLayout
-    private lateinit var titleToolBar: Toolbar
 
     //下拉列表list
     private lateinit var listPopData: List<String>
@@ -69,17 +59,19 @@ class AppManagerActivity : AppCompatActivity() {
 
     private lateinit var uninstallBt: LinearLayout
 
+    private lateinit var dataBinding:CleanupFragmentAppManagerMainBinding
+
+
     //使用权限，控制使用频率tab是否展示
     var isPermission: Boolean = false
 
     //viewModel
-    private lateinit var mViewModel: appManagerViewModel
+    private lateinit var mViewModel: AppManagerViewModel
 
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP_MR1)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.cleanup_fragment_app_manager_main)
-
+        dataBinding=DataBindingUtil.setContentView(this,R.layout.cleanup_fragment_app_manager_main)
         initView()
         initData()
     }
@@ -87,11 +79,8 @@ class AppManagerActivity : AppCompatActivity() {
 
     private fun initView() {
         SystemUiUtil.immersiveSystemUi(window)
-        title = findViewById(R.id.title_layout)
-        titleToolBar = findViewById(R.id.header_toolbar)
-        viewPager = findViewById(R.id.viewPager)
-        tabLayout = findViewById(R.id.tabs)
-        searchEt = findViewById(R.id.search)
+        tabLayout = dataBinding.tabs
+
         searchBt = findViewById(R.id.search_button)
         searchCloseBt = findViewById(R.id.search_close_button)
         middleText = findViewById(R.id.middle_text)
@@ -99,7 +88,7 @@ class AppManagerActivity : AppCompatActivity() {
         uninstallBtnSize = findViewById(R.id.unInstall_btn_size)
         uninstallBt = findViewById(R.id.unInstall_btn)!!
 
-        mViewModel = ViewModelProvider(this).get(appManagerViewModel::class.java)
+        mViewModel = ViewModelProvider(this).get(AppManagerViewModel::class.java)
 
         //observe
 
@@ -122,8 +111,8 @@ class AppManagerActivity : AppCompatActivity() {
         })
 
         //标题
-        title.backgroundResource = android.R.color.transparent
-        titleToolBar.apply {
+        dataBinding.titleLayout.backgroundResource = android.R.color.transparent
+        dataBinding.headerToolbar.apply {
             navigationIcon = ResourceUtil.getDrawable(R.drawable.app_manager_back)
             setNavigationOnClickListener {
                 finish()
@@ -133,8 +122,8 @@ class AppManagerActivity : AppCompatActivity() {
         }
 
         //搜索框点击变大
-        searchEt.onFocusChangeListener = View.OnFocusChangeListener { _, _ ->
-            if (searchEt.isFocused) {
+        dataBinding.search.onFocusChangeListener = View.OnFocusChangeListener { _, _ ->
+            if (dataBinding.search.isFocused) {
                 playExpandAnim {
                     middleText.visibility = View.GONE
                     searchBt.visibility = View.GONE
@@ -144,8 +133,8 @@ class AppManagerActivity : AppCompatActivity() {
         }
         searchCloseBt.setOnClickListener {
             playShrinkAnim {
-                searchEt.clearFocus()
-                searchEt.setText("")
+                dataBinding.search.clearFocus()
+                dataBinding.search.setText("")
                 middleText.visibility = View.VISIBLE
                 searchCloseBt.visibility = View.GONE
                 searchBt.visibility = View.VISIBLE
@@ -159,7 +148,7 @@ class AppManagerActivity : AppCompatActivity() {
 //            })
         }
 
-        searchEt.addTextChangedListener(object : TextWatcher {
+        dataBinding.search.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 
             }
@@ -193,8 +182,8 @@ class AppManagerActivity : AppCompatActivity() {
         val valueAnimator =
             ValueAnimator.ofInt(SizeUtil.dp2px(120f), SizeUtil.dp2px(333f)).setDuration(400)
         valueAnimator.addUpdateListener {
-            searchEt.layoutParams.width = it.animatedValue as Int
-            searchEt.requestLayout()
+            dataBinding.search.layoutParams.width = it.animatedValue as Int
+            dataBinding.search.requestLayout()
         }
         valueAnimator.addListener(object : Animator.AnimatorListener {
             override fun onAnimationStart(animation: Animator?) {}
@@ -214,8 +203,8 @@ class AppManagerActivity : AppCompatActivity() {
         val valueAnimator =
             ValueAnimator.ofInt(SizeUtil.dp2px(333f), SizeUtil.dp2px(120f)).setDuration(400)
         valueAnimator.addUpdateListener {
-            searchEt.layoutParams.width = it.animatedValue as Int
-            searchEt.requestLayout()
+            dataBinding.search.layoutParams.width = it.animatedValue as Int
+            dataBinding.search.requestLayout()
         }
         valueAnimator.addListener(object : Animator.AnimatorListener {
             override fun onAnimationStart(animation: Animator?) {}
@@ -279,7 +268,7 @@ class AppManagerActivity : AppCompatActivity() {
             twoTab = tabTwo?.view!!
             threeTab = tabThree?.view!!
 
-            //viewPager数据
+            //dataBinding.viewPager数据
             fragmentList = ArrayList()
             fragmentList!!.add(AppManagerFragmentUseFrequency())
             fragmentList!!.add(AppManagerFragmentAppSize())
@@ -291,7 +280,7 @@ class AppManagerActivity : AppCompatActivity() {
             twoTab = tabTwo?.view!!
             threeTab = tabThree?.view!!
 
-            //viewPager数据
+            //dataBinding.viewPager数据
             fragmentList = ArrayList()
             fragmentList!!.add(AppManagerFragmentAppSize())
             fragmentList!!.add(AppManagerFragmentInstallTime())
@@ -299,17 +288,17 @@ class AppManagerActivity : AppCompatActivity() {
 
 
         fragAdapter = MyPagerAdapter(supportFragmentManager, fragmentList!!)
-        viewPager?.adapter = fragAdapter
-        viewPager?.currentItem = 0
-        viewPager?.offscreenPageLimit = 3
-        viewPager?.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
+        dataBinding.viewPager?.adapter = fragAdapter
+        dataBinding.viewPager?.currentItem = 0
+        dataBinding.viewPager?.offscreenPageLimit = 3
+        dataBinding.viewPager?.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
 
         //tab数据
         tabLayout?.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 val position = tab?.position
                 if (position != null) {
-                    viewPager?.currentItem = position
+                    dataBinding.viewPager?.currentItem = position
                     mViewModel.checkList.value?.clear()
                     if (isPermission) {
                         when (position) {
@@ -365,6 +354,10 @@ class AppManagerActivity : AppCompatActivity() {
             }
         })
 
+
+        mViewModel.appAllList.observe(this) {
+            dataBinding.softNumber.text="${it.size}"
+        }
     }
 
     private fun initTabView(list: List<String>, imageId: Int) {

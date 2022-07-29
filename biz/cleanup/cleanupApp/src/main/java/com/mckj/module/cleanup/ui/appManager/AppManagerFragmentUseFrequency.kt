@@ -1,10 +1,7 @@
 package com.mckj.module.cleanup.ui.appManager
 
-import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,15 +14,13 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mckj.module.cleanup.R
-import com.mckj.module.cleanup.data.model.appManagerViewModel
-import com.mckj.module.cleanup.entity.AppInfoHolder
+import com.mckj.module.cleanup.data.model.AppManagerViewModel
 import com.mckj.module.cleanup.entity.ApplicationLocal
 import com.mckj.module.cleanup.ui.adapter.AppRecyclerAdapter
 
 import com.mckj.module.utils.EventTrack
 
 import java.util.*
-import java.util.zip.Inflater
 
 class AppManagerFragmentUseFrequency : Fragment() {
 
@@ -41,7 +36,7 @@ class AppManagerFragmentUseFrequency : Fragment() {
 
     private var rv_appList: RecyclerView? = null
 
-    private lateinit var mViewModel: appManagerViewModel
+    private lateinit var mViewModel: AppManagerViewModel
 
     private var isAfterUnInstall: Boolean = false
 
@@ -82,7 +77,7 @@ class AppManagerFragmentUseFrequency : Fragment() {
         searchEt = activity?.findViewById(R.id.search)!!
         checkSize = activity?.findViewById(R.id.unInstall_btn_size)!!
         uninstallBt = activity?.findViewById(R.id.unInstall_btn)!!
-        mViewModel = ViewModelProvider(requireActivity()).get(appManagerViewModel::class.java)
+        mViewModel = ViewModelProvider(requireActivity()).get(AppManagerViewModel::class.java)
     }
 
     private fun searchEtListener() {

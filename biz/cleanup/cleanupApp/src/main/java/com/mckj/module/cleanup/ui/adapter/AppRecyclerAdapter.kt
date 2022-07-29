@@ -1,7 +1,6 @@
 package com.mckj.module.cleanup.ui.adapter
 
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -16,7 +15,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat.startActivity
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.dn.vi.app.base.view.gone
@@ -24,13 +22,10 @@ import com.dn.vi.app.base.view.show
 import com.mckj.baselib.helper.getApplicationContext
 import com.mckj.baselib.util.ResourceUtil
 import com.mckj.module.cleanup.R
-import com.mckj.module.cleanup.data.model.appManagerViewModel
+import com.mckj.module.cleanup.data.model.AppManagerViewModel
 import com.mckj.module.cleanup.entity.AppInfoHolder
 import com.mckj.module.cleanup.entity.ApplicationLocal
 import com.mckj.module.cleanup.ui.appManager.AppManagerActivity
-import com.mckj.module.cleanup.ui.appManager.AppManagerFragmentAppSize
-import com.mckj.module.cleanup.ui.appManager.AppManagerFragmentInstallTime
-import com.mckj.module.cleanup.ui.appManager.AppManagerFragmentUseFrequency
 import com.mckj.module.cleanup.util.DateTools
 import com.mckj.module.cleanup.util.Log
 import java.math.BigDecimal
@@ -53,8 +48,8 @@ open class AppRecyclerAdapter(
 //    private var checkedSize: BigDecimal = BigDecimal(0L)
 
     //viewModel
-    private var mViewModel: appManagerViewModel =
-        ViewModelProvider(mContext as AppManagerActivity).get(appManagerViewModel::class.java)
+    private var mViewModel: AppManagerViewModel =
+        ViewModelProvider(mContext as AppManagerActivity).get(AppManagerViewModel::class.java)
 
     init {
 

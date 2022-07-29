@@ -11,7 +11,7 @@ import com.org.proxy.AppProxy
 
 import java.math.BigDecimal
 
-class appManagerViewModel : ViewModel() {
+class AppManagerViewModel : ViewModel() {
     val map: MutableMap<Int, Boolean> = mutableMapOf()
 
     var sharedAdapter: MutableMap<Int, AppRecyclerAdapter> = mutableMapOf()
